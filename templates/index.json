@@ -35,9 +35,9 @@
     "featured_collection_XNjNXE": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best Sellers",
+        "title": "Best Selling Plants",
         "heading_size": "h2",
-        "heading_position": "left",
+        "heading_position": "center",
         "home_featured_products": "best-sellers-for-homepage",
         "count": 10,
         "products_per_row": 5,
@@ -53,6 +53,20 @@
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "herb-plants",
+        "count": 10,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured_collection_zemH9n": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Vegetables To Plant Now",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "vegetables-to-plant-now",
         "count": 10,
         "products_per_row": 5,
         "mobile_scrollable": true,
@@ -453,6 +467,7 @@
     "text_and_image_cYgC3g",
     "featured_collection_XNjNXE",
     "featured-collection",
+    "featured_collection_zemH9n",
     "featured-collections",
     "scrolling_text_YD9DRb",
     "testimonials",
