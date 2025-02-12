@@ -36,7 +36,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "main_menu_link_list": "new-menu",
+        "main_menu_link_list": "header-nav-2025",
         "hover_menu": true,
         "main_menu_alignment": "left",
         "mega_products": true,
