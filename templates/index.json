@@ -50,14 +50,14 @@
         "featured-collections-0": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "amaryllis",
             "title": ""
           }
         },
         "featured-collections-1": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "apartment-garden",
             "title": ""
           }
         },
@@ -101,8 +101,20 @@
       "settings": {
         "title": "Popular categories",
         "heading_size": "h2",
-        "heading_position": "left",
+        "heading_position": "center",
         "divider": false
+      }
+    },
+    "scrolling_text_YD9DRb": {
+      "type": "scrolling-text",
+      "settings": {
+        "text": "Free shipping and returns",
+        "link": "",
+        "text_size": 24,
+        "text_spacing": true,
+        "direction": "left",
+        "speed": 200,
+        "color_scheme": "1"
       }
     },
     "testimonials": {
@@ -425,6 +437,7 @@
     "text_and_image_cYgC3g",
     "featured-collection",
     "featured-collections",
+    "scrolling_text_YD9DRb",
     "testimonials",
     "featured-collection2",
     "slideshow-split2",
