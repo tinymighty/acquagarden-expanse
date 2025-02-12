@@ -80,42 +80,42 @@
         "featured-collections-0": {
           "type": "collection",
           "settings": {
-            "collection": "amaryllis",
+            "collection": "vegetable-plants",
             "title": ""
           }
         },
         "featured-collections-1": {
           "type": "collection",
           "settings": {
-            "collection": "apartment-garden",
+            "collection": "bedding-flower-plants",
             "title": ""
           }
         },
         "featured-collections-2": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "herb-plants",
             "title": ""
           }
         },
         "featured-collections-3": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "rose-plants",
             "title": ""
           }
         },
         "featured-collections-4": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "bulbs",
             "title": ""
           }
         },
         "featured-collections-5": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "shrubs-perennials",
             "title": ""
           }
         }
@@ -138,13 +138,13 @@
     "scrolling_text_YD9DRb": {
       "type": "scrolling-text",
       "settings": {
-        "text": "Free shipping and returns",
+        "text": "Free UK Delivery on orders over £30",
         "link": "",
         "text_size": 24,
         "text_spacing": true,
         "direction": "left",
-        "speed": 200,
-        "color_scheme": "1"
+        "speed": 290,
+        "color_scheme": "2"
       }
     },
     "testimonials": {
@@ -222,6 +222,7 @@
     },
     "featured-collection2": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured Collection",
         "heading_size": "h2",
@@ -257,6 +258,7 @@
       "block_order": [
         "slideshow-split2-0"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 550,
@@ -283,6 +285,7 @@
       "block_order": [
         "block-1"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "gutter_size": 0,
@@ -292,6 +295,7 @@
     },
     "featured-collection3": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h2",
@@ -307,6 +311,22 @@
     "slideshow-split3": {
       "type": "slideshow-split",
       "blocks": {
+        "slide_4UP86B": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Side by Side Slide",
+            "title_size": 60,
+            "subheading": "Add optional subtext",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "indent_image": false,
+            "color_scheme": "none"
+          }
+        },
         "slideshow-split3-0": {
           "type": "slide",
           "settings": {
@@ -325,8 +345,10 @@
         }
       },
       "block_order": [
+        "slide_4UP86B",
         "slideshow-split3-0"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 550,
@@ -381,9 +403,10 @@
         "block-2",
         "block-3"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
-        "align_text": "left",
+        "align_text": "center",
         "divider": false,
         "color_scheme": "none"
       }
@@ -402,6 +425,7 @@
       "block_order": [
         "text"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -412,16 +436,16 @@
     "blog-posts": {
       "type": "blog-posts",
       "settings": {
-        "title": "From the journal",
+        "title": "Explore our free planting guides",
         "heading_size": "h2",
-        "heading_position": "left",
-        "blog": "news",
-        "blog_show_tags": true,
+        "heading_position": "center",
+        "blog": "planting-guides",
+        "blog_show_tags": false,
         "blog_show_date": false,
         "blog_show_comments": false,
         "blog_show_author": false,
         "blog_show_excerpt": false,
-        "blog_image_size": "square",
+        "blog_image_size": "natural",
         "divider": false
       }
     },
@@ -451,6 +475,7 @@
         "text",
         "form"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "2",
         "align_text": "center",
