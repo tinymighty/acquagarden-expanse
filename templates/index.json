@@ -12,11 +12,13 @@
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
       "settings": {
-        "image_mask": "none",
-        "image2_mask": "none",
+        "image": "shopify://shop_images/Shutterstock_2133409103.jpg",
+        "image_mask": "square",
+        "image2": "shopify://shop_images/Shutterstock_713158120.jpg",
+        "image2_mask": "square",
         "subtitle": "",
-        "title": "Image with text",
-        "heading_size": "h2",
+        "title": "Key SEO heading here, UK delivery, quality guarantee",
+        "heading_size": "h0",
         "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
         "button_label": "",
         "button_link": "",
@@ -24,7 +26,7 @@
         "align_text": "left",
         "image_width": "50",
         "layout": "right",
-        "color_scheme": "1",
+        "color_scheme": "2",
         "divider": false,
         "top_padding": true,
         "bottom_padding": true
