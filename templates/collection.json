@@ -35,6 +35,7 @@
       "block_order": [
         "banner"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "gutter_size": 20,

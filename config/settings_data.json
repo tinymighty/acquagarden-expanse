@@ -82,7 +82,7 @@
     "favicon": "shopify://shop_images/favicon.jpg",
     "predictive_search_enabled": true,
     "show_breadcrumbs": true,
-    "show_breadcrumbs_collection_link": true,
+    "show_breadcrumbs_collection_link": false,
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
     "checkout_body_background_color": "#ffffff",
