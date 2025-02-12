@@ -35,6 +35,19 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "logo_WcXaYT": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Logo-Transp_copy_1.webp",
+            "desktop_logo_width": 160,
+            "mobile_logo_width": 120
+          }
+        }
+      },
+      "block_order": [
+        "logo_WcXaYT"
+      ],
       "settings": {
         "main_menu_link_list": "header-nav-2025",
         "hover_menu": true,
