@@ -32,6 +32,20 @@
         "bottom_padding": true
       }
     },
+    "featured_collection_XNjNXE": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "home_featured_products": "best-sellers-for-homepage",
+        "count": 10,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -437,6 +451,7 @@
   },
   "order": [
     "text_and_image_cYgC3g",
+    "featured_collection_XNjNXE",
     "featured-collection",
     "featured-collections",
     "scrolling_text_YD9DRb",
