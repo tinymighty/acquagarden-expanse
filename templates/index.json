@@ -150,74 +150,105 @@
     "testimonials": {
       "type": "testimonials",
       "blocks": {
-        "testimonial_EmzfUe": {
+        "testimonial_tBBQNr": {
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
+            "testimonial": "<p>\"A lovely little plant, in great condition, well packaged and delivered on time.\"</p>",
+            "author": "Quality plant",
             "author_info": "Los Angeles, CA"
           }
         },
-        "block-1": {
+        "testimonial_Ajg7FV": {
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
+            "testimonial": "<p>\"Plants arrived hydrated and in good condition ready to plant. All healthy and in individual holders.\"</p>",
+            "author": "Jeff",
+            "author_info": ""
           }
         },
-        "block-2": {
+        "testimonial_i4rexR": {
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
+            "testimonial": "<p>\"Super quick delivery. Lovely plugs. I had nearly given up on using online plant companies, but you have changed my mind. Thank you!\"</p>",
+            "author": "Katie",
+            "author_info": ""
           }
         },
-        "block-3": {
+        "testimonial_cALRP6": {
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
+            "testimonial": "<p>\"My plants arrived in a beautiful condition. Strong plants. I will definitely use the company again.\"</p>",
+            "author": "M. G.",
+            "author_info": ""
           }
         },
-        "block-4": {
+        "testimonial_6UjfVT": {
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
+            "testimonial": "<p>\"Fast delivery, very well packed, and good healthy plants which arrived in perfect condition.\"</p>",
+            "author": "Mary",
+            "author_info": ""
           }
         },
-        "block-5": {
+        "testimonial_Pby4M6": {
           "type": "testimonial",
           "settings": {
             "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
+            "testimonial": "<p>\"Great customer service, very knowledgeable. Made the whole process easy, I will be using them again.\"</p>",
+            "author": "Alex",
+            "author_info": ""
+          }
+        },
+        "testimonial_7Cqa34": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Great shipping experience, good prices, wonderful healthy plants, very well packed and shipped.\"</p>",
+            "author": "Bijin",
+            "author_info": ""
+          }
+        },
+        "testimonial_B7M36b": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Arrived in strong packaging very fresh look lovely in my pots. Definitely recommend. Thank you.\"</p>",
+            "author": "Sharon",
+            "author_info": ""
+          }
+        },
+        "testimonial_BNHWUq": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Excellent plants. Packaged safely and arrived promptly and intact. Thank you for superb service.\"</p>",
+            "author": "Margaret",
+            "author_info": ""
           }
         }
       },
       "block_order": [
-        "testimonial_EmzfUe",
-        "block-1",
-        "block-2",
-        "block-3",
-        "block-4",
-        "block-5"
+        "testimonial_tBBQNr",
+        "testimonial_Ajg7FV",
+        "testimonial_i4rexR",
+        "testimonial_cALRP6",
+        "testimonial_6UjfVT",
+        "testimonial_Pby4M6",
+        "testimonial_7Cqa34",
+        "testimonial_B7M36b",
+        "testimonial_BNHWUq"
       ],
       "settings": {
-        "title": "Don't take our word for it",
+        "title": "",
         "align_text": "center",
         "round_images": true,
-        "color_scheme": "3"
+        "embed_richdata": true,
+        "color_scheme": "none"
       }
     },
     "featured-collection2": {
