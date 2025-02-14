@@ -11,40 +11,8 @@
   });
 */
 
-if (console && console.log) {
-  console.log(
-    "Expanse theme (" +
-      theme.settings.themeVersion +
-      ") by ARCHΞTYPE | Learn more at https://archetypethemes.co"
-  );
-}
-
 (function () {
   "use strict";
-
-  if (
-    window.Shopify &&
-    window.Shopify.theme &&
-    navigator &&
-    navigator.sendBeacon &&
-    window.Shopify.designMode
-  ) {
-    navigator.sendBeacon(
-      "https://api.archetypethemes.co/api/beacon",
-      new URLSearchParams({
-        shop: window.Shopify.shop,
-        themeName:
-          window.theme &&
-          window.theme.settings &&
-          `${window.theme.settings.themeName} v${window.theme.settings.themeVersion}`,
-        role: window.Shopify.theme.role,
-        route: window.location.pathname,
-        themeId: window.Shopify.theme.id,
-        themeStoreId: window.Shopify.theme.theme_store_id || 0,
-        isThemeEditor: !!window.Shopify.designMode,
-      })
-    );
-  }
 
   /*============================================================================
     Things that don't require DOM to be ready
