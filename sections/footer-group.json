@@ -11,6 +11,13 @@
   "type": "footer",
   "name": "t:labels.footer_group",
   "sections": {
+    "173955388440a6c059": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
     "footer-promotions": {
       "type": "footer-promotions",
       "blocks": {
@@ -117,7 +124,7 @@
         "footer-2"
       ],
       "settings": {
-        "show_newsletter": true,
+        "show_newsletter": false,
         "newsletter_richtext": "<p>Subscribe today to hear first about our sales</p>",
         "footer_main_menu": true,
         "show_copyright": true,
@@ -127,6 +134,7 @@
     }
   },
   "order": [
+    "173955388440a6c059",
     "footer-promotions",
     "footer"
   ]
