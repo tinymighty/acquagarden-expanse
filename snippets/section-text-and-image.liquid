@@ -49,8 +49,10 @@
   assign color_scheme = color_scheme | default: section.settings.color_scheme | default: 'none'
 
   assign lazyload_images = true
+  assign is_h1 = false
   if section.index == 1
     assign lazyload_images = false
+    assign is_h1 = true
   endif
 -%}
 
@@ -167,7 +169,7 @@
           <p class="accent-subtitle">{{ subtitle }}</p>
         {%- endif -%}
         {%- if title != blank -%}
-          <h2 class="{{ heading_size }}">{{ title | escape }}</h2>
+          {%- if is_h1 -%}<h1 class="{{ heading_size }}">{{ title | escape }}</h1>{%- else -%}<h2 class="{{ heading_size }}">{{ title | escape }}</h2>{%- endif -%}
         {%- endif -%}
         {%- if text != blank -%}
           <div class="rte featured-row__subtext clearfix">{{ text }}</div>
