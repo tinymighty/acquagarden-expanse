@@ -1,1 +1,167 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"slideshow":{"type":"slideshow","blocks":{"slideshow-0":{"type":"hero","settings":{"link_text":""}}},"block_order":["slideshow-0"],"settings":{}},"rich-text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{}},"text":{"type":"text","settings":{}}},"block_order":["heading","text"],"settings":{"color_scheme":"none"}},"map":{"type":"map","settings":{}},"text-columns":{"type":"text-columns","blocks":{"column1":{"type":"text_block","settings":{}},"column2":{"type":"text_block","settings":{}},"column3":{"type":"text_block","settings":{}}},"block_order":["column1","column2","column3"],"settings":{}},"featured-collection":{"type":"featured-collection","settings":{}},"form":{"type":"contact-form","settings":{"color_scheme":"none"}}},"order":["main","slideshow","rich-text","text-columns","map","featured-collection","form"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "text_and_image_6zH93y": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/1_2fa7ceaf-b6b0-4aa5-9fe8-500716dda8a1.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Transforming Gardening into Pure Joy",
+        "heading_size": "h2",
+        "text": "<p>Gardening is about more than plants—it’s about creating moments of peace, beauty, and achievement. But let’s face it: choosing the right plants, ensuring reliable quality, trusting they’ll arrive in perfect condition, and getting them to thrive can be challenging.<br/><br/>That’s where we come in. At Acqua Garden, we believe gardening should be a joy from the start, not a chore. We make it easy, enjoyable, and accessible for everyone—whether you’re a seasoned pro or planting your very first seedling. And we guarantee the highest quality, to ensure your success.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_FWLexf": {
+      "type": "text-and-image",
+      "settings": {
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Image with text",
+        "heading_size": "h2",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_columns_w6LA8q": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_D7XVjr": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AG_Premium_Icon_32f36241-6b18-4db6-8fb4-bf5b59b2a692.png",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Plants That Thrive, Not Just Survive",
+            "text": "<p>Every plant we send out is nurtured with expert care to ensure it arrives healthy, strong, and ready to flourish in your garden.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_LwndjT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AG_Range_Icon_1.png",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Handpicked Varieties, All Year Round",
+            "text": "<p>From seasonal favourites to rare gems, our collection is curated to inspire and excite—no matter the time of year or the size of your garden.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_XcM9K7": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AG_Delivery_Icon_3dd26526-2b05-420b-9808-affe32aef517.png",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Delivery You Can Rely On",
+            "text": "<p>We don’t just pack your plants; we cocoon them. With our bespoke packaging, your plants travel safely and arrive fresh, vibrant, and ready to grow.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_TRRFrT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Free_Vegetable_Icon_1.png",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Fresh & Homegrown Produce",
+            "text": "<p>Plants are individually selected for each order with quality checks and controls and exceptional plant care</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_CpwmGy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/AG_Happiness_Icon_9942ff01-3db0-4c8f-94de-31a300c2e07e.png",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "A Promise You Can Trust",
+            "text": "<p>Our 100% Happiness Guarantee means you can shop with confidence. Not happy? We’ll make it right—no questions asked.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_rn6eCc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Plant_vegetables_corn_1.png",
+            "image_mask": "none",
+            "image_width": 60,
+            "title": "Personalised Support at Every Step",
+            "text": "<p>Whether you’re choosing plants, planting them, or nurturing them to their full glory, we’re here with guidance, tips, and expert advice.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_D7XVjr",
+        "text_block_LwndjT",
+        "text_block_XcM9K7",
+        "text_block_TRRFrT",
+        "text_block_CpwmGy",
+        "text_block_rn6eCc"
+      ],
+      "custom_css": [
+        ".grid__item h2 {font-size: 20px;}"
+      ],
+      "settings": {
+        "title": "Why Acqua Garden?",
+        "align_text": "center",
+        "divider": false,
+        "color_scheme": "none"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "text_and_image_6zH93y",
+    "text_and_image_FWLexf",
+    "text_columns_w6LA8q"
+  ]
+}
