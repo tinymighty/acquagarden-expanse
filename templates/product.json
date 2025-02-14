@@ -43,7 +43,7 @@
         "description_3BPgtL": {
           "type": "description",
           "settings": {
-            "is_tab": true
+            "is_tab": false
           }
         },
         "sales_point": {
@@ -141,6 +141,7 @@
         "tab",
         "contact"
       ],
+      "disabled": true,
       "settings": {
         "max_width": true
       }
