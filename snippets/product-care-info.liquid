@@ -1,0 +1,111 @@
+{% if product.metafields.custom.care_info %}
+
+  <div class="product-care-info">
+
+    {% comment %}
+      {
+        "sunlight":"Full Sun",
+        "position":"Sheltered",
+        "soil":"Well drained soil",
+        "plantingTime":"Spring and Autumn",
+        "moisture":"Medium",
+        "hardiness":"Hardy",
+        "growthRate":"Medium",
+        "spacing":"40cm",
+        "heightAndSpread":"1m x 50cm",
+        "annualOrPerennial":"Perennial"
+      } {% endcomment %}
+
+    <table>
+      <tr>
+        <th>Sunlight</th>
+        <td>{{ product.metafields.custom.care_info.value.sunlight }}</td>
+      </tr>
+      <tr>
+        <th>Position</th>
+        <td>{{ product.metafields.custom.care_info.value.position }}</td>
+      </tr>
+      <tr>
+        <th>Soil</th>
+        <td>{{ product.metafields.custom.care_info.value.soil }}</td>
+      </tr>
+      <tr>
+        <th>Planting Time</th>
+        <td>{{ product.metafields.custom.care_info.value.plantingTime }}</td>
+      </tr>
+      <tr>
+        <th>Moisture</th>
+        <td>{{ product.metafields.custom.care_info.value.moisture }}</td>
+      </tr>
+      <tr>
+        <th>Hardiness</th>
+        <td>{{ product.metafields.custom.care_info.value.hardiness }}</td>
+      </tr>
+      <tr>
+        <th>Growth Rate</th>
+        <td>{{ product.metafields.custom.care_info.value.growthRate }}</td>
+      </tr>
+      <tr>
+        <th>Spacing</th>
+        <td>{{ product.metafields.custom.care_info.value.spacing }}</td>
+      </tr>
+      <tr>
+        <th>Height and Spread</th>
+        <td>{{ product.metafields.custom.care_info.value.heightAndSpread }}</td>
+      </tr>
+      <tr>
+        <th>Annual or Perennial</th>
+        <td>{{ product.metafields.custom.care_info.value.annualOrPerennial }}</td>
+      </tr>
+
+    </table>
+
+    {% if product.metafields.custom.planting_guide_blog %}
+      <div class="growing-guide-link">
+        <a href="{{ product.metafields.custom.planting_guide_blog }}">Read Our Planting Guide</a>
+      </div>
+    {% endif %}
+     
+
+  </div>
+
+
+{% style %}
+.product-care-info table tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+.product-care-info table tr::last-child {
+  border-bottom: none;
+}
+.product-care-info table td,
+.product-care-info table th {
+  padding: 2px 0;
+}
+.product-care-info table td {
+  font-weight: bold;
+}
+.product-care-info .growing-guide-link {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.product-care-info .growing-guide-link a,
+.product-care-info .growing-guide-link a:visited,
+.product-care-info .growing-guide-link a:hover,
+.product-care-info .growing-guide-link a:active
+{
+  text-decoration: none !important;
+  border-radius: 10px;
+  color: white;
+  border-color: #254545;
+  background: #254545;
+  padding: 7px 12px 5px;
+}
+.product-care-info .growing-guide-link a:hover {
+  background: #5B6A30;
+}
+{% endstyle %}
+
+{% endif %}
