@@ -67,21 +67,30 @@
         "menu_RQjWND": {
           "type": "menu",
           "settings": {
-            "title": "",
-            "menu": "information",
+            "title": "Shop All Plants",
+            "menu": "footer-collections",
             "enable_account_link": false
           }
         },
         "footer-0": {
           "type": "menu",
           "settings": {
+            "title": "Gardening Resources",
+            "menu": "footer-resources",
+            "enable_account_link": false
+          }
+        },
+        "menu_yFzD79": {
+          "type": "menu",
+          "settings": {
             "title": "",
-            "menu": "footer",
+            "menu": "gardening-support",
             "enable_account_link": false
           }
         },
         "footer-1": {
           "type": "contact",
+          "disabled": true,
           "settings": {
             "phone": "",
             "contact": "contact-us",
@@ -103,6 +112,7 @@
       "block_order": [
         "menu_RQjWND",
         "footer-0",
+        "menu_yFzD79",
         "footer-1",
         "footer-2"
       ],
