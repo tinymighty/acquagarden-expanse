@@ -137,10 +137,11 @@
     },
     "scrolling_text_YD9DRb": {
       "type": "scrolling-text",
+      "disabled": true,
       "settings": {
         "text": "Free UK Delivery on orders over £30",
         "link": "",
-        "text_size": 24,
+        "text_size": 20,
         "text_spacing": true,
         "direction": "left",
         "speed": 290,
@@ -247,7 +248,6 @@
         "title": "",
         "align_text": "center",
         "round_images": true,
-        "embed_richdata": true,
         "color_scheme": "none"
       }
     },
