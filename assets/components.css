@@ -4200,7 +4200,7 @@ th,
 @media only screen and (min-width: 769px) {
   .product-single__sticky {
     position: sticky;
-    top: 20px;
+    top: 100px;
   }
 
   .modal--quick-shop .product-single__sticky {
@@ -4209,6 +4209,13 @@ th,
 
   .product-full-width {
     margin-top: 40px;
+  }
+
+  .product-single__sticky .block-buy-buttons{
+    position: sticky;
+    top: 110px;
+    background: white;
+    z-index: 2;
   }
 }
 
@@ -4262,7 +4269,7 @@ th,
   }
 
 .product-single__meta {
-  padding-top: 65px;
+  padding-top: 5px;
   padding-left: 45px;
 }
 
