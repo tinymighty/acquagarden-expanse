@@ -64,6 +64,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "menu_RQjWND": {
+          "type": "menu",
+          "settings": {
+            "title": "",
+            "menu": "information",
+            "enable_account_link": false
+          }
+        },
         "footer-0": {
           "type": "menu",
           "settings": {
@@ -75,14 +83,15 @@
         "footer-1": {
           "type": "contact",
           "settings": {
-            "phone": "+1 800 123 1234",
-            "contact": "",
+            "phone": "",
+            "contact": "contact-us",
             "chat": "",
-            "enable_social": true
+            "enable_social": false
           }
         },
         "footer-2": {
           "type": "payment",
+          "disabled": true,
           "settings": {
             "show_payment_icons": true,
             "show_locale_selector": true,
@@ -92,6 +101,7 @@
         }
       },
       "block_order": [
+        "menu_RQjWND",
         "footer-0",
         "footer-1",
         "footer-2"
