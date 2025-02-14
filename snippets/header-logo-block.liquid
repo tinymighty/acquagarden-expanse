@@ -44,11 +44,7 @@
       }
     {%- endstyle -%}
 
-    {%- if template == 'index' -%}
-      <h1 class="site-header__logo" {{ block.shopify_attributes }}>
-    {%- else -%}
-      <div class="h1 site-header__logo" {{ block.shopify_attributes }}>
-    {%- endif -%}
+    <div class="h1 site-header__logo" {{ block.shopify_attributes }}>
 
     {%- if block.settings.logo -%}
       {%- assign logo_alt = block.settings.logo.alt | default: shop.name | escape -%}
@@ -144,11 +140,7 @@
     {%- else -%}
       <a href="{{ routes.root_url }}">{{ shop.name }}</a>
     {%- endif -%}
-    {%- if template == 'index' -%}
-      </h1>
-    {%- else -%}
-      </div>
-    {%- endif -%}
+    </div>
   {%- endif -%}
 {%- endfor -%}
 
