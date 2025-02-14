@@ -28,29 +28,8 @@
         "button_link": "",
         "button_style": "primary",
         "align_text": "left",
-        "image_width": "50",
+        "image_width": "33",
         "layout": "right",
-        "color_scheme": "none",
-        "divider": false,
-        "top_padding": true,
-        "bottom_padding": true
-      }
-    },
-    "text_and_image_FWLexf": {
-      "type": "text-and-image",
-      "settings": {
-        "image_mask": "none",
-        "image2_mask": "none",
-        "subtitle": "",
-        "title": "Image with text",
-        "heading_size": "h2",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "image_width": "50",
-        "layout": "left",
         "color_scheme": "none",
         "divider": false,
         "top_padding": true,
@@ -156,12 +135,57 @@
         "divider": false,
         "color_scheme": "none"
       }
+    },
+    "text_and_image_FWLexf": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/1_42a352c0-2390-4193-b64a-28edbbca3422.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "The Acqua Garden Difference",
+        "heading_size": "h2",
+        "text": "<p>We’re not just a plants company—we’re passionate gardeners who know what it feels like to open a delivery and find plants that <em>don’t</em> live up to expectations. That’s why we do things differently.</p><p>At our commercial greenhouse, every plant is nurtured from the start. We feed, water, and nurture them until they’re strong, healthy, and vibrant. From there, our expert packing team ensures your plants are securely packaged and ready for their journey to your door.</p><p>Our customer experience team? They’re not just here to help; they’re here to inspire. From plant selection to troubleshooting care, they’ll guide you with kindness, patience, and knowledge.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "left",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_fdcwGJ": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/2_0759cf2f-e598-4e7e-a866-23d70b556e7d.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Our Story",
+        "heading_size": "h2",
+        "text": "<p>Acqua Garden was born in 2018 from one simple idea: <em>gardening should be easy for everyone.</em></p><p>After a successful career as an international corporate lawyer, founder Jonathan Martin wanted to combine his lifelong passion for gardening with a vision for something better. He saw the frustrations of finding high-quality plants online—often poor quality, the lack of reliable care guidance, the poor delivery standards—and he decided to change it.</p><p>Acqua Garden is now the home for anyone who loves plants. Whether you’re growing tomatoes on a city balcony or creating a vibrant garden oasis, we’re here to help you every step of the way.</p><p>Together, let’s make your garden the happiest place on Earth!</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "right",
+        "color_scheme": "none",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
     }
   },
   "order": [
     "main",
     "text_and_image_6zH93y",
+    "text_columns_w6LA8q",
     "text_and_image_FWLexf",
-    "text_columns_w6LA8q"
+    "text_and_image_fdcwGJ"
   ]
 }
