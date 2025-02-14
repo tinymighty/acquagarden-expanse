@@ -337,6 +337,9 @@
             {%- endif -%}
 
             <div class="grid-product__title">{{ product.title }}</div>
+            {%- if product.metafields.custom.collection_sub_text != blank -%}
+              <div class="grid-product__vendor">{{ product.metafields.custom.collection_sub_text }}</div>
+            {%- endif -%}
 
             {%- if vendor_enable -%}
               <div class="grid-product__vendor">{{ product.vendor }}</div>
