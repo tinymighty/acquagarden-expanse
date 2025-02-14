@@ -8,6 +8,8 @@
           render 'block-title', block: block
         when 'description'
           render 'block-description', block: block
+        when 'care-info'
+          render 'block-care-info', block: block
         when 'variant_picker'
           render 'block-variant-picker', block: block, forloop: forloop
         when 'buy_buttons'
@@ -582,6 +584,11 @@
           "content": "t:info.choose_which_platforms_share_theme_settings"
         }
       ]
+    },
+    {
+      "type": "care-info",
+      "name": "Product Care Info",
+      "limit": 1
     }
   ]
 }

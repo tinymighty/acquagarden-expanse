@@ -54,6 +54,11 @@
             "is_tab": false
           }
         },
+        "care-info": {
+          "type": "care-info",
+          "settings": {
+          }
+        },
         "sales_point": {
           "type": "sales_point",
           "disabled": true,
@@ -94,6 +99,7 @@
         "inventory_status",
         "buy_buttons",
         "description_3BPgtL",
+        "care-info",
         "sales_point",
         "sales_point2",
         "sales_point3",
