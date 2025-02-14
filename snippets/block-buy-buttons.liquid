@@ -54,9 +54,9 @@
     {%- form 'product', product, id: form_id, novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
       {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
         <div class="product__policies rte">
-          {%- if cart.taxes_included -%}
+          {% comment %} {%- if cart.taxes_included -%}
             {% render 't_with_fallback', key: 'info.tax_included', fallback: 'Tax included.' %}
-          {%- endif -%}
+          {%- endif -%} {% endcomment %}
 
           {%- if shop.shipping_policy.body != blank -%}
             {% assign info_shipping_policy_html = 'info.shipping_policy_html' | t: link: shop.shipping_policy.url %}
