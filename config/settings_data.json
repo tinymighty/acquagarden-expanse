@@ -56,7 +56,7 @@
     "icon_weight": "3px",
     "icon_linecaps": "miter",
     "superscript_decimals": true,
-    "vendor_enable": true,
+    "vendor_enable": false,
     "quick_shop_enable": true,
     "quick_add_enable": true,
     "product_grid_image_size": "square",
