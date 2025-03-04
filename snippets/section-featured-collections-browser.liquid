@@ -17,6 +17,12 @@
   assign heading_size = heading_size | default: section.settings.heading_size | default: 'h2'
   assign heading_position = heading_position | default: section.settings.heading_position | default: 'left'
   assign divider = divider | default: section.settings.divider, allow_false: true | default: false, allow_false: true
+
+  assign is_empty = true
+  if section.blocks.size > 0
+    assign is_empty = false
+  endif
+
 -%}
 
 {%- if divider -%}<div class="section--divider">{%- endif -%}
@@ -29,27 +35,16 @@
   {%- endif -%}
 
   <div
-    class="new-grid"
-    {% if section.blocks.size < 6 %}
-      {%- render 'grid-view-type', products_per_row: section.blocks.size -%}
-    {% else %}
-      data-view="6-3"
-    {% endif %}
+    class="featured-collections--tabs"
   >
-    {%- liquid
-      assign is_empty = true
-      if section.blocks.size > 0
-        assign is_empty = false
-      endif
-    -%}
 
+    {% unless is_empty %}
     {%- for block in section.blocks -%}
-      {%- liquid
-        assign sizeVariable = section.blocks.size | at_most: 6
-
-        render 'collection-grid-item', block: block, collection: block.settings.collection, sizeVariable: sizeVariable, fallback: 'variable'
-      -%}
+      {%- assign collection = collections[block.settings.collection] -%}
+      {{ collection.title }}
     {%- endfor -%}
+
+    {% endunless %}
 
     {%- if is_empty -%}
       <div class="page-width">
