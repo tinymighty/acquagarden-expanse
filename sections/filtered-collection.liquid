@@ -1,0 +1,486 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% render 'modal-smart-variants', collection: section.settings.collection, product: product, id: product.id, options: section.settings %}
+{% assign tags = section.settings.tags | split: ',' %}
+<script>
+    
+    //window.addEventListener("load", () => {filtered_featured_init('{{section.id}}');});
+    window.filtering = false;
+  
+    function toggle_tagged(id, tag) {
+      if (window.filtering) return;
+      window.filtering = true;
+      $(`#s_{{ section.id }} #slider_{{ section.id }}`).slick('slickUnfilter');
+      tag = tag.toLowerCase().replace(' ', '_').replace(' ', '_').replace(' ', '_').replace(' ', '_').replace("'", '');
+      tag = `{{ section.settings.tag_prefix }}${tag}_tag`;
+      var contains = 0;
+      var no_contains = 0;
+      $(`#s_{{ section.id }} #slider_{{ section.id }}`).slick('slickUnfilter').slick('slickFilter', (_, el) => {
+        if (tag == 'shop_all_tag') return true;
+        var match = $(el).hasClass(tag) || $(el).find('.slide_card').hasClass(tag);
+        if (match) contains++;
+        else no_contains++;
+        return match;
+      });
+        console.log('filtered', tag, 'results:', contains, 'excluded:', no_contains);
+        window.filtering = false;
+        setTimeout(() => {
+              $(`#s_{{ section.id }} #slider_{{ section.id }}`).slick('slickGoTo', 0);
+          }, 500);
+    }
+    
+    function filtered_featured_init(id) {
+      console.log('init');
+      
+      $('#s_{{ section.id }} #s_{{ section.id }}').show();
+      setTimeout(() => {
+        $('#s_{{ section.id }} .f_filter').on('click', (event) => {
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+          $('#s_{{ section.id }} .f_filter.checked').removeClass('checked');
+          $(event.target).addClass('checked');
+          console.log('TOGGLE TAGGED', $(event.target).text());
+          toggle_tagged(id, $(event.target).text())
+        });
+  
+        $('#s_{{ section.id }} select.f_filter_dropdown').on('change', (event) => {
+          event.stopPropagation();
+          event.stopImmediatePropagation();
+  
+          toggle_tagged(id, $(event.currentTarget).val());
+        });
+        var config = {
+           dots: true,
+           arrows: true,
+           infinite: true,
+           slidesToShow: {{ section.settings.products_to_show }},
+           centerMode: false,
+           draggable: true,
+           swipeToSlide: true,
+           prevArrow: $('#s_{{ section.id }} #{{ section.id }}_left_thumbnails'),
+           nextArrow: $('#s_{{ section.id }} #{{ section.id }}_right_thumbnails'),
+           responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 3,
+                dots: false
+              }
+            },
+             {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 2,
+                dots: false
+              }
+            },
+            {
+              breakpoint: 750,
+              settings: {
+                slidesToShow: 1,
+                arrows: false,
+                centerMode: false,
+                dots: false
+              }
+            },
+            {
+              breakpoint: 400,
+              settings: {
+                slidesToShow: 1,
+                centerMode: true,
+                dots: false
+              }
+            }
+           ]
+         };
+        console.log(config);
+         $(`#s_{{ section.id }} #slider_${id}`).slick(config);
+      }, 100);
+  
+    {% for tag in tags limit: 1 %}
+        setTimeout(() => {
+          toggle_tagged(id, '{{tag | strip}}');
+        }, 200);
+      {% endfor %}
+    }
+
+  $( document ).ready(function() {
+    filtered_featured_init('{{section.id}}');
+  });
+</script>
+
+<style>
+      #s_{{ section.id }} .slick-dots li button:before {
+        font-size: 20px;
+        color: #d5d5d5;
+        opacity: 1;
+      }
+
+      #s_{{section.id}} div.star, #s_{{section.id}} div.star svg {
+        width: 14px;
+        height: 14px;
+        vertical-align: super !important;
+    }
+
+      #s_{{ section.id }} .slick-dots li:not(.slick-active) button:before {
+        background-color: transparent !important;
+      }
+      #s_{{ section.id }} .slick-dots li.slick-active button:before {
+        color: #000;
+      }
+
+    #s_{{ section.id }} .thumbnails {
+        margin: 50px 10px 0px 10px;
+        position: relative;
+        display: block;
+    }
+
+    @media only screen and (max-width: 768px) {
+     #s_{{ section.id }} .thumbnails {
+        dispaly: none;
+      }
+    }
+
+    #s_{{ section.id }} .thumbnails svg {
+      width: 30px;
+      height: auto;
+    }
+
+    #s_{{ section.id }} select {
+      margin: 10px auto;
+      display: block;
+      background: none;
+      border: 1px solid #564B49;
+      color: #564B49 !important;
+      padding: 15px 35px;
+      border-radius: 7px;
+      width: 100%;
+      font-size: 20px !important;
+
+      outline: none !important;
+      box-shadow: none !important;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: transparent;
+      background-image: url("data:image/svg+xml;utf8,<svg fill='88BA43' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position-x: 95%;
+      background-position-y: 50%;
+    }
+
+    #s_{{ section.id }} .slick-track
+    {
+        display: flex !important;
+      padding-bottom: 50px !important;
+    }
+
+    #s_{{ section.id }} .slick-slide
+    {
+        height: inherit !important;
+    }
+
+    #s_{{ section.id }} .card__information {
+      padding-top: 0 !important;
+      padding-bottom: 60px !important;
+    }
+
+  #s_{{ section.id }} .slick-slide > div { height: 100%; }
+  #s_{{ section.id }} .slick-slide li.slide_card { height: 100%; }
+
+   #s_{{ section.id }} .filter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #254545;
+      border-radius: 8px;
+      border: 2px solid #254545;
+      padding: 0.5rem 10px;
+      overflow: hidden;
+      font-weight: 400 !important;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #s_{{ section.id }} .filter:hover {
+      background-color: #254545;
+      border-color: #254545;
+      color: white;
+    }
+
+    #s_{{ section.id }} .filter.checked {
+      background-color: #254545;
+      border-color: #254545;
+      color: white;
+    }
+
+  #s_{{ section.id }} svg.loox-icon {
+    width: {{section.settings.star_size}}px !important;
+    height:  {{section.settings.star_size}}px !important;
+  }
+
+  #s_{{ section.id }} .loox-rating-label {
+    font-size: {{section.settings.rating_font_size}}px !important;
+  }
+
+  #s_{{section.id}} .product_card_benefit {
+    margin-bottom: {{section.settings.benefit_padding_bottom}}px !important;
+    font-weight: {{ section.settings.benefit_font_weight }};
+    font-size: {{ section.settings.benefit_font_size }}px;
+  }
+
+  #s_{{section.id}} h3.card__heading.h5 {
+    margin-bottom: {{section.settings.title_padding_bottom}}px !important;
+    font-weight: {{ section.settings.title_font_weight }};
+    font-size: {{ section.settings.title_font_size }}px;
+  }
+
+  #s_{{section.id}} .price .price__container span {
+    margin-bottom: {{section.settings.price_padding_bottom}}px !important;
+    font-weight: {{ section.settings.price_font_weight }};
+    font-size: {{ section.settings.price_font_size }}px;
+  }
+
+    #s_{{ section.id }} .thumbnails svg {
+      display: block;
+      height: auto;
+  }
+
+  {% if section.settings.sub_and_save %}
+    #s_{{section.id}} .slick-list {
+      /*overflow: visible !important;*/
+    }
+    #s_{{section.id}} .slick-dots {
+      z-index: -1;
+      bottom: 25px !important;
+    }
+  {% endif %}
+  @media only screen and (max-width: 768px) {
+    #s_{{section.id}} .slick-list{padding:0 15% 0 0 !important;}
+    #s_{{section.id}} .thumbnails {
+      display: none !important;
+    }
+
+    #s_{{section.id}} .tag_header_container {
+      display: block !important;
+      margin-bottom: 0px !important;
+    }
+
+    #s_{{section.id}} .product_card_benefit {
+      font-size: {{ section.settings.m_benefit_font_size }}px;
+    }
+
+    #s_{{section.id}} h3.card__heading.h5 {
+      font-size: {{ section.settings.m_title_font_size }}px;
+    }
+
+    #s_{{section.id}} .price .price__container span {
+      font-size: {{ section.settings.m_price_font_size }}px;
+    }
+  }
+      #s_{{ section.id }} .tag_header_container {
+        display: flex; align-items: center; justify-content: space-between;
+      }
+
+      #s_{{ section.id }} .dt-tag-container {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+      }
+      #s_{{ section.id }} .desktop-only {display: block;}
+      #s_{{ section.id }} .mobile-only {display: none;}
+      #s_{{ section.id }} .small-card {
+        padding: 35px 15px;
+      }
+      @media only screen and (max-width: 768px) {
+        #s_{{ section.id }} .dt-tag-container {
+          flex-wrap: wrap;
+        }
+        #s_{{ section.id }} .f_filter.filter {
+          min-width: 45%;
+          padding: 0.5rem 12px;
+        }
+        #s_{{ section.id }} .small-card {
+            padding: 35px 0px;
+        }
+        #s_{{ section.id }} .{{ section.id }}_title {
+          display: block;
+          text-align: center;
+          width: 100%;
+          margin: auto;
+        }
+        #s_{{ section.id }} .tag_header_container {
+          display: block !important;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        #s_{{ section.id }} .desktop-only {display: none;}
+        #s_{{ section.id }} .mobile-only {display: block;}
+      }
+</style>
+
+<div
+  id="s_{{ section.id }}"
+  style="max-width: {{ section.settings.max_width }}px; margin: auto;"
+  class="bootstrap _demo_ filtered-collection-section"
+>
+  <div class="">
+    {%- for product in section.settings.collection.products %}
+       <!-- product {{ product.title }} -->
+   {%- endfor -%}
+    <div class="tag_header_container collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+      <div class="mobile-only d-none d-md-none px-2">
+        <select class="f_filter_dropdown">
+          {% for tag in tags %}
+            <option
+              {% if forloop.first %}
+                selected
+              {% endif %}
+            >
+              {{ tag | strip }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="d-block d-md-block" style="flex: 1 1 auto;">
+        <div class="dt-tag-container">
+          {% for tag in tags %}
+            <div class="f_filter filter lh-1 {% if forloop.first %}checked{% endif %}">{{ tag | strip }}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width: {{ section.settings.max_width }}px; margin: auto; border-radius: 4px;" class="page-width">
+      <div style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <div
+          id="{{ section.id }}_left_thumbnails"
+          class="thumbnails  {{ section.id }}_thumbnails d-flex align-items-center justify-content-center"
+          style="z-index: 100; cursor: pointer; left: 0; max-width: 40px; min-width: 40px; height: 40px;  user-select: none; background: #DCE2C9; border-radius: 50%; color: #{{ section.settings.arrow_colour }};"
+        >
+          {% render 'icon-pack', icon: 'chevron_left' %}
+        </div>
+        <div id="slider_{{ section.id }}" style="width: 100%;">
+          {%- for product in section.settings.collection.products -%}
+            <li
+              style="list-style: none !important; height: 100%; min-width: 300px;"
+              tags="{{ product.tags | join : ' ' }}"
+              class="px-1 slide_card {% for tag in product.tags %}{{ tag | replace: "'", '' | replace: ' ', '_' | downcase }}_tag {% endfor %}"
+            >
+              <div style="height: 100%;" class="w-100 small-card">
+                {% render 'new-product-card', product: product, options: section.settings, show_quick_add: false %}
+              </div>
+            </li>
+          {%- endfor -%}
+        </div>
+        <div
+          id="{{ section.id }}_right_thumbnails"
+          class="thumbnails {{ section.id }}_thumbnails d-flex align-items-center justify-content-center"
+          style="z-index: 100; cursor: pointer; left: 0; max-width: 40px; min-width: 40px; height: 40px;  user-select: none; background: #DCE2C9; border-radius: 50%; color: #{{ section.settings.arrow_colour }};"
+        >
+          {% render 'icon-pack', icon: 'chevron' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Filtered Featured",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag_prefix",
+      "label": "Tag Prefix (leave empty for no prefix: ie: hp_bs_)"
+    },
+    { "type": "checkbox", "id": "sub_and_save", "label": "Sub And Save", "default": false },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Featured collection",
+      "label": "Header"
+    },
+    { "type": "number", "id": "max_width", "label": "Max Width", "default": 1200 },
+    { "type": "text", "id": "tags", "label": "Tags (use a comma to separate)" },
+    { "type": "number", "id": "rating_font_size", "label": "Rating Font Size (px)", "default": 14 },
+    { "type": "number", "id": "star_size", "label": "Star Size (px)", "default": 10 },
+
+    { "type": "number", "id": "title_padding_bottom", "label": "Title Padding Bottom (px)", "default": 10 },
+    { "type": "number", "id": "title_font_weight", "label": "Title Font Weight (100s)", "default": 400 },
+    { "type": "number", "id": "title_font_size", "label": "Desktop Title Font Size (px)", "default": 15 },
+    { "type": "number", "id": "m_title_font_size", "label": "Mobile Title Font Size (px)", "default": 13 },
+
+    { "type": "number", "id": "benefit_padding_bottom", "label": "Benefit Padding Bottom (px)", "default": 0 },
+    { "type": "number", "id": "benefit_font_weight", "label": "Benefit Font Weight (100s)", "default": 400 },
+    { "type": "number", "id": "benefit_font_size", "label": "Desktop Benefit Font Size (px)", "default": 15 },
+    { "type": "number", "id": "m_benefit_font_size", "label": "Mobile Benefit Font Size (px)", "default": 13 },
+
+    { "type": "number", "id": "price_padding_bottom", "label": "Price Padding Bottom (px)", "default": 10 },
+    { "type": "number", "id": "price_font_weight", "label": "Price Font Weight (100s)", "default": 400 },
+    { "type": "number", "id": "price_font_size", "label": "Desktop Price Font Size (px)", "default": 15 },
+    { "type": "number", "id": "m_price_font_size", "label": "Mobile Price Font Size (px)", "default": 13 },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "label": "Products To Show"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Filtered Featured"
+    }
+  ]
+}
+{% endschema %}
