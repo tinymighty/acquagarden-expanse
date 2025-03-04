@@ -2,7 +2,7 @@
 
 {% schema %}
 {
-  "name": "t:labels.collection_list",
+  "name": "Collections Browser",
   "class": "index-section",
   "max_blocks": 18,
   "settings": [
@@ -11,56 +11,6 @@
       "id": "title",
       "label": "t:labels.heading",
       "default": "Popular categories"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "label": "t:labels.heading_size",
-      "default": "h2",
-      "options": [
-        {
-          "value": "h3",
-          "label": "t:labels.sizes.small"
-        },
-        {
-          "value": "h2",
-          "label": "t:labels.sizes.medium"
-        },
-        {
-          "value": "h1",
-          "label": "t:labels.sizes.large"
-        },
-        {
-          "value": "h0",
-          "label": "t:labels.sizes.extra_large"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "heading_position",
-      "label": "t:labels.heading_position",
-      "default": "left",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:labels.alignments.left"
-        },
-        {
-          "value": "center",
-          "label": "t:labels.alignments.center"
-        },
-        {
-          "value": "right",
-          "label": "t:labels.alignments.right"
-        }
-      ]
-    },
-    {
-      "type": "checkbox",
-      "id": "divider",
-      "label": "t:actions.show_section_divider",
-      "default": false
     }
   ],
   "blocks": [
