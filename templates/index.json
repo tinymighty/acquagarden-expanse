@@ -96,10 +96,34 @@
             "collection": "vegetable-plants",
             "title": ""
           }
+        },
+        "collection_X3jpwM": {
+          "type": "collection",
+          "settings": {
+            "collection": "bedding-flower-plants",
+            "title": ""
+          }
+        },
+        "collection_X3jpwN": {
+          "type": "collection",
+          "settings": {
+            "collection": "rose-plants",
+            "title": ""
+          }
+        },
+        "collection_X3jpwO": {
+          "type": "collection",
+          "settings": {
+            "collection": "shrubs-perennials",
+            "title": ""
+          }
         }
       },
       "block_order": [
-        "collection_X3jpwL"
+        "collection_X3jpwL",
+        "collection_X3jpwM",
+        "collection_X3jpwN",
+        "collection_X3jpwO"
       ],
       "settings": {
         "title": "Popular categories"
