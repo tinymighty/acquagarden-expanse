@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "actions": {
     "slideshow_pause": "Metti in pausa presentazione",
@@ -11,7 +20,7 @@
     "send_as_gift": "Voglio inviarlo come regalo",
     "add_order_note": "Aggiungi una nota all'ordine",
     "close": "Chiudi",
-    "terms_i_agree_html": "Sono d'accordo con i <a href='{{ url }}' target='_blank'>termini e condizioni</a>",
+    "terms_i_agree_html": "Sono d'accordo con i <a href='{{ url }}' target='_blank'>termini e condizioni<\/a>",
     "terms_i_agree": "Sono d'accordo con i termini e le condizioni",
     "checkout": "Check-out",
     "expand_submenu": "Espandi sottomenu",
@@ -103,7 +112,7 @@
     "save_amount": "Salva {{ saved_amount }}",
     "placeholder_product_description": "Questa area è utilizzata per descrivere i dettagli del tuo prodotto. Racconta ai clienti l'aspetto, le caratteristiche e lo stile del tuo prodotto. Aggiungi dettagli sul colore, i materiali utilizzati, le dimensioni e dove è stato realizzato.",
     "tax_included": "Imposte incluse.",
-    "shipping_policy_html": "<a href='{{ link }}'>Spedizione</a> calcolata alla cassa.",
+    "shipping_policy_html": "<a href='{{ link }}'>Spedizione<\/a> calcolata alla cassa.",
     "sold_out": "Esaurito",
     "view_in_space_explanation": "Visualizza nel tuo spazio, carica l'articolo nella finestra della realtà aumentata",
     "low_stock_count": {
@@ -123,7 +132,7 @@
     },
     "contact_confirmation": "Grazie per averci contattato. Risponderemo il prima possibile.",
     "404_page_not_found": "404 Pagina non trovata",
-    "page_does_not_exist_html": "<p>La pagina che stavi cercando non esiste. </p><p><a href='{{ url }}'>Continua a comprare</a></p>",
+    "page_does_not_exist_html": "<p>La pagina che stavi cercando non esiste. <\/p><p><a href='{{ url }}'>Continua a comprare<\/a><\/p>",
     "you_save_amount": "Risparmi {{ saved_amount }}",
     "search_result_count": {
       "one": "{{ count }} risultato",
@@ -132,12 +141,12 @@
     "search_no_results_html": "Cercare \"{{ terms }}\"",
     "address_error": "Errore nella ricerca di questo indirizzo",
     "address_no_results": "Nessun risultato per questo indirizzo",
-    "address_query_limit_html": "Hai superato il limite di utilizzo delle API di Google. Considera l'aggiornamento ad un <a href=\"https://developers.google.com/maps/premium/usage-limits\">Piano Premium</a>.",
-    "map_auth_error_html": "Si è verificato un problema durante l'autenticazione del tuo account Google Maps. Crea e attiva i permessi <a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">JavaScript API</a> e <a href=\"https://developers.google.com/maps/documentation/geocoding/get-api-key\">Geocoding API</a> della tua applicazione.",
+    "address_query_limit_html": "Hai superato il limite di utilizzo delle API di Google. Considera l'aggiornamento ad un <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Piano Premium<\/a>.",
+    "map_auth_error_html": "Si è verificato un problema durante l'autenticazione del tuo account Google Maps. Crea e attiva i permessi <a href=\"https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key\">JavaScript API<\/a> e <a href=\"https:\/\/developers.google.com\/maps\/documentation\/geocoding\/get-api-key\">Geocoding API<\/a> della tua applicazione.",
     "pick_up_available": "Ritiro disponibile",
     "pick_up_currently_unavailable": "Ritiro attualmente non disponibile",
-    "pick_up_available_at_html": "Ritiro disponibile a <strong>{{ location_name }}</strong>",
-    "pick_up_unavailable_at_html": "Ritiro attualmente non disponibile presso <strong>{{ location_name }}</strong>",
+    "pick_up_available_at_html": "Ritiro disponibile a <strong>{{ location_name }}<\/strong>",
+    "pick_up_unavailable_at_html": "Ritiro attualmente non disponibile presso <strong>{{ location_name }}<\/strong>",
     "cart_max_quantity": "Puoi solo avere {{ quantity }} di {{ title }} nel tuo carrello.",
     "create_your_password_to_activate": "Crea una password per attivare il tuo account.",
     "disabled": "Disabilitato",
@@ -160,7 +169,7 @@
     "variant_sold_out_or_unavailable": "Variante esaurita o non disponibile",
     "will_be_powered_by_html": "Questo negozio sarà ospitato su {{ shopify }}",
     "you_must_agree": "Devi accettare i termini e le condizioni di vendita per procedere al pagamento",
-    "admin_link_html": "Sei il proprietario di un negozio? <a href=\"/admin\" class=\"text-link\">Entra qui</a>"
+    "admin_link_html": "Sei il proprietario di un negozio? <a href=\"\/admin\" class=\"text-link\">Entra qui<\/a>"
   },
   "labels": {
     "home": "Inizio",
@@ -205,7 +214,7 @@
     "pages": "Pagine",
     "articles": "Articoli",
     "products": "prodotti",
-    "from_price_html": "<span>da</span> {{ price }}",
+    "from_price_html": "<span>da<\/span> {{ price }}",
     "tagged_with": "Contrassegnato da tag \"{{ tag }}\"",
     "page_title": "Pagina {{ page }}",
     "my_account": "Il mio account",
