@@ -1,0 +1,59 @@
+/* styles for custom components added to the Expanse 6.10 theme 
+for overrides, use overrides.css 
+*/
+
+.featured-collections-browser {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.featured-collections-browser__tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+}
+.featured-collections-browser__tab {
+  padding: 5px 10px;
+  color: #254545;
+  border-radius: 8px;
+  border: 2px solid #254545;
+  cursor: pointer;
+}
+.featured-collections-browser__tab:hover, 
+.featured-collections-browser__tab--active {
+  background-color: #254545;
+  border-color: #254545;
+  color: white;
+}
+.featured-collections-browser__content {
+  width: 100vw;
+}
+.featured-collections-browser__collection {
+  display: none;
+}
+.featured-collections-browser__collection--active {
+  display: block;
+}
+.featured-collections-browser__collection__grid {
+
+}
+.featured-collections-browser__collection__grid .grid-item {
+
+}
+.featured-collections-browser__collection__grid .grid-item__meta {
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+.featured-collections-browser__collection__view-all {
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .featured-collections-browser__tabs {
+    gap: 1rem;
+  }
+  .featured-collections-browser__tab {
+    padding: 10px 30px;
+  }
+}

@@ -16,7 +16,6 @@
   assign title = title | default: section.settings.title
   assign heading_size = heading_size | default: section.settings.heading_size | default: 'h2'
   assign heading_position = heading_position | default: section.settings.heading_position | default: 'left'
-  assign divider = divider | default: section.settings.divider, allow_false: true | default: false, allow_false: true
 
   assign is_empty = true
   if section.blocks.size > 0
@@ -25,7 +24,6 @@
 
 -%}
 
-{%- if divider -%}<div class="section--divider">{%- endif -%}
 
 <div class="page-width">
   {%- if title != blank -%}
@@ -33,17 +31,52 @@
       <h2 class="section-header__title {{ heading_size }}">{{ title | escape }}</h2>
     </div>
   {%- endif -%}
+</div>
 
-  <div
-    class="featured-collections--tabs"
+<is-land on:visible>
+  <featured-collections-browser
+    class="featured-collections-browser"
   >
-
     {%- unless is_empty -%}
+      <div class="featured-collections-browser__tabs page-width">
       {%- for block in section.blocks -%}
         {%- assign collection = collections[block.settings.collection] -%}
-        {{ collection.title }}
+        <div class="featured-collections-browser__tab">{{ collection.title }}</div>
       {%- endfor -%}
-
+      </div>
+      <div class="">
+        <div class="featured-collections-browser__content page-width page-width--flush-small">
+        {%- for block in section.blocks -%}
+          {%- assign collection = collections[block.settings.collection] -%}
+      
+          <div class="featured-collections-browser__collection
+          {%- if forloop.first %} featured-collections-browser__collection--active{%- endif -%}
+          ">
+            <div class="featured-collections-browser__collection__grid new-grid product-grid scrollable-grid--small" data-view="xsmall">
+            {% if collection != blank %}
+              {% assign sorted_products = collection.products | sort: 'best-selling' %}
+              {% for product in sorted_products limit: 10 %}
+                {% render 'product-grid-item',
+                product: product,
+                collection: collection,
+                sizeVariable: products_per_row,
+                fallback: fallback
+                %}
+              {% endfor %}
+            {% endif %}
+            </div>
+            <div class="featured-collections-browser__collection__view-all">
+              <a href="{{ collection.url }}" >
+              {% render 't_with_fallback',
+                key: 'info.view_all',
+                fallback: 'View all'
+              %} {{ collection.title }}
+            </a>
+            </div>
+          </div>
+        {%- endfor -%}
+        </div>
+      </div>
     {%- endunless -%}
 
     {%- if is_empty -%}
@@ -56,7 +89,12 @@
         </div>
       </div>
     {%- endif -%}
-  </div>
-</div>
+    
+  </featured-collections-browser>
+</is-land>
 
-{%- if divider -%}</div>{%- endif -%}
+
+<script type="module">
+  import 'components/section-featured-collections-browser';
+</script>
+  
