@@ -1,0 +1,54 @@
+{% assign parent_collection = collection.metafields.custom.parent_collection %}
+{% if parent_collection != blank %}
+  <div class="parent-collection">
+        <div><a href="{{ parent_collection.value.url }}" class="parent-collection-link">
+          &lt; Back to {{ parent_collection.value.title }}
+        </a></div>
+    </div>
+{% endif %} 
+
+
+{% assign child_collections = collection.metafields.custom.child_collections %}
+{% if child_collections != blank %}
+  <div class="child-collections-grid">
+    <div class="child-collections-wrapper">
+      {% for collection_ref in child_collections.value %}
+        {% assign collection_handle = collection_ref.handle %}
+        {% assign child_collection = collections[collection_handle] %}
+        {% if child_collection != blank %}
+          <div><a href="{{ child_collection.url }}" class="child-collection-link">
+            {{ child_collection.title }}
+          </a></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %} 
+
+<style type="text/css">
+  .parent-collection {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+  }
+  .parent-collection-link {
+    padding: 5px;
+    display: block;
+  }
+  .child-collections-grid {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+  }
+
+  .child-collections-wrapper {
+
+  }
+
+  .child-collection-link {
+    padding: 5px;
+    display: block;
+    font-size: 1.2em;
+  }
+</style>

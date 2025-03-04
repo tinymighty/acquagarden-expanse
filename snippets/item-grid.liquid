@@ -27,6 +27,8 @@
 {%- capture grid_content -%}
   {%- if enable_filters -%}
     <div data-sticky-sidebar class="grid__item medium-up--one-fifth item-grid__sidebar">
+      {%- render 'collection-grid-child-collections' -%} 
+      
       <div id="CollectionSidebar">
         <div class="collection-sidebar small--hide" id="CollectionSidebarFilterWrap">
           <div class="filter-wrapper">
