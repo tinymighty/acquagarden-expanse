@@ -59,18 +59,62 @@
         "divider": false
       }
     },
-    "featured_collection_zemH9n": {
-      "type": "featured-collection",
+    "featured-collections-browser": {
+      "type": "featured-collections-browser",
+      "blocks": {
+        "collection_X3jpwL": {
+          "type": "collection",
+          "settings": {
+            "collection": "vegetable-plants",
+            "title": ""
+          }
+        },
+        "collection_46q6Lq": {
+          "type": "collection",
+          "settings": {
+            "collection": "bedding-plants",
+            "title": ""
+          }
+        },
+        "collection_kwE97H": {
+          "type": "collection",
+          "settings": {
+            "collection": "fruit-plants",
+            "title": ""
+          }
+        },
+        "collection_RtkLhh": {
+          "type": "collection",
+          "settings": {
+            "collection": "rose-plants",
+            "title": ""
+          }
+        },
+        "collection_Kr8j4g": {
+          "type": "collection",
+          "settings": {
+            "collection": "shrubs-perennials",
+            "title": ""
+          }
+        },
+        "collection_8h6fMG": {
+          "type": "collection",
+          "settings": {
+            "collection": "trees",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_X3jpwL",
+        "collection_46q6Lq",
+        "collection_kwE97H",
+        "collection_RtkLhh",
+        "collection_Kr8j4g",
+        "collection_8h6fMG"
+      ],
       "settings": {
-        "title": "Vegetables To Plant Now",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "home_featured_products": "vegetables-to-plant-now",
-        "count": 10,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false
+        "title": "Popular categories"
       }
     },
     "featured_collection_mQreKt": {
@@ -85,48 +129,6 @@
         "mobile_scrollable": true,
         "view_all": true,
         "divider": false
-      }
-    },
-    "featured-collections-browser": {
-      "type": "featured-collections-browser",
-      "blocks": {
-        "collection_X3jpwL": {
-          "type": "collection",
-          "settings": {
-            "collection": "vegetable-plants",
-            "title": ""
-          }
-        },
-        "collection_X3jpwM": {
-          "type": "collection",
-          "settings": {
-            "collection": "bedding-flower-plants",
-            "title": ""
-          }
-        },
-        "collection_X3jpwN": {
-          "type": "collection",
-          "settings": {
-            "collection": "rose-plants",
-            "title": ""
-          }
-        },
-        "collection_X3jpwO": {
-          "type": "collection",
-          "settings": {
-            "collection": "shrubs-perennials",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_X3jpwL",
-        "collection_X3jpwM",
-        "collection_X3jpwN",
-        "collection_X3jpwO"
-      ],
-      "settings": {
-        "title": "Popular categories"
       }
     },
     "featured-collections": {
@@ -592,9 +594,8 @@
     "text_and_image_cYgC3g",
     "featured_collection_XNjNXE",
     "featured_collection_brPzkY",
-    "featured_collection_zemH9n",
-    "featured_collection_mQreKt",
     "featured-collections-browser",
+    "featured_collection_mQreKt",
     "featured-collections",
     "featured-collection",
     "scrolling_text_YD9DRb",
