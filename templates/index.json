@@ -90,50 +90,20 @@
     "featured-collections-browser": {
       "type": "featured-collections-browser",
       "blocks": {
-        "collection-0": {
+        "collection_X3jpwL": {
           "type": "collection",
           "settings": {
             "collection": "vegetable-plants",
             "title": ""
           }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "bedding-flower-plants",
-            "title": ""
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "herb-plants",
-            "title": ""
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "rose-plants",
-            "title": ""
-          }
-        },
-        "collection-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "bulbs",
-            "title": ""
-          }
-        },
-        "collection-5": {
-          "type": "collection",
-          "settings": {
-            "collection": "shrubs-perennials",
-            "title": ""
-          }
         }
       },
-      "settings": {}
+      "block_order": [
+        "collection_X3jpwL"
+      ],
+      "settings": {
+        "title": "Popular categories"
+      }
     },
     "featured-collections": {
       "type": "featured-collections",
