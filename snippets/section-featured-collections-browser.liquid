@@ -38,13 +38,13 @@
     class="featured-collections--tabs"
   >
 
-    {% unless is_empty %}
-    {%- for block in section.blocks -%}
-      {%- assign collection = collections[block.settings.collection] -%}
-      {{ collection.title }}
-    {%- endfor -%}
+    {%- unless is_empty -%}
+      {%- for block in section.blocks -%}
+        {%- assign collection = collections[block.settings.collection] -%}
+        {{ collection.title }}
+      {%- endfor -%}
 
-    {% endunless %}
+    {%- endunless -%}
 
     {%- if is_empty -%}
       <div class="page-width">
