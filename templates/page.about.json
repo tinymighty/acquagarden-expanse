@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -17,13 +8,13 @@
     "text_and_image_6zH93y": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/1_2fa7ceaf-b6b0-4aa5-9fe8-500716dda8a1.jpg",
+        "image": "shopify:\/\/shop_images\/1_2fa7ceaf-b6b0-4aa5-9fe8-500716dda8a1.jpg",
         "image_mask": "none",
         "image2_mask": "none",
         "subtitle": "",
         "title": "Transforming Gardening into Pure Joy",
         "heading_size": "h2",
-        "text": "<p>Gardening is about more than plants—it’s about creating moments of peace, beauty, and achievement. But let’s face it: choosing the right plants, ensuring reliable quality, trusting they’ll arrive in perfect condition, and getting them to thrive can be challenging.<br/><br/>That’s where we come in. At Acqua Garden, we believe gardening should be a joy from the start, not a chore. We make it easy, enjoyable, and accessible for everyone—whether you’re a seasoned pro or planting your very first seedling. And we guarantee the highest quality, to ensure your success.</p>",
+        "text": "<p>Gardening is about more than plants—it’s about creating moments of peace, beauty, and achievement. But let’s face it: choosing the right plants, ensuring reliable quality, trusting they’ll arrive in perfect condition, and getting them to thrive can be challenging.<br\/><br\/>That’s where we come in. At Acqua Garden, we believe gardening should be a joy from the start, not a chore. We make it easy, enjoyable, and accessible for everyone—whether you’re a seasoned pro or planting your very first seedling. And we guarantee the highest quality, to ensure your success.<\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -43,11 +34,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/AG_Premium_Icon_32f36241-6b18-4db6-8fb4-bf5b59b2a692.png",
+            "image": "shopify:\/\/shop_images\/AG_Premium_Icon_32f36241-6b18-4db6-8fb4-bf5b59b2a692.png",
             "image_mask": "none",
             "image_width": 60,
             "title": "Plants That Thrive, Not Just Survive",
-            "text": "<p>Every plant we send out is nurtured with expert care to ensure it arrives healthy, strong, and ready to flourish in your garden.</p>",
+            "text": "<p>Every plant we send out is nurtured with expert care to ensure it arrives healthy, strong, and ready to flourish in your garden.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -56,11 +47,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/AG_Range_Icon_1.png",
+            "image": "shopify:\/\/shop_images\/AG_Range_Icon_1.png",
             "image_mask": "none",
             "image_width": 60,
             "title": "Handpicked Varieties, All Year Round",
-            "text": "<p>From seasonal favourites to rare gems, our collection is curated to inspire and excite—no matter the time of year or the size of your garden.</p>",
+            "text": "<p>From seasonal favourites to rare gems, our collection is curated to inspire and excite—no matter the time of year or the size of your garden.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -69,11 +60,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/AG_Delivery_Icon_3dd26526-2b05-420b-9808-affe32aef517.png",
+            "image": "shopify:\/\/shop_images\/AG_Delivery_Icon_3dd26526-2b05-420b-9808-affe32aef517.png",
             "image_mask": "none",
             "image_width": 60,
             "title": "Delivery You Can Rely On",
-            "text": "<p>We don’t just pack your plants; we cocoon them. With our bespoke packaging, your plants travel safely and arrive fresh, vibrant, and ready to grow.</p>",
+            "text": "<p>We don’t just pack your plants; we cocoon them. With our bespoke packaging, your plants travel safely and arrive fresh, vibrant, and ready to grow.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -82,11 +73,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Free_Vegetable_Icon_1.png",
+            "image": "shopify:\/\/shop_images\/Free_Vegetable_Icon_1.png",
             "image_mask": "none",
             "image_width": 60,
             "title": "Fresh & Homegrown Produce",
-            "text": "<p>Plants are individually selected for each order with quality checks and controls and exceptional plant care</p>",
+            "text": "<p>Plants are individually selected for each order with quality checks and controls and exceptional plant care<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -95,11 +86,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/AG_Happiness_Icon_9942ff01-3db0-4c8f-94de-31a300c2e07e.png",
+            "image": "shopify:\/\/shop_images\/AG_Happiness_Icon_9942ff01-3db0-4c8f-94de-31a300c2e07e.png",
             "image_mask": "none",
             "image_width": 60,
             "title": "A Promise You Can Trust",
-            "text": "<p>Our 100% Happiness Guarantee means you can shop with confidence. Not happy? We’ll make it right—no questions asked.</p>",
+            "text": "<p>Our 100% Happiness Guarantee means you can shop with confidence. Not happy? We’ll make it right—no questions asked.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -108,11 +99,11 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Plant_vegetables_corn_1.png",
+            "image": "shopify:\/\/shop_images\/Plant_vegetables_corn_1.png",
             "image_mask": "none",
             "image_width": 60,
             "title": "Personalised Support at Every Step",
-            "text": "<p>Whether you’re choosing plants, planting them, or nurturing them to their full glory, we’re here with guidance, tips, and expert advice.</p>",
+            "text": "<p>Whether you’re choosing plants, planting them, or nurturing them to their full glory, we’re here with guidance, tips, and expert advice.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -139,13 +130,13 @@
     "text_and_image_FWLexf": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/1_42a352c0-2390-4193-b64a-28edbbca3422.jpg",
+        "image": "shopify:\/\/shop_images\/1_42a352c0-2390-4193-b64a-28edbbca3422.jpg",
         "image_mask": "none",
         "image2_mask": "none",
         "subtitle": "",
         "title": "The Acqua Garden Difference",
         "heading_size": "h2",
-        "text": "<p>We’re not just a plants company—we’re passionate gardeners who know what it feels like to open a delivery and find plants that <em>don’t</em> live up to expectations. That’s why we do things differently.</p><p>At our commercial greenhouse, every plant is nurtured from the start. We feed, water, and nurture them until they’re strong, healthy, and vibrant. From there, our expert packing team ensures your plants are securely packaged and ready for their journey to your door.</p><p>Our customer experience team? They’re not just here to help; they’re here to inspire. From plant selection to troubleshooting care, they’ll guide you with kindness, patience, and knowledge.</p>",
+        "text": "<p>We’re not just a plants company—we’re passionate gardeners who know what it feels like to open a delivery and find plants that <em>don’t<\/em> live up to expectations. That’s why we do things differently.<\/p><p>At our commercial greenhouse, every plant is nurtured from the start. We feed, water, and nurture them until they’re strong, healthy, and vibrant. From there, our expert packing team ensures your plants are securely packaged and ready for their journey to your door.<\/p><p>Our customer experience team? They’re not just here to help; they’re here to inspire. From plant selection to troubleshooting care, they’ll guide you with kindness, patience, and knowledge.<\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -161,13 +152,13 @@
     "text_and_image_fdcwGJ": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/2_0759cf2f-e598-4e7e-a866-23d70b556e7d.jpg",
+        "image": "shopify:\/\/shop_images\/2_0759cf2f-e598-4e7e-a866-23d70b556e7d.jpg",
         "image_mask": "none",
         "image2_mask": "none",
         "subtitle": "",
         "title": "Our Story",
         "heading_size": "h2",
-        "text": "<p>Acqua Garden was born in 2018 from one simple idea: <em>gardening should be easy for everyone.</em></p><p>After a successful career as an international corporate lawyer, founder Jonathan Martin wanted to combine his lifelong passion for gardening with a vision for something better. He saw the frustrations of finding high-quality plants online—often poor quality, the lack of reliable care guidance, the poor delivery standards—and he decided to change it.</p><p>Acqua Garden is now the home for anyone who loves plants. Whether you’re growing tomatoes on a city balcony or creating a vibrant garden oasis, we’re here to help you every step of the way.</p><p>Together, let’s make your garden the happiest place on Earth!</p>",
+        "text": "<p>Acqua Garden was born in 2018 from one simple idea: <em>gardening should be easy for everyone.<\/em><\/p><p>After a successful career as an international corporate lawyer, founder Jonathan Martin wanted to combine his lifelong passion for gardening with a vision for something better. He saw the frustrations of finding high-quality plants online—often poor quality, the lack of reliable care guidance, the poor delivery standards—and he decided to change it.<\/p><p>Acqua Garden is now the home for anyone who loves plants. Whether you’re growing tomatoes on a city balcony or creating a vibrant garden oasis, we’re here to help you every step of the way.<\/p><p>Together, let’s make your garden the happiest place on Earth!<\/p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
