@@ -107,11 +107,11 @@
           <div class="grid-product__actions">
             {%- if quick_shop_enable and type != 'horizontal' -%}
               {%- capture quickShopButton -%}
-                <button type="button" class="btn btn--circle btn--icon quick-product__btn js-modal-open-quick-modal-{{ product.id }} small--hide" title="
+                <button type="button" class="btn  quick-product__btn js-modal-open-quick-modal-{{ product.id }} small--hide" title="
                   {% render 't_with_fallback', key: 'labels.quick_shop', fallback: 'Quick shop' -%}
                   " data-handle="{{ product.handle }}">
-                  {% render 'icon', name: 'search' %}
-                  <span class="icon__fallback-text visually-hidden">
+                  {% render 'icon', name: 'cart' %}
+                  <span class="icon__fallback-text">
                     {% render 't_with_fallback', key: 'labels.quick_shop', fallback: 'Quick shop' %}
                   </span>
                 </button>
