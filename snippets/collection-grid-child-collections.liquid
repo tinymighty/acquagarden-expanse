@@ -9,7 +9,7 @@
   {% assign child_collections = parent_collection.metafields.custom.child_collections %}
 {% endif %}
 
-{% if child_collections == blank %}
+{% if child_collections == blank and parent_collection.handle != collection.handle %}
   <div class="parent-collection">
         <div><a href="{{ parent_collection.url }}" class="parent-collection-link">
           &lt; Back to {{ parent_collection.title }}
