@@ -322,21 +322,6 @@
         "color_scheme": "none"
       }
     },
-    "featured-collection2": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Featured Collection",
-        "heading_size": "h2",
-        "heading_position": "left",
-        "home_featured_products": "",
-        "count": 5,
-        "products_per_row": 5,
-        "mobile_scrollable": false,
-        "view_all": true,
-        "divider": false
-      }
-    },
     "slideshow-split2": {
       "type": "slideshow-split",
       "blocks": {
@@ -377,6 +362,7 @@
         "slide_UQiCCQ",
         "slideshow-split2-0"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 550,
@@ -616,7 +602,6 @@
     "featured-collection",
     "scrolling_text_YD9DRb",
     "testimonials",
-    "featured-collection2",
     "slideshow-split2",
     "promo-grid",
     "featured-collection3",
