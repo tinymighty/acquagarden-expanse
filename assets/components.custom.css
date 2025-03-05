@@ -12,6 +12,8 @@ for overrides, use overrides.css
   flex-direction: row;
   gap: 0.2rem;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
 }
 .featured-collections-browser__tab {
   padding: 5px 10px;
