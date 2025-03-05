@@ -33,6 +33,7 @@
             <a href="{{ child_collection.url }}" class="child-collection-link {% if collection.handle == child_collection.handle %}child-collection-link--active{% endif %}">
             {{ child_collection.title }}
             </a>
+            <link rel="prefetch" href="{{ child_collection.url }}" />
           </div>
         {% endif %}
       {% endfor %}
