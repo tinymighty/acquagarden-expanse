@@ -24,77 +24,77 @@
 
 -%}
 
-
-<div class="page-width">
-  {%- if title != blank -%}
-    <div class="section-header text-{{ heading_position }}">
-      <h2 class="section-header__title {{ heading_size }}">{{ title | escape }}</h2>
-    </div>
-  {%- endif -%}
-</div>
-
-<is-land on:visible>
-  <featured-collections-browser
-    class="featured-collections-browser"
-  >
-    {%- unless is_empty -%}
-      <div class="featured-collections-browser__tabs page-width">
-      {%- for block in section.blocks -%}
-        {%- assign collection = collections[block.settings.collection] -%}
-        <div class="featured-collections-browser__tab">{{ collection.title }}</div>
-      {%- endfor -%}
-      </div>
-      <div class="">
-        <div class="featured-collections-browser__content page-width page-width--flush-small">
-        {%- for block in section.blocks -%}
-          {%- assign collection = collections[block.settings.collection] -%}
-      
-          <div class="featured-collections-browser__collection
-          {%- if forloop.first %} featured-collections-browser__collection--active{%- endif -%}
-          ">
-            <div class="featured-collections-browser__collection__grid new-grid product-grid scrollable-grid--small" data-view="xsmall">
-            {% if collection != blank %}
-              {% assign sorted_products = collection.products | sort: 'best-selling' %}
-              {% for product in sorted_products limit: 10 %}
-                {% render 'product-grid-item',
-                product: product,
-                collection: collection,
-                sizeVariable: products_per_row,
-                fallback: fallback
-                %}
-              {% endfor %}
-            {% endif %}
-            </div>
-            <div class="featured-collections-browser__collection__view-all">
-              <a href="{{ collection.url }}" >
-              {% render 't_with_fallback',
-                key: 'info.view_all',
-                fallback: 'View all'
-              %} {{ collection.title }}
-            </a>
-            </div>
-          </div>
-        {%- endfor -%}
-        </div>
-      </div>
-    {%- endunless -%}
-
-    {%- if is_empty -%}
-      <div class="page-width">
-        <div class="rte clearfix">
-          {% render 't_with_fallback',
-            key: 'info.section_no_content',
-            fallback: "This section doesn't currently include any content. Add content to this section using the sidebar."
-          %}
-        </div>
+<div class="index-section color-scheme-2">
+  <div class="page-width">
+    {%- if title != blank -%}
+      <div class="text-{{ heading_position }} mb-2">
+        <h2 class="{{ heading_size }}">{{ title | escape }}</h2>
       </div>
     {%- endif -%}
-    
-  </featured-collections-browser>
-</is-land>
+  </div>
+
+  <is-land on:visible>
+    <featured-collections-browser
+      class="featured-collections-browser"
+    >
+      {%- unless is_empty -%}
+        <div class="featured-collections-browser__tabs page-width">
+        {%- for block in section.blocks -%}
+          {%- assign collection = collections[block.settings.collection] -%}
+          <div class="featured-collections-browser__tab">{{ collection.title }}</div>
+        {%- endfor -%}
+        </div>
+        <div class="">
+          <div class="featured-collections-browser__content page-width page-width--flush-small">
+          {%- for block in section.blocks -%}
+            {%- assign collection = collections[block.settings.collection] -%}
+        
+            <div class="featured-collections-browser__collection
+            {%- if forloop.first %} featured-collections-browser__collection--active{%- endif -%}
+            ">
+              <div class="featured-collections-browser__collection__grid new-grid product-grid scrollable-grid--small" data-view="xsmall">
+              {% if collection != blank %}
+                {% assign sorted_products = collection.products | sort: 'best-selling' %}
+                {% for product in sorted_products limit: 10 %}
+                  {% render 'product-grid-item',
+                  product: product,
+                  collection: collection,
+                  sizeVariable: products_per_row,
+                  fallback: fallback
+                  %}
+                {% endfor %}
+              {% endif %}
+              </div>
+              <div class="featured-collections-browser__collection__view-all">
+                <a href="{{ collection.url }}" class="btn btn--primary">
+                {% render 't_with_fallback',
+                  key: 'info.view_all',
+                  fallback: 'View all'
+                %} {{ collection.title }}
+              </a>
+              </div>
+            </div>
+          {%- endfor -%}
+          </div>
+        </div>
+      {%- endunless -%}
+
+      {%- if is_empty -%}
+        <div class="page-width">
+          <div class="rte clearfix">
+            {% render 't_with_fallback',
+              key: 'info.section_no_content',
+              fallback: "This section doesn't currently include any content. Add content to this section using the sidebar."
+            %}
+          </div>
+        </div>
+      {%- endif -%}
+      
+    </featured-collections-browser>
+  </is-land>
 
 
-<script type="module">
-  import 'components/section-featured-collections-browser';
-</script>
-  
+  <script type="module">
+    import 'components/section-featured-collections-browser';
+  </script>
+</div>
