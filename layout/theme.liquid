@@ -82,7 +82,7 @@
   </head>
 
   <body
-    class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}"
+    class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} template-{{ template | replace: '.', '-' }}{% if request.path == '/challenge' %} template-challange{% endif %}"
     data-button_style="{{ settings.button_style }}"
     data-edges="{{ settings.roundness }}"
     data-type_header_capitalize="{{ settings.type_header_capitalize }}"

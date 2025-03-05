@@ -59,3 +59,14 @@
     display: block;
     margin-bottom: 5px;
   }
+
+
+  /* for collection.no-sidebar template, show 4 product per row */
+.template-collection-no-sidebar [data-view='medium'] .grid-item {
+  flex: 0 0 25%;
+}
+@media only screen and (max-width: 768px) {
+  .template-collection-no-sidebar [data-view='medium'] .grid-item {
+    flex: 0 0 calc(100% / 3);
+  }
+}
