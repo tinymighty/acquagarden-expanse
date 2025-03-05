@@ -57,6 +57,45 @@
           <div {{ block.shopify_attributes }}>
             {%- if collection.description != blank and current_filter_size == 0 -%}
               {%- render 'rte', slot: collection.description, class: 'rte--collection-desc enlarge-text' -%}
+              <script type="text/javascript">
+                const container = document.querySelector('.rte--collection-desc');
+                if (container) {
+                  const hr = container.querySelector('hr');
+                  if (hr) {
+                    // Create wrapper div with hidden class
+                    const hiddenDiv = document.createElement('div');
+                    hiddenDiv.classList.add('visually-hidden');
+                    
+                    // Gather all siblings after hr
+                    let sibling = hr.nextSibling;
+                    while (sibling) {
+                      const nextSibling = sibling.nextSibling;
+                      hiddenDiv.appendChild(sibling);
+                      sibling = nextSibling;
+                    }
+                    
+                    // Insert wrapper after hr
+                    hr.parentNode.insertBefore(hiddenDiv, hr.nextSibling);
+                    
+                    // Create "Read more" link to replace hr
+                    const link = document.createElement('a');
+                    link.href = '#';
+                    link.textContent = 'Read more';
+                    link.style.cursor = 'pointer';
+                    link.style.display = 'block';
+                    link.addEventListener('click', function(e) {
+                      e.preventDefault();
+                      hiddenDiv.classList.toggle('visually-hidden');
+                      link.textContent = hiddenDiv.classList.contains('visually-hidden') ? 'Read more' : 'Read less';
+                    });
+                    
+                    // Replace hr with link
+                    hr.parentNode.appendChild(link);
+                    hr.remove();
+                    
+                  }
+                }
+              </script>
             {%- endif -%}
           </div>
         {%- when 'subcollections' -%}
