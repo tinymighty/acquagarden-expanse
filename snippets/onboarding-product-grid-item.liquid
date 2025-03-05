@@ -40,7 +40,7 @@
   "
 >
   <div class="grid-item__content">
-    <a href="{{ product.url | within: collection | default: '#' }}" class="grid-item__link">
+    <a href="{{ product.url | default: '#' }}" class="grid-item__link">
       <div class="grid-product__image-wrap">
         {%- if index == 1 -%}
           <div class="grid-product__tags">

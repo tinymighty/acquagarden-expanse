@@ -52,7 +52,7 @@
             {%- if color_count <= max_colors_show -%}
               <span
                 class="color-swatch color-swatch--{{ value | handle }}{% if variant.image %} color-swatch--with-image{% endif %}"
-                data-url="{{ variant.url | within: collection }}"
+                data-url="{{ variant.url }}"
                 {% if variant.image %}
                   data-variant-id="{{ variant.id }}"
                   data-variant-image="{{ variant.image | image_url: width: 400 }}"
