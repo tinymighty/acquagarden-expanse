@@ -57,3 +57,44 @@ for overrides, use overrides.css
     padding: 10px 30px;
   }
 }
+
+
+/* collection sidebar hierarchy navigation  */
+.parent-collection {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 20px;
+}
+.parent-collection-link {
+  padding: 5px;
+  display: block;
+}
+.child-collections-grid {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 20px;
+}
+
+.child-collections-wrapper {
+
+}
+.child-collection-item {
+  padding: 3px 0;
+}
+.child-collection-link {
+  margin-left: -15px;
+  padding: 3px 5px 3px 15px;
+  display: block;
+  font-size: 1.2em;
+  box-sizing: border-box;
+}
+.child-collection-link:hover {
+  color: var(--color-button-primary);
+}
+.child-collection-link--active {
+  font-weight: bold;
+  border-left: 3px solid var(--color-button-primary);
+  color: var(--color-button-primary);
+  margin-left: -18px;
+}
