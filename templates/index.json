@@ -59,9 +59,44 @@
         "divider": false
       }
     },
+    "featured_collection_mQreKt": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Bedding Plants",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "bedding-plants",
+        "count": 10,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Herb Plants",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "herb-plants",
+        "count": 10,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "featured-collections-browser": {
       "type": "featured-collections-browser",
       "blocks": {
+        "collection_kwE97H": {
+          "type": "collection",
+          "settings": {
+            "collection": "fruit-plants",
+            "title": ""
+          }
+        },
         "collection_X3jpwL": {
           "type": "collection",
           "settings": {
@@ -73,13 +108,6 @@
           "type": "collection",
           "settings": {
             "collection": "bedding-plants",
-            "title": ""
-          }
-        },
-        "collection_kwE97H": {
-          "type": "collection",
-          "settings": {
-            "collection": "fruit-plants",
             "title": ""
           }
         },
@@ -106,29 +134,15 @@
         }
       },
       "block_order": [
+        "collection_kwE97H",
         "collection_X3jpwL",
         "collection_46q6Lq",
-        "collection_kwE97H",
         "collection_RtkLhh",
         "collection_Kr8j4g",
         "collection_8h6fMG"
       ],
       "settings": {
         "title": "Popular categories"
-      }
-    },
-    "featured_collection_mQreKt": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Bedding Plants",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "home_featured_products": "bedding-plants",
-        "count": 10,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false
       }
     },
     "featured-collections": {
@@ -185,24 +199,11 @@
         "featured-collections-4",
         "featured-collections-5"
       ],
+      "disabled": true,
       "settings": {
         "title": "Popular Categories",
         "heading_size": "h2",
         "heading_position": "center",
-        "divider": false
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Herbs",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "home_featured_products": "herb-plants",
-        "count": 10,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": true,
         "divider": false
       }
     },
@@ -228,7 +229,7 @@
             "icon": "5-stars",
             "testimonial": "<p>\"A lovely little plant, in great condition, well packaged and delivered on time.\"</p>",
             "author": "Quality plant",
-            "author_info": "Los Angeles, CA"
+            "author_info": ""
           }
         },
         "testimonial_Ajg7FV": {
@@ -596,10 +597,10 @@
     "text_and_image_cYgC3g",
     "featured_collection_XNjNXE",
     "featured_collection_brPzkY",
-    "featured-collections-browser",
     "featured_collection_mQreKt",
-    "featured-collections",
     "featured-collection",
+    "featured-collections-browser",
+    "featured-collections",
     "scrolling_text_YD9DRb",
     "testimonials",
     "slideshow-split2",
