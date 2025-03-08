@@ -110,3 +110,49 @@ for overrides, use overrides.css
   color: var(--color-button-primary);
   margin-left: -18px;
 }
+
+
+/* Marquee banner (sections/marquee-banner.liquid) */
+
+.marquee-banner {
+
+
+}
+.marquee-banner__scroller {
+  overflow: clip;
+  display: flex;
+  gap: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.marquee-banner__scroller:hover .marquee-banner__row {
+  animation-play-state: paused;
+}
+.marquee-banner__row {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  flex: 1 0 auto;
+  overflow: clip;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.marquee-banner__item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex: 1 0 auto; 
+  align-items: center;
+}
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -45,6 +45,102 @@
         "divider": false
       }
     },
+    "company_usp_banner_yDj3at": {
+      "type": "marquee-banner",
+      "blocks": {
+        "col_item_JdHTMB": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Premium_Icon_32f36241-6b18-4db6-8fb4-bf5b59b2a692.png",
+            "text": "Best Quality Plants",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_NHt7rD": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Delivery_Icon_3dd26526-2b05-420b-9808-affe32aef517.png",
+            "text": "Fast & Secure Delivery",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_FPTFih": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/uk-sticker.png",
+            "text": "UK Business",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_AqXHTA": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Happiness_Icon_9942ff01-3db0-4c8f-94de-31a300c2e07e.png",
+            "text": "100% Happiness Guarantee",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_8QMCW7": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Packaging_Icon_5701810a-4e11-4105-a590-4e888b8fe88c.png",
+            "text": "Bespoke Protective Packaging",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_KLY3EE": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Range_Icon_1.png",
+            "text": "Wide Range Available",
+            "show_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "col_item_JdHTMB",
+        "col_item_NHt7rD",
+        "col_item_FPTFih",
+        "col_item_AqXHTA",
+        "col_item_8QMCW7",
+        "col_item_KLY3EE"
+      ],
+      "custom_css": [
+        ".bootstrap {border-top: 1px solid #fff; border-bottom: 1px solid #fff;}"
+      ],
+      "settings": {
+        "scroll_speed": 20,
+        "m_scroll_speed": 15,
+        "header_max_width": "",
+        "header_bottom_padding": "",
+        "main_title": "",
+        "main_title_size": 20,
+        "m_main_title_size": 16,
+        "main_title_colour": "#5b6a30",
+        "main_title_font_weight": 400,
+        "header_text_align": "center",
+        "outer_c_padding_top": 20,
+        "outer_c_padding_bottom": 60,
+        "outer_c_padding_left": 0,
+        "outer_c_padding_right": 0,
+        "outer_m_c_padding_top": 20,
+        "outer_m_c_padding_bottom": 20,
+        "outer_m_c_padding_left": 0,
+        "outer_m_c_padding_right": 0,
+        "c_padding_top": 0,
+        "c_padding_bottom": 0,
+        "c_padding_left": 0,
+        "c_padding_right": 0,
+        "m_c_padding_top": 0,
+        "m_c_padding_bottom": 0,
+        "m_c_padding_left": 0,
+        "m_c_padding_right": 0,
+        "max_width": 3000,
+        "outer_background_colour": "",
+        "inner_background_colour": ""
+      }
+    },
+
     "featured_collection_brPzkY": {
       "type": "featured-collection",
       "settings": {
@@ -596,6 +692,7 @@
   "order": [
     "text_and_image_cYgC3g",
     "featured_collection_XNjNXE",
+    "company_usp_banner_yDj3at",
     "featured_collection_brPzkY",
     "featured_collection_mQreKt",
     "featured-collection",

@@ -1,0 +1,158 @@
+<div id="t-{{ section.id }}" class="marquee-banner">
+    <div class="inner">
+      <h2 class="main_title">{{ section.settings.main_title }}</h2>
+    {% capture row %}
+      <div class="marquee-banner__row">
+      {% for block in section.blocks %}
+          {% if block.type == 'col_item' %}
+            <div class="marquee-banner__item">
+              <div class="d-block section_icon">
+                {% if block.settings.icon %}
+                  {{ block.settings.icon | image_url: width: "100px" | image_tag: class: '', alt: block.settings.text }}
+                {% endif %}
+              </div>
+              <p class="mb-0 main_title">
+                {{ block.settings.text }}
+              </p>
+            </div>
+          {% endif %}  
+        {% endfor %}
+        </div>
+    {% endcapture %}
+    <div class="marquee-banner__scroller">
+      {{ row }}
+      {{ row }}
+    </div>
+</div>
+
+
+<style>
+  #t-{{ section.id }} {
+    background-color: {{ section.settings.outer_background_colour }};
+  }
+
+  #t-{{ section.id }} .inner {
+      background-color: {{ section.settings.inner_background_colour }};
+  }
+
+  #t-{{section.id}} .component-inner {
+      
+  }
+
+  #t-{{ section.id }} .main_title {
+    text-align: {{ section.settings.header_text_align }};
+    max-width: {{ section.settings.header_max_width }}px;
+    padding-bottom: {{section.settings.header_bottom_padding}}px;
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+
+    color: {{ section.settings.main_title_colour }};
+    font-size: {{ section.settings.main_title_size }}px;
+    font-weight: {{ section.settings.main_title_font_weight }};
+  }
+
+  #t-{{section.id}} .section_icon {
+      max-width: {{ section.settings.icon_max_width }}px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    #t-{{ section.id }} .main_title { font-size: {{ section.settings.m_main_title_size }}px; font-weight: {{section.settings.main_title_font_weight}}; }
+  }
+
+    .{{section.id}}-4wp {
+        padding: {{ section.settings.c_padding_top }}px {{ section.settings.c_padding_right }}px {{ section.settings.c_padding_bottom }}px {{ section.settings.c_padding_left }}px;
+    }
+    .outer-{{section.id}}-4wp {
+        padding: {{ section.settings.outer_c_padding_top }}px {{ section.settings.outer_c_padding_right }}px {{ section.settings.outer_c_padding_bottom }}px {{ section.settings.outer_c_padding_left }}px;
+    }
+    @media only screen and (max-width: 768px) {
+        .{{section.id}}-4wp {
+            padding: {{ section.settings.m_c_padding_top }}px {{ section.settings.m_c_padding_right }}px {{ section.settings.m_c_padding_bottom }}px {{ section.settings.m_c_padding_left }}px;
+        }
+        .outer-{{section.id}}-4wp {
+            padding: {{ section.settings.outer_m_c_padding_top }}px {{ section.settings.outer_m_c_padding_right }}px {{ section.settings.outer_m_c_padding_bottom }}px {{ section.settings.outer_m_c_padding_left }}px;
+        }
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Marquee Banner",
+  "settings": [
+    { "type": "number", "id": "scroll_speed", "label": "Scroll Speed (pixels per second)", "default": 100 },
+    { "type": "number", "id": "m_scroll_speed", "label": "Mobile Scroll Speed (pixels per second)", "default": 75 },
+    
+    { "type": "header", "content": "Header settings" },
+    { "type": "text", "id": "header_max_width", "label": "Header Max Width" },
+    { "type": "text", "id": "header_bottom_padding", "label": "Header Bottom Padding" },
+    { "type": "text", "id": "main_title", "label": "Title Text", "default": "Some header text" },
+    { "type": "number", "id": "main_title_size", "label": "Title Text Size", "default": 28 },
+    { "type": "number", "id": "m_main_title_size", "label": "Mobile Title Text Size", "default": 24 },
+    { "type": "color", "id": "main_title_colour", "label": "Title Colour", "default": "#000" },
+    { "type": "number", "id": "main_title_font_weight", "label": "Sub Title Font Weight (100s)", "default": 600 },
+    {
+      "type": "select",
+      "id": "header_text_align",
+      "label": "Text Align",
+      "default": "center",
+      "options": [
+        {
+          "label": "Center",
+          "value": "center"
+        },
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ]
+    },
+
+    { "type": "header", "content": "Outer Padding settings" },
+    { "type": "number", "id": "outer_c_padding_top", "label": "Outer Padding Top", "default": 20 },
+    { "type": "number", "id": "outer_c_padding_bottom", "label": "Outer Padding Bottom", "default": 20 },
+    { "type": "number", "id": "outer_c_padding_left", "label": "Outer Padding Left", "default": 0 },
+    { "type": "number", "id": "outer_c_padding_right", "label": "Outer Padding Right", "default": 0 },
+    { "type": "number", "id": "outer_m_c_padding_top", "label": "Outer Mobile Padding Top", "default": 20 },
+    { "type": "number", "id": "outer_m_c_padding_bottom", "label": "Outer Mobile Padding Bottom", "default": 20 },
+    { "type": "number", "id": "outer_m_c_padding_left", "label": "Outer Mobile Padding Left", "default": 0 },
+    { "type": "number", "id": "outer_m_c_padding_right", "label": "Outer Mobile Padding Right", "default": 0 },
+
+    { "type": "header", "content": "Padding settings" },
+    { "type": "number", "id": "c_padding_top", "label": "Padding Top", "default": 20 },
+    { "type": "number", "id": "c_padding_bottom", "label": "Padding Bottom", "default": 20 },
+    { "type": "number", "id": "c_padding_left", "label": "Padding Left", "default": 0 },
+    { "type": "number", "id": "c_padding_right", "label": "Padding Right", "default": 0 },
+    { "type": "number", "id": "m_c_padding_top", "label": "Mobile Padding Top", "default": 20 },
+    { "type": "number", "id": "m_c_padding_bottom", "label": "Mobile Padding Bottom", "default": 20 },
+    { "type": "number", "id": "m_c_padding_left", "label": "Mobile Padding Left", "default": 0 },
+    { "type": "number", "id": "m_c_padding_right", "label": "Mobile Padding Right", "default": 0 },
+
+    { "type": "header", "content": "Component Settings" },
+    { "type": "number", "id": "max_width", "label": "Max width", "default": 800 },
+    { "type": "color", "id": "outer_background_colour", "label": "Outer Background Colour" },
+    { "type": "color", "id": "inner_background_colour", "label": "Inner Background Colour" }
+  ],
+  "blocks": [
+    {
+      "type": "col_item",
+      "name": "Column Item",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon" },
+        { "type": "text", "id": "text", "label": "Text" },
+        { "type": "checkbox", "id": "show_on_mobile", "label": "Show On Mobile", "default": true }
+      ],
+      "limit": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Column Item"
+    }
+  ]
+}
+{% endschema %}
