@@ -17,7 +17,7 @@
         "image2_mask": "landscape",
         "subtitle": "",
         "title": "Gardening Made Easy For Everyone",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "text": "<p>Acqua Garden makes gardening easier than ever from start to finish whether you are a new gardener or an experienced one</p>",
         "button_label": "Shop Our UK Plant Range",
         "button_link": "shopify://collections",
@@ -38,7 +38,7 @@
           "type": "heading",
           "settings": {
             "title": "Over 2 Million Plants Shipped",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         }
       },
