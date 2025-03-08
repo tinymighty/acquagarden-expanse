@@ -31,27 +31,6 @@
         "bottom_padding": true
       }
     },
-    "rich_text_BjweHA": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xpqpGU": {
-          "type": "heading",
-          "settings": {
-            "title": "Over 2 Million Plants Shipped",
-            "heading_size": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_xpqpGU"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "color_scheme": "none",
-        "divider": false
-      }
-    },
     "company_usp_banner_yDj3at": {
       "type": "marquee-banner",
       "blocks": {
@@ -336,6 +315,28 @@
         "color_scheme": "2"
       }
     },
+    "rich_text_BjweHA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xpqpGU": {
+          "type": "heading",
+          "settings": {
+            "title": "Over 2 Million Plants Shipped",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xpqpGU"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "color_scheme": "none",
+        "divider": false
+      }
+    },
     "testimonials": {
       "type": "testimonials",
       "blocks": {
@@ -433,7 +434,7 @@
         "testimonial_BNHWUq"
       ],
       "settings": {
-        "title": "",
+        "title": "Over 2 Million Plants Shipped",
         "align_text": "center",
         "round_images": true,
         "color_scheme": "none"
@@ -711,7 +712,6 @@
   },
   "order": [
     "text_and_image_cYgC3g",
-    "rich_text_BjweHA",
     "company_usp_banner_yDj3at",
     "featured_collection_XNjNXE",
     "featured_collection_brPzkY",
@@ -720,6 +720,7 @@
     "featured-collections-browser",
     "featured-collections",
     "scrolling_text_YD9DRb",
+    "rich_text_BjweHA",
     "testimonials",
     "slideshow-split2",
     "promo-grid",
