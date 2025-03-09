@@ -1,0 +1,219 @@
+{%- liquid
+  assign product = section.settings.product | default: product
+  assign form_id = 'sticky-buy-form-' | append: section.id | append: '-2'
+
+  assign cart_type = 'dropdown'
+
+  assign show_dynamic_checkout = false
+
+  if block.settings.show_dynamic_checkout
+    assign show_dynamic_checkout = true
+  endif
+
+  assign check_against_inventory = true
+  assign quantity_rule_soldout = false
+
+  if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+    assign check_against_inventory = false
+  endif
+
+  if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+    assign quantity_rule_soldout = true
+  endif
+
+  assign gift_card_recipient_feature_active = false
+  if block.settings.show_gift_card_recipient and product.gift_card?
+    assign gift_card_recipient_feature_active = true
+  endif
+-%}
+
+{% if product %}
+<div class="sticky-buy-bar">
+    {%- form 'product', product, id: form_id, novalidate: 'novalidate' -%}
+      <div class="sticky-buy-bar__inner page-width">
+        <div class="sticky-buy-bar__backtotop">Back to Top ↑</div>
+        <div style="flex:1"></div>
+      {%- render 'quantity-selector', id: quantity_selector_id, form_id: form_id -%}
+
+      {% if product.has_only_default_variant == false %}
+        <div class="variant-selectors">
+              <div class="selector-wrapper">
+                <select>
+                  {% for variant in product.variants %}
+                    <option
+                      value="{{ variant.id | escape }}" 
+                      {% unless variant.available  %}disabled{% endunless %}
+                      {% if variant.id == product.selected_or_first_available_variant.id %}selected{% endif %}
+                    >
+                      {{ variant.title }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>  
+        </div>
+      {% endif %}
+
+      <input
+        type="hidden"
+        name="id"
+        value="{{ product.selected_or_first_available_variant.id }}"
+      >
+      <div>
+        <button
+          id="ProductSubmitButton-{{ section.id }}"
+          type="submit"
+          name="add"
+          class="btn btn--full add-to-cart"
+          {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+            disabled
+          {% endif %}
+        >
+          <span class="add-to-cart__text">
+            {% liquid
+              capture button_text
+                render 't_with_fallback', key: 'actions.add_to_cart', fallback: 'Add to cart'
+              endcapture
+
+              if template contains 'preorder'
+                capture button_text
+                  render 't_with_fallback', key: 'actions.preorder', fallback: 'Pre-order'
+                endcapture
+              endif
+
+              if product.selected_or_first_available_variant.available == false or quantity_rule_soldout
+                capture button_text
+                  render 't_with_fallback', key: 'info.sold_out', fallback: 'Sold out'
+                endcapture
+              endif
+
+              echo button_text
+            %}
+          </span> 
+          <span class="add-to-cart__icon">{% render 'icon', name: 'cart' %}</span>
+        </button>
+      </div>
+      </div>
+    {%- endform -%}
+
+    </div>
+{%- endif -%}
+
+<script type="text/javascript">
+const form = document.getElementById("{{form_id}}");
+const mainFormVariantInput = document.querySelector('form[data-type="add-to-cart-form"] input[name="id"]')
+
+// set hidden variant id on select change
+form.querySelector("select").addEventListener("change", (event) => {
+  form.querySelector("input[name=id]").value = event.target.value;
+  // update main form hidden input value
+  // commented out for now; the module which handles the variant selection 
+  // doesn't have an event listener for the main form hidden input
+  // so this doesn't work 
+  // if (mainFormVariantInput) {
+  //   mainFormVariantInput.value = event.target.value;
+  //   mainFormVariantInput.dispatchEvent(new Event('change', { bubbles: true }))
+  // }
+});
+
+if (mainFormVariantInput) {
+  // watch main form hidden input value and update sticky form hidden input value
+  form.querySelector("select").value = mainFormVariantInput.value;
+  mainFormVariantInput.addEventListener("change", (event) => {
+    form.querySelector("select").value = event.target.value;
+  });
+}
+
+// show sticky bar when variant-button-wrap scrolls out of view
+const priceBlock = document.querySelector('.variant-button-wrap');
+const stickyBuyBar = document.querySelector('.sticky-buy-bar');
+
+if (priceBlock && stickyBuyBar) {
+  const observer = new IntersectionObserver((entries) => {
+    // When price block is not intersecting (out of view), show sticky bar
+    if (!entries[0].isIntersecting) {
+      stickyBuyBar.classList.add('sticky-buy-bar--visible');
+    } else {
+      stickyBuyBar.classList.remove('sticky-buy-bar--visible');
+    }
+  }, { threshold: 0 });
+  
+  observer.observe(priceBlock);
+}
+
+// back to top button
+document.querySelector('.sticky-buy-bar__backtotop').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+</script>
+
+<style>
+[data-modal] .sticky-buy-bar {
+  display: none;
+}
+.sticky-buy-bar {
+  position: fixed;
+  height: 60px;
+  bottom: -60px;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  z-index: 1000;
+  transition: bottom 0.3s;
+  background-color: var(--color-nav);
+}
+.sticky-buy-bar.sticky-buy-bar--visible {
+  bottom: 0;
+}
+.sticky-buy-bar form,
+.sticky-buy-bar__inner {
+  height: 100%;
+}
+.sticky-buy-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.sticky-buy-bar .btn {
+  margin: 0;
+  padding: 8px 20px;
+}
+.sticky-buy-bar .js-qty__wrapper {
+  display: none;
+}
+.sticky-buy-bar .js-qty__num {
+  padding: 8px 20px;
+}
+.sticky-buy-bar select {
+  background-color: white;
+}
+.sticky-buy-bar__backtotop {
+  cursor: pointer;
+}
+.sticky-buy-bar .variant-selectors {
+  display: none;
+}
+/* .sticky-buy-bar .add-to-cart__text {
+  display: none;
+} */
+.sticky-buy-bar .add-to-cart__icon {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .sticky-buy-bar__inner {
+    justify-content: flex-end;;
+  }
+  .sticky-buy-bar .variant-selectors {
+    display: block;
+  }
+  .sticky-buy-bar .add-to-cart__text {
+    display: inline-block;
+  }
+  .sticky-buy-bar .add-to-cart__icon {
+    display: none;
+  }
+  .sticky-buy-bar .js-qty__wrapper {
+    display: block;
+  }
+}
+</style>
