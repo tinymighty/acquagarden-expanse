@@ -1,0 +1,833 @@
+{% assign canShow = false %}
+{% if section.settings.product != blank %}
+  {% if product.handle == section.settings.product %}
+    {% assign canShow = true %}
+  {% endif %}
+{% else %}
+  {% assign canShow = true %}
+{% endif %}
+
+{% if canShow %}
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    #s_{{ section.id }} .accordion__title {
+      width: 100%;
+      text-align: {{ section.settings.faq_title_text_align }};
+      font-size: {{ section.settings.faq_title_desktop_font_size }}px;
+    	font-weight: {{ section.settings.faq_title_font_weight}};
+    }
+
+    #s_{{ section.id }} .accordion__content {
+      text-align: {{ section.settings.faq_body_text_align }};
+      font-size: {{ section.settings.faq_body_size }}px;
+    	font-weight: {{ section.settings.faq_body_font_weight}};
+    }
+
+    @media only screen and (max-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+
+      #s_{{ section.id }} .accordion__title {
+        font-size: {{ section.settings.m_faq_title_size }}px;
+      }
+
+      #s_{{ section.id }} .accordion__content {
+        font-size: {{ section.settings.m_faq_body_size }}px;
+      }
+    }
+  {%- endstyle -%}
+
+  <style>
+    #s_{{ section.id }} button {
+      border-radius: 5px;
+    }
+    #s_{{ section.id }} button:hover {
+      color: white !important;
+      background: #254545 !important;
+    }
+    #s_{{ section.id }} button:hover::after {
+      box-shadow: none !important;
+    }
+    #s_{{ section.id }} button.not-selected {
+      background: transparent;
+      color: #254545;
+      border: 1px solid #254545;
+    }
+
+    #s_{{ section.id }} summary svg.icon-plus,
+    #s_{{ section.id }} summary  svg.icon-minus {
+      fill: #254545 !important;
+      color: #254545 !important;
+    }
+
+    .accordion__title,
+    .accordion__content * {
+      user-select: none;
+    }
+
+    #s_{{ section.id }} details[open]  svg.icon-plus {
+      display: none;
+    }
+    #s_{{ section.id }} details:not([open])  svg.icon-minus {
+      display: none;
+    }
+    #s_{{ section.id }} details[open]  svg.icon-minus {
+      display: block;
+    }
+
+    #s_{{ section.id }} .section-filter.button {
+        font-weight: bold;
+        min-width: 0px !important;
+        min-height: 0px !important;
+        padding: 1px 10px;
+        color: #254545;
+        border-color: #254545 ;
+        width: 30%;
+        max-width: 150px;
+        font-size: 20px !important;
+    }
+
+    #s_{{ section.id }} .section-filter.button:not(.not-selected) {
+      background: #254545;
+      color: #fff !important;
+      box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    }
+
+    #s_{{ section.id }} .view_more:hover {
+      background: none !important;
+      color: #254545 !important;
+    }
+
+    .filter-button-container {
+      margin-bottom: {{ section.settings.button_spacing}}px;
+    }
+
+    @media only screen and (max-width: 768px) {
+    .filter-button-container {
+      margin-bottom: {{ section.settings.m_button_spacing}}px;
+    }
+      .flex-filter-container {
+        flex-wrap: wrap;
+      }
+
+      #s_{{ section.id }} .section-filter.button {
+      font-size: 18px !important;
+    }
+    }
+
+    .{{section.id}}-4wp {
+      padding: {{ section.settings.padding_top }}px {{ section.settings.padding_right }}px {{ section.settings.padding_bottom }}px {{ section.settings.padding_left }}px;
+    }
+    @media only screen and (max-width: 768px) {
+      .{{section.id}}-4wp {
+          padding: {{ section.settings.m_padding_top }}px {{ section.settings.m_padding_right }}px {{ section.settings.m_padding_bottom }}px {{ section.settings.m_padding_left }}px;
+      }
+    }
+
+    .desktop-only {display: block;}
+      .mobile-only {display: none;}
+      @media only screen and (max-width: 768px) {
+        .desktop-only {display: none;}
+        .mobile-only {display: block;}
+      }
+  </style>
+
+  <style>
+      #ch-{{ section.id }} {
+        padding-bottom: {{section.settings.header_bottom_padding}}px;
+        max-width: {{section.settings.header_max_width}}px;
+        margin: auto;
+      }
+
+      #ch-{{ section.id }} .main_title {
+        text-align: {{ section.settings.text_align }};
+        max-width: {{ section.settings.max_width }}px;
+        width: 100%;
+        margin: 0;
+
+        color: {{ section.settings.main_title_colour }};
+        font-size: {{ section.settings.main_title_size }}px;
+        font-weight: {{ section.settings.main_title_font_weight }};
+      }
+
+    .comp_img_cont {
+      max-width: {{ section.settings.img_max_width }}px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      #ch-{{ section.id }} {
+        padding-bottom: {{section.settings.m_header_bottom_padding}}px;
+
+      }
+
+      #ch-{{ section.id }} .main_title { font-size: {{ section.settings.m_main_title_size }}px; font-weight: {{section.settings.main_title_font_weight}}; }
+
+      .comp_img_cont {
+        max-width: {{ section.settings.m_img_max_width }}px;
+      }
+    }
+
+    .close_button {
+      width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .close_button svg {
+      width: 25px !important;
+      height: 25px !important;
+    }
+  </style>
+
+  <script>
+    function filter_content(section, limit = {{ section.settings.row_count }}) {
+      document.querySelectorAll(`#s_{{ section.id }} div.accordion`).forEach(el => el.style.display = 'none');
+      document.querySelectorAll(`#s_{{ section.id }} div.accordion[data-section="${section}"]:lt(${limit})`).forEach(el => el.style.display = 'block');
+      document.querySelectorAll(`#s_{{ section.id }} div.accordion[data-section="*"]:lt(${limit})`).forEach(el => el.style.display = 'block');
+      document.querySelectorAll(`#s_{{ section.id }} button.section-filter`).forEach(el => el.classList.add('not-selected'));
+      document.querySelector(`#s_{{ section.id }} button.section-filter[data-section="${section}"]`).classList.remove('not-selected');
+
+      const filteredCount = document.querySelectorAll(`#s_{{ section.id }} div.accordion[data-section="${section}"]`).length;
+      const allCount = document.querySelectorAll(`#s_{{ section.id }} div.accordion[data-section="*"]`).length;
+
+      if (filteredCount + allCount > {{ section.settings.row_count }}) {
+        document.querySelector(`#s_{{ section.id }} button.view_more`).style.display = 'block';
+      } else {
+        document.querySelector(`#s_{{ section.id }} button.view_more`).style.display = 'none';
+      }
+    }
+
+  function show_all() {
+    console.log('show all');
+    {% if section.settings.show_buttons %}
+      const selectedButton = document.querySelector(`#s_{{ section.id }} button.section-filter:not(.not-selected)`);
+      if (!selectedButton) return;
+      
+      const selected = selectedButton.getAttribute('data-section');
+      if (selected === undefined) return;
+
+      const filteredCount = document.querySelectorAll(`#s_{{ section.id }} div.accordion[data-section="${selected}"]`).length;
+      const allCount = document.querySelectorAll(`#s_{{ section.id }} div.accordion[data-section="*"]`).length;
+
+      if (window.innerWidth > 768 && filteredCount + allCount >= {{ section.settings.popup_limit }}) {
+        // get all and insert into popup
+        const limit = 1000;
+        const dialog = document.getElementById(`s_{{ section.id }}_dialog`);
+        dialog.style.display = 'block';
+        
+        const contentElement = dialog.querySelector('.content');
+        const faqs = document.querySelector('#s_{{ section.id }} .main_content .faqs');
+        if (contentElement && faqs) {
+          contentElement.innerHTML = faqs.innerHTML;
+        }
+        
+        document.querySelectorAll(`#s_{{ section.id }}_dialog div.accordion[data-section="${selected}"]`).forEach((el, index) => {
+          if (index < limit) el.style.display = 'block';
+        });
+        
+        document.querySelectorAll(`#s_{{ section.id }}_dialog div.accordion[data-section="*"]`).forEach((el, index) => {
+          if (index < limit) el.style.display = 'block';
+        });
+        
+        LockScroll();
+      } else {
+        filter_content(selected, 1000);
+      }
+    {% else %}
+      filter_content('*', 1000);
+    {% endif %}
+
+      document.querySelector(`#s_{{ section.id }} button.view_more`).style.display = 'none';
+    }
+
+    function close_popup() {
+      const dialog = document.getElementById(`s_{{ section.id }}_dialog`);
+      dialog.style.display = 'none';
+      
+      const contentElement = dialog.querySelector('.content');
+      if (contentElement) {
+        contentElement.innerHTML = null; // clear content
+      }
+      
+      document.querySelector(`#s_{{ section.id }} button.view_more`).style.display = 'block';
+      UnlockScroll();
+    }
+  </script>
+
+  <div class="bootstrap" id="s_{{ section.id }}">
+    <div
+      style="display: none; z-index: 100000; background-color: rgba(0,0,0,0.3);"
+      class="faq-modal"
+      id="s_{{ section.id }}_dialog"
+    >
+      <div class="faq-modal-container">
+        <div
+          class="faq-modal-content"
+          style="max-width: 700px; max-height: 90vh; background: #F3EFE8"
+        >
+          <div
+            class="faq-modal-body"
+            style="overflow-y: auto; height: 100%;"
+          ></div>
+          <div class="faq-modal-close-wrapper">
+            <div
+              style="cursor: pointer; background: black; color: #F3EFE8;"
+              class="close_button rounded-circle"
+              onclick="close_popup()"
+            >
+              {% render 'icon-pack', icon: 'close' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="background: none; color: {{ section.settings.font_colour }} !important; background-color: {{ section.settings.bg_colour }} !important; margin: auto; max-width: {{ section.settings.max_width }}px"
+      class="{{section.id}}-4wp main_content"
+    >
+      <div id="ch-{{ section.id }}">
+        <h2 class="main_title">{{ section.settings.main_title }}</h2>
+      </div>
+
+      <div class="faq-layout">
+        {% if section.settings.show_image %}
+          <div class="faq-image-container rounded comp_img_cont">
+            <img
+              src="{{ section.settings.image | img_url: 'master' }}"
+              class="desktop-only"
+              onclick="{{section.settings.img_click}}"
+            >
+            <img
+              src="{{ section.settings.m_image | img_url: 'master' }}"
+              class="mobile-only"
+              onclick="{{section.settings.img_click}}"
+            >
+            <div>
+              {% if section.settings.image_desc != blank %}
+                <p class="faq-image-description">{{ section.settings.image_desc }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+        <div class="faq-content">
+          {% if section.settings.show_buttons %}
+            <div class="filter-button-container">
+              <div class="faq-filter-buttons {% if section.settings.show_image %}faq-filter-left{% else %}faq-filter-center{% endif %}">
+                {% assign defaultFilter = '' %}
+                {% assign index = 0 %}
+                {%- for block in section.blocks -%}
+                  {% if block.type == 'section' %}
+                    {% assign index = index | plus: 1 %}
+                    {% if index == 1 %}{% assign defaultFilter = block.settings.name %}{% endif %}
+                    <button
+                      onclick="filter_content('{{ block.settings.name }}')"
+                      data-section="{{ block.settings.name }}"
+                      class="rounded-pill section-filter button {% if index == 1 %}{% else %}not-selected{% endif %}"
+                    >
+                      {{ block.settings.name }}
+                    </button>
+                  {% endif %}
+                {%- endfor -%}
+              </div>
+            </div>
+          {% endif %}
+          <div style="max-width: 700px; margin: auto;" class="faqs-cc">
+            <div class="faqs">
+              {% assign index = 0 %}
+              {%- for block in section.blocks -%}
+                {% if block.type == 'collapsible_row' %}
+                  {% if block.settings.heading == blank %}{% continue %}{% else %}
+                  {% assign index = index | plus: 1 %}
+                    <div
+                      index="loop-{{ index }}"
+                      {% if defaultFilter == block.settings.section and index <= section.settings.row_count %}
+                        style="display: block;"
+                      {% elsif block.settings.section == '*' and index <= section.settings.row_count %}
+                        style="display: block;"
+                      {% else %}
+                        style="display: none;"
+                      {% endif %}
+                      data-section="{{ block.settings.section }}"
+                      class="accordion-item{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
+                      {{ block.shopify_attributes }}
+                    >
+                      <details
+                        class="__detail"
+                        id="Details-{{ block.id }}-{{ section.id }}"
+                        style="{{ section.settings.custom_row_css }}"
+                        {% if section.settings.open_first_collapsible_row and index == 1 %}
+                          open
+                        {% endif %}
+                        {% if section.settings.all_open %}
+                          open
+                        {% endif %}
+                      >
+                        <summary
+                          id="Summary-{{ block.id }}-{{ section.id }}"
+                          class="plus_minus black"
+                          style="padding: {{ section.settings.row_padding }}px 5px;"
+                        >
+                          <h3 class="accordion__title">
+                            {{ block.settings.heading | default: block.settings.page.title }}
+                          </h3>
+                          {% comment %}
+                          {% render 'icon-pack', icon: 'plus' %}
+                          {% render 'icon-pack', icon: 'minus' %}
+                          {% endcomment %}
+                        </summary>
+                        <div
+                          class="accordion__content"
+                          id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                          role="region"
+                          aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                        >
+                          {{ block.settings.row_content }}
+                          {{ block.settings.page.content }}
+                        </div>
+                      </details>
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {%- endfor -%}
+            </div>
+
+            <div class="faq-view-more-container">
+              {% if index > section.settings.row_count%}
+                <button
+                  onclick="show_all()"
+                  class="view_more"
+                  style="
+                    background: none;
+                    padding: 10px;
+                    border: none;
+                    text-decoration: underline;
+                    text-align: center;
+                    display: block;
+                    color: black !important;
+                  "
+                >
+                  VIEW MORE FAQ'S
+                </button>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('#s_{{ section.id }} .__detail').forEach(detail => {
+      detail.addEventListener('click', (event) => {
+        // close others
+        document.querySelectorAll('#s_{{ section.id }} .__detail').forEach(el => {
+          if (el !== event.currentTarget) {
+            el.removeAttribute('open');
+          }
+        });
+      });
+    });
+  </script>
+
+  <style>
+    .faq-modal {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .faq-modal {
+        padding: 3rem;
+      }
+    }
+
+    .faq-modal-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .faq-modal-content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .faq-modal-content {
+        padding: 1.5rem;
+      }
+    }
+
+    .faq-modal-body {
+      flex: 1 1 auto;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    .faq-modal-close-wrapper {
+      flex-grow: 0;
+    }
+
+    .rounded-circle {
+      border-radius: 50%;
+    }
+
+    .faq-layout {
+      display: block;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .faq-layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+    }
+
+    .faq-image-container {
+      margin: auto;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .faq-image-container {
+        margin: 0;
+      }
+    }
+
+    .faq-image-description {
+      margin-bottom: 0;
+      margin-top: 0.5rem;
+    }
+
+    .faq-content {
+      width: 100%;
+    }
+
+    .faq-filter-buttons {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .faq-filter-buttons {
+        gap: 1rem;
+      }
+    }
+
+    .faq-filter-center {
+      justify-content: center;
+    }
+
+    .faq-filter-left {
+      justify-content: flex-start;
+    }
+
+    .accordion-item {
+      margin-top: 0;
+    }
+
+    .accordion__title {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    .accordion__content {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-view-more-container {
+      width: 100%;
+    }
+
+    .view_more {
+      margin-top: 0.5rem;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+  </style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Filtered FAQ",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "checkbox", "id": "show_image", "label": "Show Image", "default": true },
+    { "type": "text", "id": "img_click", "label": "Image Click" },
+    { "type": "text", "id": "image_desc", "label": "Image Description Text" },
+
+    { "type": "text", "id": "header_max_width", "label": "Header Max Width" },
+    { "type": "text", "id": "header_bottom_padding", "label": "Header Bottom Padding" },
+    { "type": "text", "id": "m_header_bottom_padding", "label": "MOBILE Header Bottom Padding", "default": "15" },
+    { "type": "text", "id": "main_title", "label": "Title Text", "default": "Some header text" },
+    { "type": "number", "id": "main_title_size", "label": "Title Text Size", "default": 30 },
+    { "type": "number", "id": "m_main_title_size", "label": "Mobile Title Text Size", "default": 30 },
+    { "type": "color", "id": "main_title_colour", "label": "Title Colour", "default": "#000" },
+    { "type": "number", "id": "main_title_font_weight", "label": "Sub Title Font Weight (100s)", "default": 400 },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text Align",
+      "default": "center",
+      "options": [
+        {
+          "label": "Center",
+          "value": "center"
+        },
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ]
+    },
+
+    {
+      "type": "checkbox",
+      "id": "show_buttons",
+      "label": "Show Buttons",
+      "default": false,
+      "info": "Show filter buttons"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Only Show on Product",
+      "info": "Only show this section when its on this product page"
+    },
+    { "type": "color", "id": "bg_colour", "label": "Background Colour", "info": "Background colour for section" },
+    { "type": "color", "id": "font_colour", "label": "Font Colour", "info": "Text colour for this section" },
+
+    { "type": "number", "id": "padding_top", "label": "Padding Top", "default": 20 },
+    { "type": "number", "id": "padding_bottom", "label": "Padding Bottom", "default": 20 },
+    { "type": "number", "id": "padding_left", "label": "Padding Left", "default": 10 },
+    { "type": "number", "id": "padding_right", "label": "Padding Right", "default": 10 },
+    { "type": "number", "id": "m_padding_top", "label": "Mobile Padding Top", "default": 20 },
+    { "type": "number", "id": "m_padding_bottom", "label": "Mobile Padding Bottom", "default": 20 },
+    { "type": "number", "id": "m_padding_left", "label": "Mobile Padding Left", "default": 10 },
+    { "type": "number", "id": "m_padding_right", "label": "Mobile Padding Right", "default": 10 },
+
+    {
+      "type": "number",
+      "id": "max_width",
+      "label": "Component Max Width",
+      "default": 1000,
+      "info": "Component maximum width in pixels"
+    },
+    { "type": "image_picker", "id": "image", "label": "Image", "info": "Component featured Image" },
+    { "type": "image_picker", "id": "m_image", "label": "Image", "info": "Component MOBILE featured Image" },
+    {
+      "type": "number",
+      "id": "img_max_width",
+      "label": "Image Max Width",
+      "default": 250,
+      "info": "Feature image maximum width in pixels"
+    },
+    {
+      "type": "number",
+      "id": "m_img_max_width",
+      "label": "Moile image Max Width",
+      "default": 250,
+      "info": "Mobile feature image maximum width in pixels"
+    },
+
+    {
+      "type": "number",
+      "id": "row_count",
+      "label": "Default Visible Rows",
+      "default": 4,
+      "info": "Default number of rows visible"
+    },
+    {
+      "type": "number",
+      "id": "popup_limit",
+      "label": "Number of rows where a popup will trigger",
+      "default": 8,
+      "info": "When clicking the viewmore button, this will determine if the items show in the list or popup instead"
+    },
+    {
+      "type": "number",
+      "id": "row_padding",
+      "label": "Row Padding",
+      "default": 15,
+      "info": "Vertical padding for each dropdown"
+    },
+    { "type": "text", "id": "custom_row_css", "label": "Custom Row CSS", "info": "Custom CSS applied to each row" },
+
+    {
+      "type": "number",
+      "id": "faq_title_desktop_font_size",
+      "label": "FAQ Title Text Size",
+      "default": 20,
+      "info": "Desktop Header font size"
+    },
+    {
+      "type": "number",
+      "id": "m_faq_title_size",
+      "label": "Mobile FAQ Title Text Size",
+      "default": 20,
+      "info": "Mobile Header font size"
+    },
+    {
+      "type": "number",
+      "id": "faq_title_font_weight",
+      "label": "FAQ Title Font Weight (100s)",
+      "default": 400,
+      "info": "Header font weight"
+    },
+    {
+      "type": "select",
+      "id": "faq_title_text_align",
+      "label": "FAQ Title Text Align",
+      "info": "Header text alignment",
+      "default": "center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Center",
+          "value": "center"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "button_spacing",
+      "label": "Button Spacing",
+      "default": 15,
+      "info": "Spacing under filter buttons on desktop"
+    },
+    {
+      "type": "number",
+      "id": "m_button_spacing",
+      "label": "Mobile Button Spacing",
+      "default": 25,
+      "info": "Spacing under filter buttons on mobile"
+    },
+    { "type": "number", "id": "faq_body_size", "label": "FAQ Body Size", "default": 20 },
+    { "type": "number", "id": "m_faq_body_size", "label": "Mobile FAQ Body Text Size", "default": 20 },
+    { "type": "number", "id": "faq_body_font_weight", "label": "FAQ Body Font Weight (100s)", "default": 400 },
+    {
+      "type": "select",
+      "id": "faq_body_text_align",
+      "label": "FAQ Body Text Align",
+      "default": "center",
+      "options": [
+        {
+          "label": "Left",
+          "value": "left"
+        },
+        {
+          "label": "Center",
+          "value": "center"
+        },
+        {
+          "label": "Right",
+          "value": "right"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_collapsible_row",
+      "default": false,
+      "label": "First Open",
+      "info": "Is the first FAQ item open by default?"
+    },
+    {
+      "type": "checkbox",
+      "id": "all_open",
+      "default": false,
+      "label": "All Open",
+      "info": "Are all FAQ items open by default?"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section",
+      "name": "Filter",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Filter Name",
+          "info": "Name of the filter displayed on the button"
+        }
+      ]
+    },
+    {
+      "type": "collapsible_row",
+      "name": "Row Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "section",
+          "default": "*",
+          "label": "Filter to appear (* for all)",
+          "info": "Add the filter name"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible row",
+          "label": "Heading",
+          "info": "Heading of the dropdown item"
+        },
+        {
+          "type": "richtext",
+          "id": "row_content",
+          "label": "Content",
+          "info": "Content inside the dropdown item"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Filtered FAQ",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
