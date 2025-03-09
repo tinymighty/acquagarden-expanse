@@ -16,7 +16,8 @@
     <div id="planting-tags" class="tags-container"></div>
 
     <div id="planting-articles" class="articles-container">
-      {% for article in blog.articles %}
+      {% assign sorted_articles = blog.articles | sort: 'published_at' | reversed %}
+      {% for article in sorted_articles %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-4">
           <div class="article-card">
             <img class="article-image" src="{{ article.image | img_url: 'medium' }}" />
