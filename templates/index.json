@@ -11,6 +11,9 @@
   "sections": {
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
+      "custom_css": [
+        ".index-section .btn{margin-top: 2rem; margin-left: -0.4rem;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/Home_1.jpg",
         "image_mask": "landscape",
@@ -104,8 +107,17 @@
         "main_title_font_weight": 400,
         "header_text_align": "center",
         "outer_c_padding": "20px 0",
+        "outer_m_c_padding_top": "20px 0",
         "outer_background_colour": "",
-        "inner_background_colour": ""
+        "c_padding": "20px 0",
+        "m_c_padding_top": "20px 0",
+        "inner_background_colour": "",
+        "icon_gap": "clamp(10px, 1.5rem, 50px)",
+        "icon_max_width": "60px",
+        "icon_max_height": "60px",
+        "item_gap": "clamp(50px, 6rem, 200px)",
+        "item_text_color": "#000",
+        "item_text_size": 16
       }
     },
     "featured_collection_XNjNXE": {
