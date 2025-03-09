@@ -8,9 +8,12 @@
 .footer__title {
   font-size: calc(var(--type-base-size)*1.2);
 }
-/* .footer__blocks {
+.footer__blocks {
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
   gap: 50px;
-} */
+}
 
 .product-block .rte h2 {
   font-size: calc(var(--type-base-size)* 1.4);
