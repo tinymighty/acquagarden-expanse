@@ -1,79 +1,87 @@
 <div id="t-{{ section.id }}" class="marquee-banner">
-    <div class="inner">
-      <h2 class="main_title">{{ section.settings.main_title }}</h2>
+  <div class="marquee-banner__inner">
+    <h2 class="marquee-banner__main_title">{{ section.settings.main_title }}</h2>
     {% capture row %}
       <div class="marquee-banner__row">
-      {% for block in section.blocks %}
+        {% for block in section.blocks %}
           {% if block.type == 'col_item' %}
             <div class="marquee-banner__item">
-              <div class="d-block section_icon">
+              <div class="marquee-banner__icon">
                 {% if block.settings.icon %}
-                  {{ block.settings.icon | image_url: width: "100px" | image_tag: class: '', alt: block.settings.text }}
+                  {{ block.settings.icon | image_url: height: "60px" | image_tag: class: 'marquee-banner__img', alt: block.settings.text }}
                 {% endif %}
               </div>
-              <p class="mb-0 main_title">
-                {{ block.settings.text }}
-              </p>
+              <div class="marquee-banner__label">{{ block.settings.text }}</div>
             </div>
           {% endif %}  
         {% endfor %}
-        </div>
+      </div>
     {% endcapture %}
     <div class="marquee-banner__scroller">
       {{ row }}
       {{ row }}
     </div>
+  </div>
 </div>
 
 
 <style>
   #t-{{ section.id }} {
+    padding: {{ section.settings.outer_m_c_padding }};
     background-color: {{ section.settings.outer_background_colour }};
   }
 
-  #t-{{ section.id }} .inner {
-      background-color: {{ section.settings.inner_background_colour }};
+  #t-{{ section.id }} .marquee-banner__inner {
+    padding: {{ section.settings.m_c_padding }};
+    background-color: {{ section.settings.inner_background_colour }};
   }
 
-  #t-{{section.id}} .component-inner {
-      
-  }
-
-  #t-{{ section.id }} .main_title {
+  #t-{{ section.id }} .marquee-banner__main_title {
     text-align: {{ section.settings.header_text_align }};
-    max-width: {{ section.settings.header_max_width }}px;
-    padding-bottom: {{section.settings.header_bottom_padding}}px;
+    max-width: {{ section.settings.header_max_width }};
+    padding-bottom: {{section.settings.header_bottom_padding}};
     width: 100%;
     margin: 0 auto;
     white-space: nowrap;
 
     color: {{ section.settings.main_title_colour }};
-    font-size: {{ section.settings.main_title_size }}px;
+    font-size: calc({{ section.settings.main_title_size }}rem / 16);
     font-weight: {{ section.settings.main_title_font_weight }};
   }
+  #t-{{ section.id }} .marquee-banner__scroller,
+  #t-{{ section.id }} .marquee-banner__row {
+    gap: {{ section.settings.item_gap }};
+  }
+  #t-{{ section.id }} .marquee-banner__item {
+    gap: {{ section.settings.icon_gap }};
+  }
+  #t-{{section.id}} .marquee-banner__img {
+      max-width: {{ section.settings.icon_max_width }};
+      max-height: {{ section.settings.icon_max_height }};
+  }
 
-  #t-{{section.id}} .section_icon {
-      max-width: {{ section.settings.icon_max_width }}px;
+  #t-{{ section.id }} .marquee-banner__label {
+    color: {{ section.settings.item_text_color }};
+    font-size: calc({{ section.settings.item_text_size }}rem / 16);
   }
 
   @media only screen and (max-width: 768px) {
-    #t-{{ section.id }} .main_title { font-size: {{ section.settings.m_main_title_size }}px; font-weight: {{section.settings.main_title_font_weight}}; }
+    #t-{{ section.id }} .marquee-banner__main_title { 
+      font-size: {{ section.settings.m_main_title_size }}; 
+      font-weight: {{section.settings.main_title_font_weight}}; 
+    }
   }
 
-    .{{section.id}}-4wp {
-        padding: {{ section.settings.c_padding_top }}px {{ section.settings.c_padding_right }}px {{ section.settings.c_padding_bottom }}px {{ section.settings.c_padding_left }}px;
+  /* desktop styles */
+  @media only screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} {
+        padding: {{ section.settings.outer_c_padding }};
     }
-    .outer-{{section.id}}-4wp {
-        padding: {{ section.settings.outer_c_padding_top }}px {{ section.settings.outer_c_padding_right }}px {{ section.settings.outer_c_padding_bottom }}px {{ section.settings.outer_c_padding_left }}px;
+    #t-{{section.id}} .marquee-banner__inner {
+        padding: {{ section.settings.c_padding }};
     }
-    @media only screen and (max-width: 768px) {
-        .{{section.id}}-4wp {
-            padding: {{ section.settings.m_c_padding_top }}px {{ section.settings.m_c_padding_right }}px {{ section.settings.m_c_padding_bottom }}px {{ section.settings.m_c_padding_left }}px;
-        }
-        .outer-{{section.id}}-4wp {
-            padding: {{ section.settings.outer_m_c_padding_top }}px {{ section.settings.outer_m_c_padding_right }}px {{ section.settings.outer_m_c_padding_bottom }}px {{ section.settings.outer_m_c_padding_left }}px;
-        }
-    }
+  }
+
 </style>
 
 {% schema %}
@@ -84,8 +92,8 @@
     { "type": "number", "id": "m_scroll_speed", "label": "Mobile Scroll Speed (pixels per second)", "default": 75 },
     
     { "type": "header", "content": "Header settings" },
-    { "type": "text", "id": "header_max_width", "label": "Header Max Width" },
-    { "type": "text", "id": "header_bottom_padding", "label": "Header Bottom Padding" },
+    { "type": "text", "id": "header_max_width", "label": "Header Max Width", "default": "100%" },
+    { "type": "text", "id": "header_bottom_padding", "label": "Header Bottom Padding", "default": "1.5em" },
     { "type": "text", "id": "main_title", "label": "Title Text", "default": "Some header text" },
     { "type": "number", "id": "main_title_size", "label": "Title Text Size", "default": 28 },
     { "type": "number", "id": "m_main_title_size", "label": "Mobile Title Text Size", "default": 24 },
@@ -112,30 +120,24 @@
       ]
     },
 
-    { "type": "header", "content": "Outer Padding settings" },
-    { "type": "number", "id": "outer_c_padding_top", "label": "Outer Padding Top", "default": 20 },
-    { "type": "number", "id": "outer_c_padding_bottom", "label": "Outer Padding Bottom", "default": 20 },
-    { "type": "number", "id": "outer_c_padding_left", "label": "Outer Padding Left", "default": 0 },
-    { "type": "number", "id": "outer_c_padding_right", "label": "Outer Padding Right", "default": 0 },
-    { "type": "number", "id": "outer_m_c_padding_top", "label": "Outer Mobile Padding Top", "default": 20 },
-    { "type": "number", "id": "outer_m_c_padding_bottom", "label": "Outer Mobile Padding Bottom", "default": 20 },
-    { "type": "number", "id": "outer_m_c_padding_left", "label": "Outer Mobile Padding Left", "default": 0 },
-    { "type": "number", "id": "outer_m_c_padding_right", "label": "Outer Mobile Padding Right", "default": 0 },
-
-    { "type": "header", "content": "Padding settings" },
-    { "type": "number", "id": "c_padding_top", "label": "Padding Top", "default": 20 },
-    { "type": "number", "id": "c_padding_bottom", "label": "Padding Bottom", "default": 20 },
-    { "type": "number", "id": "c_padding_left", "label": "Padding Left", "default": 0 },
-    { "type": "number", "id": "c_padding_right", "label": "Padding Right", "default": 0 },
-    { "type": "number", "id": "m_c_padding_top", "label": "Mobile Padding Top", "default": 20 },
-    { "type": "number", "id": "m_c_padding_bottom", "label": "Mobile Padding Bottom", "default": 20 },
-    { "type": "number", "id": "m_c_padding_left", "label": "Mobile Padding Left", "default": 0 },
-    { "type": "number", "id": "m_c_padding_right", "label": "Mobile Padding Right", "default": 0 },
-
-    { "type": "header", "content": "Component Settings" },
-    { "type": "number", "id": "max_width", "label": "Max width", "default": 800 },
+    { "type": "header", "content": "Section Layout" },
+    { "type": "text", "id": "outer_c_padding", "label": "Outer Padding Top", "default": "20px 0" },
+    { "type": "text", "id": "outer_m_c_padding_top", "label": "Outer Mobile Padding Top", "default": "20px 0" },
     { "type": "color", "id": "outer_background_colour", "label": "Outer Background Colour" },
-    { "type": "color", "id": "inner_background_colour", "label": "Inner Background Colour" }
+
+    { "type": "header", "content": "Marquee Layout" },
+    { "type": "text", "id": "c_padding", "label": "Padding Top", "default": "20px 0" },
+    { "type": "text", "id": "m_c_padding_top", "label": "Mobile Padding Top", "default": "20px 0" },
+    { "type": "color", "id": "inner_background_colour", "label": "Inner Background Colour" },
+
+    { "type": "header", "content": "Item Layout" },
+    { "type": "text", "id": "icon_gap", "label": "Spacing between Icon and Label", "default": "clamp(10px, 1.5rem, 50px)" },
+    { "type": "text", "id": "icon_max_width", "label": "Max Icon Width", "default": "60px" },
+    { "type": "text", "id": "icon_max_height", "label": "Max Icon Height", "default": "60px" },
+    { "type": "text", "id": "item_gap", "label": "Minimum Spacing between Items", "default": "clamp(50px, 6rem, 200px)" },
+    { "type": "color", "id": "item_text_color", "label": "Font Colour", "default": "#000" },
+    { "type": "number", "id": "item_text_size", "label": "Font Size", "default": 16 }
+
   ],
   "blocks": [
     {
