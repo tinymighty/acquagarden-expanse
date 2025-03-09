@@ -12,7 +12,7 @@
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
       "custom_css": [
-        ".index-section .btn{margin-top: 2rem; margin-left: -0.4rem;}"
+        ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
       ],
       "settings": {
         "image": "shopify://shop_images/Home_1.jpg",
@@ -117,7 +117,7 @@
         "icon_max_height": "60px",
         "item_gap": "clamp(50px, 6rem, 200px)",
         "item_text_color": "#000",
-        "item_text_size": 16
+        "item_text_size": 18
       }
     },
     "featured_collection_XNjNXE": {
