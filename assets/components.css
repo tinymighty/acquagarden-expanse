@@ -4198,9 +4198,9 @@ th,
 */
 
 @media only screen and (min-width: 769px) {
-  *:not([data-modal]) .product-single__sticky {
-    /* position: sticky;
-    top: 100px; */
+  .product-single__sticky {
+    position: sticky;
+    top: 140px;
   }
 
   .modal--quick-shop .product-single__sticky {
