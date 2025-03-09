@@ -2,10 +2,16 @@
   flex: 1 0 100%;
 }
 
-.footer__title {
-  font-weight: bold;
-  font-size: var(--type-base-size);
+.site-footer {
+  background-color: #EFF0E9;
 }
+.footer__title {
+  font-size: calc(var(--type-base-size)*1.2);
+}
+/* .footer__blocks {
+  gap: 50px;
+} */
+
 .product-block .rte h2 {
   font-size: calc(var(--type-base-size)* 1.4);
   margin-bottom: 0.5em;
