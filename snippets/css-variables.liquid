@@ -82,7 +82,7 @@
 
     --type-header-primary: {{ settings.type_header_font_family.family }};
     --type-header-fallback: {{ settings.type_header_font_family.fallback_families }};
-    --type-header-size: {{ settings.type_header_base_size | default: '32' | append: 'px' }};
+    --type-header-size: calc({{ settings.type_header_base_size | default: '32' | append: 'rem' }} / 16);
     --type-header-weight: {{ settings.type_header_font_family.weight }};
     --type-header-line-height: {{ settings.type_header_line_height | default: 1.4 }};
     --type-header-spacing: {{ settings.type_header_spacing | default: '25' | divided_by: 1000.00 | append: 'em' }};
@@ -95,7 +95,7 @@
 
     --type-base-primary:{{ settings.type_base_font_family.family }};
     --type-base-fallback:{{ settings.type_base_font_family.fallback_families }};
-    --type-base-size: {{ settings.type_base_size | default: 16 | append: 'px' }};
+    --type-base-size: calc({{ settings.type_base_size | default: 16 | append: 'rem' }} / 16);
     --type-base-weight: {{ settings.type_base_font_family.weight }};
     --type-base-spacing: {{ settings.type_base_spacing | default: '50' | divided_by: 1000.00 | append: 'em' }};
     --type-base-line-height: {{ settings.type_base_line_height | default: 1.4 }};
@@ -155,7 +155,7 @@
       --section-header-bottom: 25px;
       --collapsible-icon-width: 10px;
       --text-frame-margin: 7px;
-      --type-base-size: {{ settings.type_base_size | default: 16 | minus: 2 | append: 'px' }};
+      --type-base-size: calc({{ settings.type_base_size | default: 16 | minus: 2 | append: 'rem' }} / 16);
 
       {% if settings.edges == 'round' %}
         --roundness: 15px;
