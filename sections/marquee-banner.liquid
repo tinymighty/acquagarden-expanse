@@ -36,6 +36,10 @@
     background-color: {{ section.settings.inner_background_colour }};
   }
 
+  #t-{{ section.id }} .marquee-banner__row {
+    animation-duration: {{ section.settings.m_scroll_speed }}s;
+  }
+
   #t-{{ section.id }} .marquee-banner__main_title {
     text-align: {{ section.settings.header_text_align }};
     max-width: {{ section.settings.header_max_width }};
@@ -75,10 +79,13 @@
   /* desktop styles */
   @media only screen and (min-width: 768px) {
     #shopify-section-{{ section.id }} {
-        padding: {{ section.settings.outer_c_padding }};
+      padding: {{ section.settings.outer_c_padding }};
     }
     #t-{{section.id}} .marquee-banner__inner {
-        padding: {{ section.settings.c_padding }};
+      padding: {{ section.settings.c_padding }};
+    }
+    #t-{{ section.id }} .marquee-banner__row {
+      animation-duration: {{ section.settings.scroll_speed }}s;
     }
   }
 
@@ -88,8 +95,8 @@
 {
   "name": "Marquee Banner",
   "settings": [
-    { "type": "number", "id": "scroll_speed", "label": "Scroll Speed (pixels per second)", "default": 100 },
-    { "type": "number", "id": "m_scroll_speed", "label": "Mobile Scroll Speed (pixels per second)", "default": 75 },
+    { "type": "number", "id": "scroll_speed", "label": "Scroll Duration", "default": 100 },
+    { "type": "number", "id": "m_scroll_speed", "label": "Mobile Scroll Duration", "default": 75 },
     
     { "type": "header", "content": "Header settings" },
     { "type": "text", "id": "header_max_width", "label": "Header Max Width", "default": "100%" },
@@ -98,7 +105,7 @@
     { "type": "number", "id": "main_title_size", "label": "Title Text Size", "default": 28 },
     { "type": "number", "id": "m_main_title_size", "label": "Mobile Title Text Size", "default": 24 },
     { "type": "color", "id": "main_title_colour", "label": "Title Colour", "default": "#000" },
-    { "type": "number", "id": "main_title_font_weight", "label": "Sub Title Font Weight (100s)", "default": 600 },
+    { "type": "number", "id": "main_title_font_weight", "label": "Title Font Weight", "default": 600 },
     {
       "type": "select",
       "id": "header_text_align",
