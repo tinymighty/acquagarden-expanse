@@ -1,1 +1,186 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"faq":{"type":"faq","blocks":{"faq-0":{"type":"rich-text","settings":{"title":"Shipping","text":""}},"faq-1":{"type":"question","settings":{}},"faq-2":{"type":"question","settings":{}},"faq-3":{"type":"rich-text","settings":{"title":"Returns","text":""}},"faq-4":{"type":"question","settings":{}}},"block_order":["faq-0","faq-1","faq-2","faq-3","faq-4"],"settings":{"title":""}}},"order":["main","faq"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+  "sections": {
+    "main": { "type": "main-page", "disabled": true, "settings": {} },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq_zBG7EP": {
+          "type": "question",
+          "settings": {
+            "title": "What makes Acqua Garden plants such high quality?",
+            "text": "<p>Acqua Garden carefully selects each plant and variety for its health, vigour, and suitability for UK growing conditions.</p><p>Our plants are cultivated by our network of expert growers to ensure they are strong, healthy and ready to thrive in your garden.</p><p>We take pride in offering a diverse range of premium quality plants, from vegetables and herbs to bedding plants and perennials.</p>"
+          }
+        },
+        "faq_gjhFWm": {
+          "type": "question",
+          "settings": {
+            "title": "What types of plants do you sell?",
+            "text": "<p>We offer a wide variety of plants, including outdoor garden plants, indoor houseplants, bulbs and many more!</p><p>Whether you're looking for low-maintenance plants or flowering plants we have something for every plant lover.</p><p>Explore our full plant collection to find the perfect addition to your home or garden.</p>"
+          }
+        },
+        "faq_8CFmcM": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer a guarantee on plant health?",
+            "text": "<p>Yes, we provide a plant health guarantee! If your plant arrives in less-than-perfect condition, we offer a hassle-free replacement or refund.</p><p>Simply contact us within 24 hours of receiving your plant and we'll ensure you're satisfied. Our top priority is delivering healthy, thriving plants to your doorstep.</p>"
+          }
+        },
+        "faq_DaNfkx": {
+          "type": "question",
+          "settings": {
+            "title": "Are your plants eco-friendly and sustainably sourced?",
+            "text": "<p>We are committed to sustainability and eco-friendly practices. All our plants are sourced from ethical growers, and we use eco-friendly packaging where available for every order.</p><p>Our goal is to reduce our environmental impact while providing beautiful, healthy plants to our customers.</p>"
+          }
+        },
+        "faq_8Jrwrp": {
+          "type": "question",
+          "settings": {
+            "title": "How long does plant delivery take?",
+            "text": "<p>Our plant delivery typically takes between 1-2 business days, depending on your location and the availability of the plant species.</p><p>You'll receive a tracking number once your order is dispatched. If you're in a remote area, delivery may take a little longer, but we ensure all plants are shipped in optimal conditions for freshness.</p>"
+          }
+        },
+        "faq_VDPyzW": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer same-day or next-day plant delivery?",
+            "text": "<p>Yes! We offer next-day delivery options for select locations and plant varieties. If you need your plants urgently, simply choose the express shipping option at checkout.<br/><br/>Next-day plant delivery is subject to availability, so we recommend placing your order early in the day.</p>"
+          }
+        },
+        "faq_LnM6zy": {
+          "type": "question",
+          "settings": {
+            "title": "How do you ensure the plants are safe during delivery?",
+            "text": "<p>We take great care to ensure your plants arrive in perfect condition. Each plant is carefully packed in protective, eco-friendly packaging to prevent damage during transit.</p>"
+          }
+        },
+        "faq_cinjgM": {
+          "type": "question",
+          "settings": {
+            "title": "What should I do if my plants arrive damaged?",
+            "text": "<p>If your plants arrive damaged or in poor condition, please contact us within 24 hours of delivery. We offer a hassle-free replacement or refund policy.</p><p>Our priority is ensuring that you receive healthy, thriving plants, so we take any issues seriously and resolve them quickly.</p>"
+          }
+        },
+        "faq_cn7eL4": {
+          "type": "question",
+          "settings": {
+            "title": "How much does plant delivery cost?",
+            "text": "<p>Plant delivery costs vary based on the size of your order and location. Standard delivery typically starts at £5.95, with free shipping on orders over £60.</p><p>We also offer expedited shipping options for faster delivery at an additional cost. You'll be able to see your total delivery cost at checkout before finalising your order.</p>"
+          }
+        },
+        "faq_jMxPTK": {
+          "type": "question",
+          "settings": {
+            "title": "What is your customer satisfaction guarantee?",
+            "text": "<p>We are committed to 100% customer satisfaction. If you're not completely happy with your plant purchase, we offer a hassle-free return, replacement, or refund policy.</p><p>Whether the plant arrives damaged or doesn't meet your expectations, our team will work quickly to resolve the issue to ensure you're satisfied with your order.</p>"
+          }
+        },
+        "faq_q9QKNj": {
+          "type": "question",
+          "settings": {
+            "title": "How do I contact customer service for plant issues?",
+            "text": "<p>If you have any issues with your plant order, our customer service team is available to help. You can reach us via email, phone, or through our live chat on the website.</p><p>We aim to respond to all inquiries within 24 hours, ensuring your concerns are addressed quickly and efficiently.</p>"
+          }
+        },
+        "faq_HbWym9": {
+          "type": "question",
+          "settings": {
+            "title": "What happens if I receive the wrong plant?",
+            "text": "<p>In the rare event you receive the wrong plant, please contact us immediately. </p><p>We will send the correct plant as soon as possible and arrange for a return or keep policy for the incorrect item.</p><p>Our goal is to ensure you receive exactly what you ordered, and we will resolve the issue swiftly.</p>"
+          }
+        },
+        "faq_UnExgn": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer guidance to inexperienced gardeners?",
+            "text": "<p>Yes! We all started gardening at some point and had no experience. In addition to our plant care guides and other information here, we offer free consultations and more extensive consultations and guidance sessions beyond that too.</p><p>Sign up for a free consultation or feel free to contact us by email or telephone if you need more extensive guidance or assistance. </p>"
+          }
+        },
+        "faq_Daqhtf": {
+          "type": "question",
+          "settings": {
+            "title": "Can I return plants if I change my mind?",
+            "text": "<p>Due to the perishable nature of plants, we generally do not ask for returns. If you have any concerns about your order or your plants, please reach out to our customer care team, and we will work to resolve any issues you may have promptly..</p>"
+          }
+        }
+      },
+      "block_order": [
+        "section_kfdcYD",
+        "section_pXPxdx",
+        "section_V6bbDR",
+        "faq_zBG7EP",
+        "faq_gjhFWm",
+        "faq_8CFmcM",
+        "faq_DaNfkx",
+        "faq_8Jrwrp",
+        "faq_VDPyzW",
+        "faq_LnM6zy",
+        "faq_cinjgM",
+        "faq_cn7eL4",
+        "faq_jMxPTK",
+        "faq_q9QKNj",
+        "faq_HbWym9",
+        "faq_UnExgn",
+        "faq_Daqhtf"
+      ],
+      "custom_css": [
+        ".bootstrap .accordion summary {border-bottom: none;}",
+        ".accordion__title.h4 {font-weight: 400 !important;}"
+      ],
+      "settings": {
+        "show_image": false,
+        "img_click": "",
+        "image_desc": "",
+        "header_max_width": "",
+        "header_bottom_padding": "20",
+        "m_header_bottom_padding": "15",
+        "main_title": "Frequently Asked Questions",
+        "main_title_size": 36,
+        "m_main_title_size": 28,
+        "main_title_colour": "#000000",
+        "main_title_font_weight": 600,
+        "text_align": "center",
+        "show_buttons": true,
+        "product": "",
+        "bg_colour": "",
+        "font_colour": "",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_left": 10,
+        "padding_right": 10,
+        "m_padding_top": 80,
+        "m_padding_bottom": 80,
+        "m_padding_left": 10,
+        "m_padding_right": 10,
+        "max_width": 1000,
+        "img_max_width": 250,
+        "m_img_max_width": 250,
+        "row_count": 12,
+        "popup_limit": 22,
+        "row_padding": 15,
+        "custom_row_css": "background: #f2f2ee; border-radius: 12px; margin-bottom: 10px; padding: 10px 15px;",
+        "faq_title_desktop_font_size": 20,
+        "m_faq_title_size": 20,
+        "faq_title_font_weight": 600,
+        "faq_title_text_align": "left",
+        "button_spacing": 15,
+        "m_button_spacing": 25,
+        "faq_body_size": 16,
+        "m_faq_body_size": 16,
+        "faq_body_font_weight": 400,
+        "faq_body_text_align": "left",
+        "open_first_collapsible_row": false,
+        "all_open": true
+      }
+    }
+  },
+  "order": ["main", "faq"]
+}
