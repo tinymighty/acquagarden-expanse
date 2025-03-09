@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "searchable_planting_guides_HMAXAW": {
+      "type": "searchable-planting-guides",
+      "custom_css": [".a-body a {color: #264545 !important;}"],
+      "settings": {
+        "url_must_contain": "/blogs/planting-guides",
+        "tags": "All,Vegetables,Herbs,Bedding,Fruits,Shrubs"
+      }
+    }
+  },
+  "order": ["searchable_planting_guides_HMAXAW"]
+}

@@ -1,0 +1,338 @@
+<div class="planting-container">
+  <div>
+    <h1 class="planting-heading fs-md-35 fs-mb-30 my-0">Quick and Easy <span class="planting-heading-accent">Planting Guides</span></h1>
+    <p class="planting-description fs-md-20 fs-mb-18">Explore our easy-to-follow guides to help you plant, grow, and care for your plants.</p>
+
+    <div>
+      <div class="search-container">
+        <input id="search-input" class="search-input" placeholder="What plant are you looking to grow or need help with?" />
+      </div>
+
+      <div class="search-button-container">
+        <button onclick="SearchHandle()" class="search-button fs-md-22 fs-mb-16">Search</button>
+      </div>
+    </div>
+
+    <div id="planting-tags" class="tags-container"></div>
+
+    <div id="planting-articles" class="articles-container">
+      {% for article in blog.articles %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-4">
+          <div class="article-card">
+            <img class="article-image" src="{{ article.image | img_url: 'medium' }}" />
+
+            <p class="article-title fs-md-20 fs-mb-18 fw-bolder">{{article.title}}</p>
+            <div class="article-summary fs-md-16 fs-mb-14">{{article.excerpt_or_content | strip_html | truncatewords: 30}}</div>
+            <a class="article-button" href="{{article.url}}">READ NOW</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="bottom-spacing"></div>
+  </div>
+</div>
+
+<style>
+  .selected {
+    background: #254545 !important;
+    color: white !important;
+    border-color: #254545 !important;
+  }
+
+  .unselected {
+    background: white !important;
+    color: #242223 !important;
+    border-color: #254545 !important;
+  }
+</style>
+
+<script>
+
+  const urlParams = new URLSearchParams(window.location.search);
+  var selectedTag = urlParams.get('selected_tag');
+  var selectedSearch = urlParams.get('search');
+  if (selectedTag == null) {
+    selectedTag = 'All';
+  }
+
+  async function BuildTags() {
+    document.getElementById('planting-tags').innerHTML = '';
+    var allTags = ["{{ section.settings.tags | split: ',' | join: '","'}}"];
+    allTags.forEach((e, i) => {
+      var tagHTML = `<button onclick="SwapTag('${e}')" class="tag-button ${e === selectedTag ? 'selected' : 'unselected'}">
+      <p class="tag-text fs-md-18 fs-mb-14">${e}</p>
+      </button>`;
+      document.getElementById('planting-tags').innerHTML += tagHTML;
+    });
+  }
+  
+  async function SwapTag(tag) {
+    selectedTag = tag;
+    await BuildTags();
+    await Search(selectedSearch);
+  }
+
+  async function SearchHandle() {
+    var value = document.getElementById('search-input').value;
+    selectedSearch = value;
+    await Search(value);
+  }
+  
+  async function Search(query = 'guide') {
+    if (query == null || query == '') query = 'guide';
+    var res = await fetch(`/search/suggest.json?q=${query}&resources[type]=article&resources[options][fields]=title,tag,author`);
+    const response = await res.json();
+    console.log(response);
+    var results = response.resources.results.articles;
+    results = results.filter(r => {
+      return r.url.indexOf('{{ section.settings.url_must_contain }}') > -1;
+    });
+
+    // filter results on tag
+    if (selectedTag != 'All') {
+      results = results.filter(r => {
+        return r.tags.findIndex((t) => t == selectedTag.toLowerCase().replace(' ', '_')) > -1;
+      });
+    }
+
+    const plantingArticles = document.getElementById('planting-articles');
+    plantingArticles.innerHTML = '';
+    
+    if (results.length == 0) {
+      plantingArticles.innerHTML = '<h2 class="text-center mx-auto w-100">No results found.</h2>';
+      return;
+    }
+
+    results.forEach((e, i) => {
+      var articleHTML = `
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-4">
+          <div class="article-card">
+            <img class="article-image" src="${e.featured_image.url}" />
+
+            <p class="article-title fs-md-20 fs-mb-18 fw-bolder">${e.title}</p>
+            <div class="article-summary fs-md-16 fs-mb-14">${e.summary_html}</div>
+            <a class="article-button" href="${e.url}">READ NOW</a>
+          </div>
+        </div>
+        `;
+        
+        plantingArticles.innerHTML += articleHTML;
+    });
+  }
+
+  BuildTags();
+  // Search(selectedSearch || 'guide');
+</script>
+
+{% schema %}
+{
+  "name": "Searchable Planting",
+  "settings": [
+    { "type": "text", "id": "url_must_contain", "label": "Url Contain", "default": "/blogs/" },
+    { "id": "tags", "type": "text", "label": "Tags", "info": "Available filters" }
+  ],
+  "presets": [
+    {
+      "name": "Searchable Planting"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  /* Original Bootstrap styles converted to semantic classes */
+  .planting-container {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .planting-heading {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .planting-heading-accent {
+    color: #5B6A30;
+  }
+  
+  .planting-description {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .search-container {
+    max-width: 500px;
+    background: #FEFEF3;
+    width: 100%;
+    display: flex;
+    border-radius: 0.5rem;
+    border: 1px solid #212529;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .search-button-container {
+    text-align: center;
+  }
+  
+  .search-button {
+    display: block;
+    margin-top: 1rem;
+    background: #5B6A30 !important;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .tags-container {
+    margin-top: 3rem;
+    /* display: flex; */
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .articles-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .article-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 1px solid #212529;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    height: 100%;
+    background: #FEFEF3;
+  }
+  
+  .article-image {
+    width: 100%;
+    display: block;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+  .article-title {
+    margin: 0;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .article-summary {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+    overflow: hidden;
+    text-wrap: wrap;
+  }
+  
+  .article-button {
+    max-width: 150px;
+    width: 100%;
+    background-color: #212529;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .tag-button {
+    border-radius: 0.375rem;
+    border: 1px solid;
+    cursor: pointer;
+  }
+  
+  .tag-text {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.25;
+    margin: 0;
+  }
+  
+  .bottom-spacing {
+    margin-top: 3rem;
+  }
+  
+  /* Responsive Typography */
+  @media (min-width: 768px) {
+    .planting-heading { font-size: 35px; }
+    .planting-description { font-size: 20px; }
+    .search-button { font-size: 22px; }
+    .tag-text { font-size: 18px; }
+    .article-title { font-size: 20px; }
+    .article-summary { font-size: 16px; }
+  }
+  
+  @media (max-width: 767px) {
+    .planting-heading { font-size: 30px; }
+    .planting-description { font-size: 18px; }
+    .search-button { font-size: 16px; }
+    .tag-text { font-size: 14px; }
+    .article-title { font-size: 18px; }
+    .article-summary { font-size: 14px; }
+  }
+  
+  /* Responsive Grid */
+  @media (min-width: 576px) {
+    .articles-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .articles-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Keep original selected/unselected classes */
+  .selected {
+    background: #254545 !important;
+    color: white !important;
+    border-color: #254545 !important;
+  }
+
+  .unselected {
+    background: white !important;
+    color: #242223 !important;
+    border-color: #254545 !important;
+  }
+</style>
