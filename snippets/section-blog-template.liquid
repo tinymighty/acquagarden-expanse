@@ -19,18 +19,20 @@
 
 {%- paginate blog.articles by 9 -%}
   <div data-section-id="{{ section.id }}" data-section-type="blog">
-    <header class="section-header{% if blog_show_tag_filter and blog.tags.size > 0 %} section-header--with-link{% endif %}">
-      <h1 class="section-header__title">
-        {{ blog.title }}
+    {%- if section.settings.blog_show_header -%}
+      <header class="section-header{% if blog_show_tag_filter and blog.tags.size > 0 %} section-header--with-link{% endif %}">
+        <h1 class="section-header__title">
+          {{ blog.title }}
 
-        {%- if blog_show_rss -%}
-          <a href="{{ shop.url }}{{ blog.url }}.atom" class="rss-link">
-            {% render 'icon', name: 'rss' %}
-            <span class="icon__fallback-text visually-hidden">RSS</span>
-          </a>
-        {%- endif -%}
-      </h1>
-    </header>
+          {%- if blog_show_rss -%}
+            <a href="{{ shop.url }}{{ blog.url }}.atom" class="rss-link">
+              {% render 'icon', name: 'rss' %}
+              <span class="icon__fallback-text visually-hidden">RSS</span>
+            </a>
+          {%- endif -%}
+        </h1>
+      </header>
+    {%- endif -%}
 
     <div class="new-grid">
       {% liquid
