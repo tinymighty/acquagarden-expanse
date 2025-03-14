@@ -130,6 +130,8 @@ const stickyBuyBar = document.querySelector('.sticky-buy-bar');
 if (priceBlock && stickyBuyBar) {
   const observer = new IntersectionObserver((entries) => {
     // When price block is not intersecting (out of view), show sticky bar
+    stickyBuyBar.style.height = `${document.querySelector('.site-header__element').offsetHeight + 60}px`;
+    stickyBuyBar.style['padding-top'] = `${document.querySelector('.site-header__element').offsetHeight}px`;
     if (!entries[0].isIntersecting) {
       stickyBuyBar.classList.add('sticky-buy-bar--visible');
     } else {
@@ -154,15 +156,17 @@ document.querySelector('.sticky-buy-bar__backtotop').addEventListener('click', (
 .sticky-buy-bar {
   position: fixed;
   height: 60px;
-  bottom: -60px;
+  top: -100px;
   width: 100%;
+  opacity: 0;
   border-top: 1px solid #e5e5e5;
-  z-index: 1000;
-  transition: bottom 0.3s;
+  z-index: calc(var(--z-index-header) - 1);
+  transition: top 0.3s, opacity 0.3s;
   background-color: var(--color-nav);
 }
 .sticky-buy-bar.sticky-buy-bar--visible {
-  bottom: 0;
+  top: 0;
+  opacity: 1;
 }
 .sticky-buy-bar form,
 .sticky-buy-bar__inner {
