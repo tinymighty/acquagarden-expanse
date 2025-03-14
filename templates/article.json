@@ -12,6 +12,7 @@
     "main": {
       "type": "article-template",
       "settings": {
+        "blog_show_h1": false,
         "blog_capitalize_first": false,
         "blog_show_tags": false,
         "blog_show_date": true,
