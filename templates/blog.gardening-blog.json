@@ -14,10 +14,9 @@
       "blocks": {
         "tag1": {
           "type": "tag_filter",
-          "disabled": true,
           "settings": {
             "title": "Blog & Tips",
-            "tag": "blog-tips"
+            "tag": "gardening_blog"
           }
         },
         "tag2": {
