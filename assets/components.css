@@ -7181,11 +7181,18 @@ svg.icon.icon--line {
 
 .item-grid__sidebar {
   min-height: 0;
-  position: sticky;
+  position: static;
   top: 90px; /*updated with sticky header JS*/
   max-height: 90vh;
   overflow-y: auto;
 }
+
+@media screen and (min-width: 768px) {
+  .item-grid__sidebar {
+    position: sticky;
+  }
+}
+
 
 .collection-mobile-filters .collapsible-trigger__layout--inline {
     justify-content: space-between;
