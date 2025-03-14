@@ -23,7 +23,7 @@
         "heading_size": "h2",
         "text": "<p>Providing the highest quality plants to gardeners of every kind across the UK</p>",
         "button_label": "Shop Our UK Plant Range",
-        "button_link": "shopify://collections",
+        "button_link": "shopify://collections/best-sellers",
         "button_style": "primary",
         "align_text": "center",
         "image_width": "50",
@@ -116,7 +116,7 @@
         "icon_max_width": "60px",
         "icon_max_height": "60px",
         "item_gap": "clamp(50px, 6rem, 200px)",
-        "item_text_color": "#000",
+        "item_text_color": "#000000",
         "item_text_size": 18
       }
     },
