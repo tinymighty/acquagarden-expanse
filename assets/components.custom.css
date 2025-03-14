@@ -290,7 +290,7 @@ for overrides, use overrides.css
   text-wrap: wrap;
 }
 
-.blog-fs__article__button {
+.blog-fs__article__button, .blog-fs__article__button:hover {
   max-width: 150px;
   width: 100%;
   background-color: #212529;
@@ -309,7 +309,7 @@ for overrides, use overrides.css
   border: 1px solid;
   cursor: pointer;
 }
-.blog-fs__tag--selected {
+.blog-fs__tag--selected, .blog-fs__tag--selected:hover {
   background: #212529;
   color: white;
 }
