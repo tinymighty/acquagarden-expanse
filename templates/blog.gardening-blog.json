@@ -2,48 +2,48 @@
   "sections": {
     "blog_filtered_searchable_HMAXAW": {
       "type": "blog-filtered-searchable",
-      "custom_css": [""],
+      "custom_css": [],
       "settings": {
-        "title": "Quick and Easy <em>Planting Guides</em>",
-        "description": "Explore our easy-to-follow guides to help you plant, grow, and care for your plants.",
-        "input_placeholder": "What plant are you looking to grow or need help with?"
+        "title": "Gardening Blog & Resources",
+        "description": "Find expert advice, how-tos, and inspiration on all things gardening.",
+        "input_placeholder": "What are you looking for?",
       },
       "blocks": {
         "tag1": {
           "type": "tag_filter",
           "settings": {
-            "tag": "vegetables",
-            "title": "Vegetables"
+            "tag": "blog-tips",
+            "title": "Blog & Tips"
           }
         },
         "tag2": {
           "type": "tag_filter",
           "settings": {
-            "tag": "herbs",
-            "title": "Herbs"
+            "tag": "nutrition-recipes",
+            "title": "Nutrition & Recipes"
           }
         },
         "tag3": {
           "type": "tag_filter",
           "settings": {
-            "tag": "bedding",
-            "title": "Bedding"
+            "tag": "urban-gardening",
+            "title": "Urban Gardening"
           }
         },
         "tag4": {
           "type": "tag_filter",
           "settings": {
-            "tag": "fruits",
-            "title": "Fruits"
+            "tag": "gardening-inspiration",
+            "title": "Gardening Inspiration"
           }
         },
         "tag5": {
           "type": "tag_filter",
           "settings": {
-            "tag": "shrubs",
-            "title": "Shrubs"
+            "tag": "seasonal-gardening",
+            "title": "Seasonal Gardening"
           }
-        }
+        },
       },
       "block_order": [
         "tag1",

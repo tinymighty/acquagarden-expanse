@@ -1,0 +1,181 @@
+{%- liquid
+  assign selectedTag = ''
+  if request.path contains '/tagged/'
+    assign path_parts = request.path | split: '/tagged/'
+    if path_parts.size > 1
+      assign selectedTag = path_parts[1] | strip
+    endif
+  endif
+  
+-%}
+<div class="blog-fs__container">
+  <div>
+    <h1 class="blog-fs__header">{{section.settings.title}}</h1>
+    <p class="planting-description">{{section.settings.description}}</p>
+
+    <div>
+      <div class="blog-fs__search-container">
+        <input id="search-input" class="blog-fs__search-input" placeholder="What plant are you looking to grow or need help with?" />
+        <button id="clear-search" class="blog-fs__search-clear"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22.5 22.5" version="1.1"><g id="surface1441"><path style=" stroke:none;fill-rule:nonzero;fill:rgb(9.019608%,9.019608%,9.411765%);fill-opacity:1;" d="M 5.132812 2.933594 C 4.945312 2.933594 4.757812 3.003906 4.613281 3.148438 L 3.148438 4.613281 C 2.863281 4.902344 2.863281 5.367188 3.148438 5.652344 L 8.496094 11 L 3.148438 16.347656 C 2.863281 16.636719 2.863281 17.097656 3.148438 17.386719 L 4.613281 18.851562 C 4.902344 19.136719 5.367188 19.136719 5.652344 18.851562 L 11 13.503906 L 16.347656 18.851562 C 16.632812 19.136719 17.097656 19.136719 17.386719 18.851562 L 18.851562 17.386719 C 19.136719 17.097656 19.136719 16.632812 18.851562 16.347656 L 13.503906 11 L 18.851562 5.652344 C 19.136719 5.367188 19.136719 4.902344 18.851562 4.613281 L 17.386719 3.148438 C 17.097656 2.863281 16.632812 2.863281 16.347656 3.148438 L 11 8.496094 L 5.652344 3.148438 C 5.507812 3.003906 5.320312 2.933594 5.132812 2.933594 Z M 5.132812 2.933594 "/></g></svg></button>
+      </div>
+
+      <div class="blog-fs__search-button-container">
+        <button class="blog-fs__search-button">Search</button>
+      </div>
+    </div>
+
+    <div class="blog-fs__tags-container">
+      <a href="{{blog.url}}/" class="blog-fs__tag {% if selectedTag == '' %}blog-fs__tag--selected{% endif %}">
+        <p class="tag-text fs-md-18 fs-mb-14">All</p>
+      </a>
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'tag_filter' -%}
+        <a href="{{blog.url}}/tagged/{{block.settings.tag}}" class="blog-fs__tag {% if selectedTag == block.settings.tag %}blog-fs__tag--selected{% endif %}">
+          <p class="tag-text fs-md-18 fs-mb-14">{{ block.settings.title | strip }}</p>
+        </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    <div id="blog-fs__search-results">
+      <div class="blog-fs__article-grid"></div>
+    </div>
+    {%- paginate blog.articles by 24 -%}
+      <div id="blog-fs__articles">
+        <div class="blog-fs__article-grid">
+        {%- for article in blog.articles -%}
+          <div class="">
+            <div class="blog-fs__article__card">
+              {{article.image |  image_url: width: '700px' |  image_tag: class: 'blog-fs__article__image'}}
+              <p class="blog-fs__article__title">{{article.title}}</p>
+              <div class="blog-fs__article__summary">{{article.excerpt_or_content | strip_html | truncatewords: 30}}</div>
+              <a class="blog-fs__article__button" href="{{article.url}}">READ NOW</a>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+      {%- liquid
+      if paginate.pages > 1
+        render 'pagination', paginate: paginate
+      endif
+    -%}
+    </div>
+  {%- endpaginate -%}
+
+    <div class="bottom-spacing"></div>
+  </div>
+</div>
+
+
+
+<script>
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedTag = window.location.pathname.indexOf('tagged') > -1 ? window.location.pathname.split('/').pop() : null;
+  console.log(selectedTag)
+  const searchResults = document.getElementById('blog-fs__search-results');
+  const searchResultsGrid = searchResults.querySelector('.blog-fs__article-grid');
+  const blogArticles = document.getElementById('blog-fs__articles');
+
+  document.querySelector('.blog-fs__search-button')?.addEventListener('click', handleSearch);
+  document.querySelector('.blog-fs__search-input')?.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  });
+
+  document.querySelector('#clear-search')?.addEventListener('click', function() {
+    document.querySelector('.blog-fs__search-input').value = '';
+    searchResultsGrid.innerHTML = '';
+    searchResults.style.display = 'none';
+    blogArticles.style.display = 'block';
+  });
+
+  async function handleSearch() {
+    var value = document.querySelector('.blog-fs__search-input').value;
+    searchResultsGrid.innerHTML = '';
+    searchResults.style.display = 'block';
+    blogArticles.style.display = 'none';
+    await Search(value);
+  }
+  
+  async function Search(query) {
+    if (query == null || query == '') {
+      console.error('Query is empty');
+      return;
+    }
+    var res = await fetch(`/search/suggest.json?q=${query}&resources[type]=article&resources[options][fields]=title,tag,author`);
+    const response = await res.json();
+    console.log(response);
+    var results = response.resources.results.articles;
+    results = results.filter(r => {
+      return r.url.indexOf('{{ section.settings.url_must_contain }}') > -1;
+    });
+
+    // filter results on tag
+    if (selectedTag) {
+      results = results.filter(r => {
+        return r.tags.findIndex((t) => t == selectedTag) > -1;
+      });
+    }
+
+    searchResultsGrid.innerHTML = '';
+    
+    if (results.length == 0) {
+      searchResultsGrid.innerHTML = '<h2 class="text-center mx-auto w-100">No results found.</h2>';
+      return;
+    }
+
+    results.forEach((e, i) => {
+      var articleHTML = `
+        <div class="">
+          <div class="blog-fs__article__card">
+            <img class="blog-fs__article__image" src="${e.featured_image.url}" />
+
+            <p class="blog-fs__article__title">${e.title}</p>
+            <div class="blog-fs__article__summary">${e.summary_html}</div>
+            <a class="blog-fs__article__button" href="${e.url}">READ NOW</a>
+          </div>
+        </div>
+        `;
+        
+        searchResultsGrid.innerHTML += articleHTML;
+    });
+  }
+
+</script>
+
+{% schema %}
+{
+  "name": "Searchable Planting",
+  "settings": [
+    { "type": "richtext", "id": "title", "label": "Title", "default": "" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "" },
+    { "type": "text", "id": "input_placeholder", "label": "Search Placeholder", "default": "Search for articles" }
+  ],
+  "blocks": [
+    {
+      "type": "tag_filter",
+      "name": "Tag Filter",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "info": "Display title for this tag"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag",
+          "info": "The blog tag to match"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Filter & Search Blog"
+    }
+  ]
+}
+{% endschema %}

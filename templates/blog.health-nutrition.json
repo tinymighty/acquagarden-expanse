@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "blog_filtered_searchable_HMAXAW": {
+      "type": "blog-filtered-searchable",
+      "custom_css": [],
+      "settings": {
+        "title": "Health & Nutrition",
+        "description": "Find expert advice, how-tos, and inspiration on all things health and nutrition.",
+        "input_placeholder": "What are you looking for?",
+      },
+      "blocks": {
+
+      },
+      "block_order": [
+
+      ]
+    }
+  },
+  "order": ["blog_filtered_searchable_HMAXAW"]
+}

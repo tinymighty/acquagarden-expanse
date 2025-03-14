@@ -156,3 +156,206 @@ for overrides, use overrides.css
     transform: translateX(-100%);
   }
 }
+
+
+/* 
+ * Custom Blog Styles - Ported from old theme, fixed and updated to remove Bootstrap dependency
+ */
+ 
+.blog-fs__container {
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.blog-fs__header {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.blog-fs__header em {
+  color: #5B6A30;
+}
+
+.planting-description {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.blog-fs__search-container {
+  max-width: 500px;
+  background: #FEFEF3;
+  width: 100%;
+  display: flex;
+  border-radius: 0.5rem;
+  border: 1px solid #212529;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+}
+
+.blog-fs__search-input {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: none;
+  outline: none;
+}
+.blog-fs__search-input:focus {
+  outline: none;
+  border: none;
+}
+.blog-fs__search-clear {
+  margin-right: 10px;
+  opacity: 0.3
+}
+.blog-fs__search-clear:hover {
+  opacity: 1;
+}
+
+.blog-fs__search-button-container {
+  text-align: center;
+}
+
+.blog-fs__search-button {
+  display: block;
+  margin-top: 1rem;
+  background: #5B6A30 !important;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.blog-fs__tags-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.blog-fs__article-grid {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+.blog-fs__article__card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid #212529;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  height: 100%;
+  background: #FEFEF3;
+}
+
+.blog-fs__article__image {
+  width: 100%;
+  display: block;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.blog-fs__article__title {
+  margin: 0;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.blog-fs__article__summary {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+  overflow: hidden;
+  text-wrap: wrap;
+}
+
+.blog-fs__article__button {
+  max-width: 150px;
+  width: 100%;
+  background-color: #212529;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.blog-fs__tag {
+  border-radius: 0.375rem;
+  border: 1px solid;
+  cursor: pointer;
+}
+.blog-fs__tag--selected {
+  background: #212529;
+  color: white;
+}
+
+.tag-text {
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.bottom-spacing {
+  margin-top: 3rem;
+}
+
+/* Responsive Typography */
+@media (min-width: 768px) {
+  .blog-fs__header { font-size: 35px; }
+  .planting-description { font-size: 20px; }
+  .search-button { font-size: 22px; }
+  .tag-text { font-size: 18px; }
+  .blog-fs__article__title { font-size: 20px; }
+  .blog-fs__article__summary { font-size: 16px; }
+}
+
+@media (max-width: 767px) {
+  .blog-fs__header { font-size: 30px; }
+  .planting-description { font-size: 18px; }
+  .search-button { font-size: 16px; }
+  .tag-text { font-size: 14px; }
+  .blog-fs__article__title { font-size: 18px; }
+  .blog-fs__article__summary { font-size: 14px; }
+}
+
+/* Responsive Grid */
+@media (min-width: 576px) {
+  .blog-fs__article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-fs__article-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
