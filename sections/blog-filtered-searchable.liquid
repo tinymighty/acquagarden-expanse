@@ -10,8 +10,8 @@
 -%}
 <div class="blog-fs__container">
   <div>
-    <h1 class="blog-fs__header">{{section.settings.title}}</h1>
-    <p class="planting-description">{{section.settings.description}}</p>
+    {{section.settings.title}}
+    <div class="planting-description">{{section.settings.description}}</div>
 
     <div>
       <div class="blog-fs__search-container">
@@ -71,7 +71,7 @@
 
   const urlParams = new URLSearchParams(window.location.search);
   const selectedTag = window.location.pathname.indexOf('tagged') > -1 ? window.location.pathname.split('/').pop() : null;
-  console.log(selectedTag)
+
   const searchResults = document.getElementById('blog-fs__search-results');
   const searchResultsGrid = searchResults.querySelector('.blog-fs__article-grid');
   const blogArticles = document.getElementById('blog-fs__articles');
@@ -105,11 +105,11 @@
     }
     var res = await fetch(`/search/suggest.json?q=${query}&resources[type]=article&resources[options][fields]=title,tag,author`);
     const response = await res.json();
-    console.log(response);
+
     var results = response.resources.results.articles;
     results = results.filter(r => {
-      return r.url.indexOf('{{ section.settings.url_must_contain }}') > -1;
-    });
+      return r.url.indexOf('{{ blog.handle }}') > -1;
+    }); 
 
     // filter results on tag
     if (selectedTag) {
@@ -148,8 +148,8 @@
 {
   "name": "Searchable Planting",
   "settings": [
-    { "type": "richtext", "id": "title", "label": "Title", "default": "" },
-    { "type": "richtext", "id": "description", "label": "Description", "default": "" },
+    { "type": "richtext", "id": "title", "label": "Title", "default": "<h1>Blog Page Title</h1>" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>Blog page description</p>" },
     { "type": "text", "id": "input_placeholder", "label": "Search Placeholder", "default": "Search for articles" }
   ],
   "blocks": [

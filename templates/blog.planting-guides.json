@@ -4,8 +4,8 @@
       "type": "blog-filtered-searchable",
       "custom_css": [""],
       "settings": {
-        "title": "Quick and Easy <em>Planting Guides</em>",
-        "description": "Explore our easy-to-follow guides to help you plant, grow, and care for your plants.",
+        "title": "<h1>Quick and Easy <em>Planting Guides</em></h1>",
+        "description": "<p>Explore our easy-to-follow guides to help you plant, grow, and care for your plants.</p>",
         "input_placeholder": "What plant are you looking to grow or need help with?"
       },
       "blocks": {

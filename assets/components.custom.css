@@ -161,21 +161,22 @@ for overrides, use overrides.css
 /* 
  * Custom Blog Styles - Ported from old theme, fixed and updated to remove Bootstrap dependency
  */
- 
+
 .blog-fs__container {
   padding-top: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.blog-fs__header {
+.blog-fs__container h1{
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.blog-fs__header em {
+.blog-fs__container h1 em {
   color: #5B6A30;
+  font-style: normal;
 }
 
 .planting-description {

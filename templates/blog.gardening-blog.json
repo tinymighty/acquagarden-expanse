@@ -4,8 +4,8 @@
       "type": "blog-filtered-searchable",
       "custom_css": [],
       "settings": {
-        "title": "Gardening Blog & Resources",
-        "description": "Find expert advice, how-tos, and inspiration on all things gardening.",
+        "title": "<h1>Gardening Blog & Resources</h1>",
+        "description": "<p>Find expert advice, how-tos, and inspiration on all things gardening.</p>",
         "input_placeholder": "What are you looking for?",
       },
       "blocks": {
