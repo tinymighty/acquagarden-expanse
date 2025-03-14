@@ -11,46 +11,40 @@
   "sections": {
     "blog_filtered_searchable_HMAXAW": {
       "type": "blog-filtered-searchable",
-      "custom_css": [""],
-      "settings": {
-        "title": "<h1>Quick and Easy <em>Planting Guides</em></h1>",
-        "description": "<p>Explore our easy-to-follow guides to help you plant, grow, and care for your plants.</p>",
-        "input_placeholder": "What plant are you looking to grow or need help with?"
-      },
       "blocks": {
         "tag1": {
           "type": "tag_filter",
           "settings": {
-            "tag": "vegetables",
-            "title": "Vegetables"
+            "title": "Vegetables",
+            "tag": "vegetables"
           }
         },
         "tag2": {
           "type": "tag_filter",
           "settings": {
-            "tag": "herbs",
-            "title": "Herbs"
+            "title": "Herbs",
+            "tag": "herbs"
           }
         },
         "tag3": {
           "type": "tag_filter",
           "settings": {
-            "tag": "bedding",
-            "title": "Bedding"
+            "title": "Bedding",
+            "tag": "bedding"
           }
         },
         "tag4": {
           "type": "tag_filter",
           "settings": {
-            "tag": "fruits",
-            "title": "Fruits"
+            "title": "Fruits",
+            "tag": "fruit"
           }
         },
         "tag5": {
           "type": "tag_filter",
           "settings": {
-            "tag": "shrubs",
-            "title": "Shrubs"
+            "title": "Shrubs",
+            "tag": "shrubs"
           }
         }
       },
@@ -60,8 +54,16 @@
         "tag3",
         "tag4",
         "tag5"
-      ]
+      ],
+      "custom_css": [],
+      "settings": {
+        "title": "<h1>Quick and Easy <em>Planting Guides</em></h1>",
+        "description": "<p>Explore our easy-to-follow guides to help you plant, grow, and care for your plants.</p>",
+        "input_placeholder": "What plant are you looking to grow or need help with?"
+      }
     }
   },
-  "order": ["blog_filtered_searchable_HMAXAW"]
+  "order": [
+    "blog_filtered_searchable_HMAXAW"
+  ]
 }
