@@ -11,48 +11,47 @@
   "sections": {
     "blog_filtered_searchable_HMAXAW": {
       "type": "blog-filtered-searchable",
-      "custom_css": [],
-      "settings": {
-        "title": "<h1>Gardening Blog & Resources</h1>",
-        "description": "<p>Find expert advice, how-tos, and inspiration on all things gardening.</p>",
-        "input_placeholder": "What are you looking for?",
-      },
       "blocks": {
         "tag1": {
           "type": "tag_filter",
+          "disabled": true,
           "settings": {
-            "tag": "blog-tips",
-            "title": "Blog & Tips"
+            "title": "Blog & Tips",
+            "tag": "blog-tips"
           }
         },
         "tag2": {
           "type": "tag_filter",
+          "disabled": true,
           "settings": {
-            "tag": "nutrition-recipes",
-            "title": "Nutrition & Recipes"
+            "title": "Nutrition & Recipes",
+            "tag": "nutrition-recipes"
           }
         },
         "tag3": {
           "type": "tag_filter",
+          "disabled": true,
           "settings": {
-            "tag": "urban-gardening",
-            "title": "Urban Gardening"
+            "title": "Urban Gardening",
+            "tag": "urban-gardening"
           }
         },
         "tag4": {
           "type": "tag_filter",
+          "disabled": true,
           "settings": {
-            "tag": "gardening-inspiration",
-            "title": "Gardening Inspiration"
+            "title": "Gardening Inspiration",
+            "tag": "gardening-inspiration"
           }
         },
         "tag5": {
           "type": "tag_filter",
+          "disabled": true,
           "settings": {
-            "tag": "seasonal-gardening",
-            "title": "Seasonal Gardening"
+            "title": "Seasonal Gardening",
+            "tag": "seasonal-gardening"
           }
-        },
+        }
       },
       "block_order": [
         "tag1",
@@ -60,8 +59,16 @@
         "tag3",
         "tag4",
         "tag5"
-      ]
+      ],
+      "custom_css": [],
+      "settings": {
+        "title": "<h1>Gardening Blog & Resources</h1>",
+        "description": "<p>Find expert advice, how-tos, and inspiration on all things gardening.</p>",
+        "input_placeholder": "What are you looking for?"
+      }
     }
   },
-  "order": ["blog_filtered_searchable_HMAXAW"]
+  "order": [
+    "blog_filtered_searchable_HMAXAW"
+  ]
 }
