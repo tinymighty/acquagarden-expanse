@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "blog_filtered_searchable_HMAXAW": {
@@ -6,15 +15,11 @@
       "settings": {
         "title": "<h1>Recipes</h1>",
         "description": "<p>Find expert advice, how-tos, and inspiration on all things health and nutrition.</p>",
-        "input_placeholder": "What are you looking for?",
-      },
-      "blocks": {
-
-      },
-      "block_order": [
-
-      ]
+        "input_placeholder": "What are you looking for?"
+      }
     }
   },
-  "order": ["blog_filtered_searchable_HMAXAW"]
+  "order": [
+    "blog_filtered_searchable_HMAXAW"
+  ]
 }
