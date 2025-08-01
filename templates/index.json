@@ -9,8 +9,26 @@
  */
 {
   "sections": {
+    "background_image_text_KigkJR": {
+      "type": "background-image-text",
+      "custom_css": [],
+      "name": "t:labels.large_image_with",
+      "settings": {
+        "subtitle": "",
+        "title": "Mid-Summer Sale: 25% Off Sitewide",
+        "text": "<p>Use Code <strong>SUMMER25 </strong></p><p>🕒Hurry! Ends Monday 11th August.</p>",
+        "button_label": "SHOP SALE",
+        "button_link": "shopify://collections",
+        "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER2_8a315eb5-0868-4eeb-81c3-13357799de1f.png",
+        "layout": "left",
+        "height": 550,
+        "parallax": false,
+        "parallax_direction": "top"
+      }
+    },
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
+      "disabled": true,
       "custom_css": [
         ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
       ],
@@ -705,6 +723,7 @@
     }
   },
   "order": [
+    "background_image_text_KigkJR",
     "text_and_image_cYgC3g",
     "company_usp_banner_yDj3at",
     "featured_collection_XNjNXE",
