@@ -39,6 +39,92 @@
         "divider": false
       }
     },
+    "company_usp_banner_yDj3at": {
+      "type": "marquee-banner",
+      "blocks": {
+        "col_item_JdHTMB": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Premium_Icon_32f36241-6b18-4db6-8fb4-bf5b59b2a692.png",
+            "text": "Best Quality Plants",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_NHt7rD": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Delivery_Icon_3dd26526-2b05-420b-9808-affe32aef517.png",
+            "text": "Fast & Secure Delivery",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_FPTFih": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/uk-sticker.png",
+            "text": "UK Business",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_AqXHTA": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Happiness_Icon_9942ff01-3db0-4c8f-94de-31a300c2e07e.png",
+            "text": "100% Happiness Guarantee",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_8QMCW7": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Packaging_Icon_5701810a-4e11-4105-a590-4e888b8fe88c.png",
+            "text": "Bespoke Protective Packaging",
+            "show_on_mobile": true
+          }
+        },
+        "col_item_KLY3EE": {
+          "type": "col_item",
+          "settings": {
+            "icon": "shopify://shop_images/AG_Range_Icon_1.png",
+            "text": "Wide Range Available",
+            "show_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "col_item_JdHTMB",
+        "col_item_NHt7rD",
+        "col_item_FPTFih",
+        "col_item_AqXHTA",
+        "col_item_8QMCW7",
+        "col_item_KLY3EE"
+      ],
+      "custom_css": [],
+      "settings": {
+        "scroll_speed": 100,
+        "m_scroll_speed": 100,
+        "header_max_width": "",
+        "header_bottom_padding": "",
+        "main_title": "",
+        "main_title_size": 20,
+        "m_main_title_size": 16,
+        "main_title_colour": "#5b6a30",
+        "main_title_font_weight": 400,
+        "header_text_align": "center",
+        "outer_c_padding": "20px 0",
+        "outer_m_c_padding_top": "20px 0",
+        "outer_background_colour": "",
+        "c_padding": "20px 0",
+        "m_c_padding_top": "20px 0",
+        "inner_background_colour": "",
+        "icon_gap": "clamp(10px, 1.5rem, 50px)",
+        "icon_max_width": "60px",
+        "icon_max_height": "60px",
+        "item_gap": "clamp(50px, 6rem, 200px)",
+        "item_text_color": "#000000",
+        "item_text_size": 18
+      }
+    },
     "featured_collection_eMYirb": {
       "type": "featured-collection",
       "settings": {
@@ -151,96 +237,10 @@
         "parallax_direction": "top"
       }
     },
-    "company_usp_banner_yDj3at": {
-      "type": "marquee-banner",
-      "blocks": {
-        "col_item_JdHTMB": {
-          "type": "col_item",
-          "settings": {
-            "icon": "shopify://shop_images/AG_Premium_Icon_32f36241-6b18-4db6-8fb4-bf5b59b2a692.png",
-            "text": "Best Quality Plants",
-            "show_on_mobile": true
-          }
-        },
-        "col_item_NHt7rD": {
-          "type": "col_item",
-          "settings": {
-            "icon": "shopify://shop_images/AG_Delivery_Icon_3dd26526-2b05-420b-9808-affe32aef517.png",
-            "text": "Fast & Secure Delivery",
-            "show_on_mobile": true
-          }
-        },
-        "col_item_FPTFih": {
-          "type": "col_item",
-          "settings": {
-            "icon": "shopify://shop_images/uk-sticker.png",
-            "text": "UK Business",
-            "show_on_mobile": true
-          }
-        },
-        "col_item_AqXHTA": {
-          "type": "col_item",
-          "settings": {
-            "icon": "shopify://shop_images/AG_Happiness_Icon_9942ff01-3db0-4c8f-94de-31a300c2e07e.png",
-            "text": "100% Happiness Guarantee",
-            "show_on_mobile": true
-          }
-        },
-        "col_item_8QMCW7": {
-          "type": "col_item",
-          "settings": {
-            "icon": "shopify://shop_images/AG_Packaging_Icon_5701810a-4e11-4105-a590-4e888b8fe88c.png",
-            "text": "Bespoke Protective Packaging",
-            "show_on_mobile": true
-          }
-        },
-        "col_item_KLY3EE": {
-          "type": "col_item",
-          "settings": {
-            "icon": "shopify://shop_images/AG_Range_Icon_1.png",
-            "text": "Wide Range Available",
-            "show_on_mobile": true
-          }
-        }
-      },
-      "block_order": [
-        "col_item_JdHTMB",
-        "col_item_NHt7rD",
-        "col_item_FPTFih",
-        "col_item_AqXHTA",
-        "col_item_8QMCW7",
-        "col_item_KLY3EE"
-      ],
-      "custom_css": [],
-      "settings": {
-        "scroll_speed": 100,
-        "m_scroll_speed": 100,
-        "header_max_width": "",
-        "header_bottom_padding": "",
-        "main_title": "",
-        "main_title_size": 20,
-        "m_main_title_size": 16,
-        "main_title_colour": "#5b6a30",
-        "main_title_font_weight": 400,
-        "header_text_align": "center",
-        "outer_c_padding": "20px 0",
-        "outer_m_c_padding_top": "20px 0",
-        "outer_background_colour": "",
-        "c_padding": "20px 0",
-        "m_c_padding_top": "20px 0",
-        "inner_background_colour": "",
-        "icon_gap": "clamp(10px, 1.5rem, 50px)",
-        "icon_max_width": "60px",
-        "icon_max_height": "60px",
-        "item_gap": "clamp(50px, 6rem, 200px)",
-        "item_text_color": "#000000",
-        "item_text_size": 18
-      }
-    },
     "featured_collection_XNjNXE": {
       "type": "featured-collection",
       "settings": {
-        "title": "SALE: 30% off Best Selling Plants (discount applied at checkout)",
+        "title": "SALE: 30% Off Best Selling Plants (discount applied at checkout)",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "best-sellers-for-homepage",
@@ -254,7 +254,7 @@
     "featured_collection_brPzkY": {
       "type": "featured-collection",
       "settings": {
-        "title": "SALE: 30% off Vegetable Plants (discount applied at checkout)",
+        "title": "SALE: 30% Off Vegetable Plants (discount applied at checkout)",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "vegetable-plants",
@@ -838,11 +838,11 @@
   },
   "order": [
     "rich_text_EjVzBt",
+    "company_usp_banner_yDj3at",
     "featured_collection_eMYirb",
     "promo_grid_jpmdeG",
     "text_and_image_cYgC3g",
     "background_image_text_KigkJR",
-    "company_usp_banner_yDj3at",
     "featured_collection_XNjNXE",
     "featured_collection_brPzkY",
     "featured_collection_mQreKt",
