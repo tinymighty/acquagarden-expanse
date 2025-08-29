@@ -40,6 +40,85 @@
         "divider": false
       }
     },
+    "promo_grid_jpmdeG": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_t3pcPk": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "SALE: Chilli Bundles: Extra 25% off",
+            "textarea": "Double Your Discount! Extra 25% Off Sale Price when you shop Chilli Plant Bundles",
+            "cta_text1": "Shop Chilli Plant Bundles",
+            "cta_link1": "shopify://collections/chillies-bundles",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER2_4.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "color_accent": "#ffffff"
+          }
+        },
+        "advanced_GXax9y": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "SALE: 25% Off All Chilli Plants",
+            "textarea": "Shop our Chilli Plants Sale with 25% Off Full Price with code CHILLIES25 at Checkout",
+            "cta_text1": "Shop Chilli Plants Sale",
+            "cta_link1": "shopify://collections/chillies",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER_CHILLI_3.png",
+            "video_url": "",
+            "width": "50",
+            "height": 500,
+            "text_align": "vertical-center horizontal-center",
+            "color_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "advanced_t3pcPk",
+        "advanced_GXax9y"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "t:labels.promotional_grid",
+      "settings": {
+        "full_width": false,
+        "gutter_size": 23,
+        "space_above": false,
+        "space_below": true
+      }
+    },
+    "text_and_image_cYgC3g": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Home_1.jpg",
+        "image_mask": "landscape",
+        "image2_mask": "landscape",
+        "subtitle": "",
+        "title": "Quality Plants for the Discerning Gardener",
+        "heading_size": "h2",
+        "text": "<p>Providing the highest quality plants to gardeners of every kind across the UK</p>",
+        "button_label": "Shop Our UK Plant Range",
+        "button_link": "shopify://collections/best-sellers",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
     "company_usp_banner_yDj3at": {
       "type": "marquee-banner",
       "blocks": {
@@ -124,85 +203,6 @@
         "item_gap": "clamp(50px, 6rem, 200px)",
         "item_text_color": "#000000",
         "item_text_size": 18
-      }
-    },
-    "promo_grid_jpmdeG": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_t3pcPk": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "SALE: Chilli Bundles: Extra 25% off",
-            "textarea": "Double Your Discount! Extra 25% Off Sale Price when you shop Chilli Plant Bundles",
-            "cta_text1": "Shop Chilli Plant Bundles",
-            "cta_link1": "shopify://collections/chillies-bundles",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER2_4.png",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_align": "vertical-center horizontal-center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "advanced_GXax9y": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "SALE: 25% Off All Chilli Plants",
-            "textarea": "Shop our Chilli Plants Sale with 25% Off Full Price with code CHILLIES25 at Checkout",
-            "cta_text1": "Shop Chilli Plants Sale",
-            "cta_link1": "shopify://collections/chillies",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER_CHILLI_3.png",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_align": "vertical-center horizontal-center",
-            "color_accent": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "advanced_t3pcPk",
-        "advanced_GXax9y"
-      ],
-      "disabled": true,
-      "custom_css": [],
-      "name": "t:labels.promotional_grid",
-      "settings": {
-        "full_width": false,
-        "gutter_size": 23,
-        "space_above": false,
-        "space_below": true
-      }
-    },
-    "text_and_image_cYgC3g": {
-      "type": "text-and-image",
-      "custom_css": [
-        ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Home_1.jpg",
-        "image_mask": "landscape",
-        "image2_mask": "landscape",
-        "subtitle": "",
-        "title": "Quality Plants for the Discerning Gardener",
-        "heading_size": "h2",
-        "text": "<p>Providing the highest quality plants to gardeners of every kind across the UK</p>",
-        "button_label": "Shop Our UK Plant Range",
-        "button_link": "shopify://collections/best-sellers",
-        "button_style": "primary",
-        "align_text": "center",
-        "image_width": "50",
-        "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "top_padding": true,
-        "bottom_padding": true
       }
     },
     "featured_collection_XNjNXE": {
@@ -838,9 +838,9 @@
   },
   "order": [
     "rich_text_EjVzBt",
-    "company_usp_banner_yDj3at",
     "promo_grid_jpmdeG",
     "text_and_image_cYgC3g",
+    "company_usp_banner_yDj3at",
     "featured_collection_XNjNXE",
     "background_image_text_KigkJR",
     "featured_collection_brPzkY",
