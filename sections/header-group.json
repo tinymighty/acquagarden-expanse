@@ -17,8 +17,8 @@
         "toolbar-0": {
           "type": "announcement",
           "settings": {
-            "richtext": "<p>🌞 End of Summer Sale: 30% Off Everything 🌞 Free UK delivery on orders over £40</p>",
-            "richtext_mobile": "<p>🌞 End of Summer Sale: 30% Off Everything 🌞 Free UK delivery on orders over £40</p>"
+            "richtext": "<p>Free UK delivery on orders over £40</p>",
+            "richtext_mobile": "<p>Free UK delivery on orders over £40</p>"
           }
         }
       },
