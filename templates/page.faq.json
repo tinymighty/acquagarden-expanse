@@ -102,6 +102,13 @@
             "text": "<p>Free UK delivery on orders over £40.<strong> </strong>For orders under £40, the standard delivery fee (2-3 business days) is £5.95, and £8.95 for express shipping/next day.</p><p>We’ll always display your total delivery cost before you pay.</p>"
           }
         },
+        "question_iRhMbP": {
+          "type": "question",
+          "settings": {
+            "title": "Do you accept international orders?",
+            "text": "<p>Unfortunately, no. We only ship within the UK.</p><p>Live plants are subject to international biosecurity rules that require phytosanitary certification and inspections in the destination market. We don’t currently provide this documentation, so we can’t accept international orders for live plants.</p>"
+          }
+        },
         "rich_text_Vt3cPQ": {
           "type": "rich-text",
           "settings": {
@@ -159,6 +166,7 @@
         "faq_LnM6zy",
         "faq_cinjgM",
         "faq_cn7eL4",
+        "question_iRhMbP",
         "rich_text_Vt3cPQ",
         "faq_jMxPTK",
         "faq_q9QKNj",
