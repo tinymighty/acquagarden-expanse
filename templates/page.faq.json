@@ -128,7 +128,7 @@
           "type": "question",
           "settings": {
             "title": "How do I contact customer service for plant issues?",
-            "text": "<p>If you have any issues with your plant order, our customer service team is available to help. You can reach us via email, phone, or through our live chat on the website.</p><p>We aim to respond to all inquiries within 24 hours, ensuring your concerns are addressed quickly and efficiently.</p>"
+            "text": "<p>If you have any issues with your plant order, our customer service team is available to help. You can reach us via our <a href=\"https://www.acquagarden.co.uk/pages/contact-us\" target=\"_blank\" title=\"Contact Us | Acqua Garden\">contact us form here.</a></p><p>We aim to respond to all inquiries within 24 hours within open business hours (Mon-Fri), ensuring your concerns are addressed quickly and efficiently.<br/>Enquiries over the weekend will be responded to the next working day.</p>"
           }
         },
         "faq_HbWym9": {
