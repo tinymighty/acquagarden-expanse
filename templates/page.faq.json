@@ -142,7 +142,7 @@
           "type": "question",
           "settings": {
             "title": "Do you offer guidance to inexperienced gardeners?",
-            "text": "<p>Yes! We all started gardening at some point and had no experience. In addition to our plant care guides and other information here, we offer free consultations and more extensive consultations and guidance sessions beyond that too.</p><p>Sign up for a free consultation or feel free to contact us by email or telephone if you need more extensive guidance or assistance. </p>"
+            "text": "<p>Yes! We all started gardening at some point and had no experience. In addition to our plant care guides and other information here, we offer free consultations and more extensive consultations and guidance sessions beyond that too.</p><p>Sign up for a free consultation or feel free to <a href=\"https://www.acquagarden.co.uk/pages/contact-us\" target=\"_blank\" title=\"Contact Us | Acqua Garden\">contact us</a> if you need more extensive guidance or assistance. </p>"
           }
         },
         "faq_Daqhtf": {
@@ -150,6 +150,13 @@
           "settings": {
             "title": "Can I return plants if I change my mind?",
             "text": "<p>Due to the perishable nature of plants, we generally do not ask for returns. If you have any concerns about your order or your plants, please reach out to our customer care team, and we will work to resolve any issues you may have promptly..</p>"
+          }
+        },
+        "question_zRccr8": {
+          "type": "question",
+          "settings": {
+            "title": "How long do refunds take?",
+            "text": "<p>Once we receive and inspect the return (or confirm an issue), refunds are usually processed within 5–7 business days to your original payment method.</p>"
           }
         }
       },
@@ -172,7 +179,8 @@
         "faq_q9QKNj",
         "faq_HbWym9",
         "faq_UnExgn",
-        "faq_Daqhtf"
+        "faq_Daqhtf",
+        "question_zRccr8"
       ],
       "custom_css": [],
       "settings": {
