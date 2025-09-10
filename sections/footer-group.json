@@ -97,12 +97,11 @@
         },
         "footer-1": {
           "type": "contact",
-          "disabled": true,
           "settings": {
             "phone": "",
             "contact": "contact-us",
             "chat": "",
-            "enable_social": false
+            "enable_social": true
           }
         },
         "footer-2": {
