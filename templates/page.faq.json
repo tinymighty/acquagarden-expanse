@@ -64,21 +64,28 @@
           "type": "question",
           "settings": {
             "title": "How long does plant delivery take?",
-            "text": "<p>Our plant delivery typically takes between 1-2 business days, depending on your location and the availability of the plant species.</p><p>You'll receive a tracking number once your order is dispatched. If you're in a remote area, delivery may take a little longer, but we ensure all plants are shipped in optimal conditions for freshness.</p>"
+            "text": "<p>Our plant delivery typically takes between 2-3 business days after dispatch for standard orders, or 1-2 business days for express shipping. This does however depend on your location and the availability of the plant species.</p><p>You'll receive a tracking number once your order is dispatched. If you're in a remote area, delivery may take a little longer, but we ensure all plants are shipped in optimal conditions for freshness.</p>"
+          }
+        },
+        "question_dyfP7H": {
+          "type": "question",
+          "settings": {
+            "title": "How fast do you process orders?",
+            "text": "<p>Orders are typically processed within 1–2 business days (Mon–Fri). We’ll email you when your order is on its way.</p>"
           }
         },
         "faq_VDPyzW": {
           "type": "question",
           "settings": {
             "title": "Do you offer same-day or next-day plant delivery?",
-            "text": "<p>Yes! We offer next-day delivery options for select locations and plant varieties. If you need your plants urgently, simply choose the express shipping option at checkout.<br/><br/>Next-day plant delivery is subject to availability, so we recommend placing your order early in the day.</p>"
+            "text": "<p>Yes, we offer next day delivery on select items and locations. If you need your plants urgently, simply choose the express shipping option at checkout. <br/><br/>Next-day plant delivery is subject to availability, so we recommend placing your order early in the day.</p>"
           }
         },
         "faq_LnM6zy": {
           "type": "question",
           "settings": {
             "title": "How do you ensure the plants are safe during delivery?",
-            "text": "<p>We take great care to ensure your plants arrive in perfect condition. Each plant is carefully packed in protective, eco-friendly packaging to prevent damage during transit.</p>"
+            "text": "<p>We take great care to ensure your plants arrive in perfect condition. Each plant is carefully packed in protective packaging to prevent damage during transit.</p>"
           }
         },
         "faq_cinjgM": {
@@ -92,7 +99,7 @@
           "type": "question",
           "settings": {
             "title": "How much does plant delivery cost?",
-            "text": "<p>Plant delivery costs vary based on the size of your order and location. Standard delivery typically starts at £5.95, with free shipping on orders over £60.</p><p>We also offer expedited shipping options for faster delivery at an additional cost. You'll be able to see your total delivery cost at checkout before finalising your order.</p>"
+            "text": "<p>Free UK delivery on orders over £40.<strong> </strong>For orders under £40, the standard delivery fee (2-3 business days) is £5.95, and £8.95 for express shipping/next day.</p><p>We’ll always display your total delivery cost before you pay.</p>"
           }
         },
         "rich_text_Vt3cPQ": {
@@ -147,6 +154,7 @@
         "faq_DaNfkx",
         "rich_text_eK7MJL",
         "faq_8Jrwrp",
+        "question_dyfP7H",
         "faq_VDPyzW",
         "faq_LnM6zy",
         "faq_cinjgM",
