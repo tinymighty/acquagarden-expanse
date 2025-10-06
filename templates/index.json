@@ -96,6 +96,7 @@
     },
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
+      "disabled": true,
       "custom_css": [
         ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
       ],
@@ -109,6 +110,28 @@
         "text": "<p>Providing the highest quality plants to gardeners of every kind across the UK</p>",
         "button_label": "Shop Our UK Plant Range",
         "button_link": "shopify://collections/best-sellers",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    },
+    "text_and_image_dJmpwg": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Christmas_Cactus_GIF.gif",
+        "image_mask": "landscape",
+        "image2_mask": "landscape",
+        "subtitle": "",
+        "title": "Celebrate the Season with Living Gifts",
+        "heading_size": "h2",
+        "text": "<p>Bring colour, warmth, and joy indoors with our festive houseplant collection.</p>",
+        "button_label": "Shop Houseplant Range",
+        "button_link": "shopify://collections/house-plants",
         "button_style": "primary",
         "align_text": "center",
         "image_width": "50",
@@ -205,6 +228,20 @@
         "item_text_size": 18
       }
     },
+    "featured_collection_mQreKt": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Seasonal Autumn / Winter Bedding Plants",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "autumn-winter-bedding-plants",
+        "count": 10,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "featured_collection_XNjNXE": {
       "type": "featured-collection",
       "settings": {
@@ -258,20 +295,6 @@
         "heading_size": "h1",
         "heading_position": "center",
         "home_featured_products": "bedding-flower-plants",
-        "count": 10,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false
-      }
-    },
-    "featured_collection_mQreKt": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Shop Seasonal Autumn / Winter Bedding Plants",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "home_featured_products": "autumn-winter-bedding-plants",
         "count": 10,
         "products_per_row": 5,
         "mobile_scrollable": true,
@@ -839,6 +862,7 @@
     "rich_text_EjVzBt",
     "promo_grid_jpmdeG",
     "text_and_image_cYgC3g",
+    "text_and_image_dJmpwg",
     "company_usp_banner_yDj3at",
     "featured_collection_mQreKt",
     "featured_collection_XNjNXE",
