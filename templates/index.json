@@ -96,7 +96,6 @@
     },
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
-      "disabled": true,
       "custom_css": [
         ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
       ],
@@ -122,6 +121,7 @@
     },
     "text_and_image_dJmpwg": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Christmas_Cactus_GIF.gif",
         "image_mask": "landscape",
