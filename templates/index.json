@@ -15,7 +15,7 @@
         "heading_WW3YKe": {
           "type": "heading",
           "settings": {
-            "title": "End of Summer Sale: 30% Off Everything",
+            "title": "Autumn Sale: 25% Off Everything",
             "heading_size": "h1"
           }
         },
@@ -23,7 +23,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p><br/>Celebrate the Bank Holiday with 30% off all your favourites, for 1 week only!<br/><br/>Discount automatically applied at Checkout. Hurry! Sale ends Friday 29th  August.</p><p><a href=\"/collections/bedding-flower-plants\" title=\"Bedding & Flowering Plants\"><strong>SHOP SALE</strong></a></p>"
+            "text": "<p>Stock up for the season ahead, from autumn veg and winter bedding to houseplants and spring bulbs.</p><p>Offer ends <strong>Friday 31st October</strong>. Discount automatically applied at checkout.</p><p><a href=\"/collections/bedding-flower-plants\" title=\"Bedding & Flowering Plants\"><strong>SHOP SALE</strong></a></p>"
           }
         }
       },
@@ -31,7 +31,6 @@
         "heading_WW3YKe",
         "text_hp9Rt6"
       ],
-      "disabled": true,
       "name": "t:labels.rich_text",
       "settings": {
         "align_text": "center",
@@ -96,6 +95,7 @@
     },
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
+      "disabled": true,
       "custom_css": [
         ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
       ],
@@ -119,27 +119,21 @@
         "bottom_padding": true
       }
     },
-    "text_and_image_dJmpwg": {
-      "type": "text-and-image",
-      "disabled": true,
+    "background_image_text_KigkJR": {
+      "type": "background-image-text",
+      "custom_css": [],
+      "name": "t:labels.large_image_with",
       "settings": {
-        "image": "shopify://shop_images/Christmas_Cactus_GIF.gif",
-        "image_mask": "landscape",
-        "image2_mask": "landscape",
         "subtitle": "",
-        "title": "Celebrate the Season with Living Gifts",
-        "heading_size": "h2",
-        "text": "<p>Bring colour, warmth, and joy indoors with our festive houseplant collection.</p>",
-        "button_label": "Shop Houseplant Range",
-        "button_link": "shopify://collections/houseplants",
-        "button_style": "primary",
-        "align_text": "center",
-        "image_width": "50",
-        "layout": "right",
-        "color_scheme": "2",
-        "divider": false,
-        "top_padding": true,
-        "bottom_padding": true
+        "title": "Autumn Sale: 25% Off Sitewide",
+        "text": "<p>Discount automatically applied at checkout.</p><p>🕒Hurry! Ends Friday 31st October</p>",
+        "button_label": "SHOP SALE",
+        "button_link": "shopify://collections",
+        "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER_AUTUMN_1.png",
+        "layout": "left",
+        "height": 550,
+        "parallax": false,
+        "parallax_direction": "top"
       }
     },
     "company_usp_banner_yDj3at": {
@@ -254,24 +248,6 @@
         "mobile_scrollable": true,
         "view_all": false,
         "divider": false
-      }
-    },
-    "background_image_text_KigkJR": {
-      "type": "background-image-text",
-      "disabled": true,
-      "custom_css": [],
-      "name": "t:labels.large_image_with",
-      "settings": {
-        "subtitle": "",
-        "title": "Mid-Summer Sale: 25% Off Sitewide",
-        "text": "<p>Use Code <strong>SUMMER25</strong> at checkout.</p><p>🕒Hurry! Ends Friday 8th August.</p>",
-        "button_label": "SHOP SALE",
-        "button_link": "shopify://collections",
-        "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER2_3.png",
-        "layout": "left",
-        "height": 550,
-        "parallax": false,
-        "parallax_direction": "top"
       }
     },
     "featured_collection_brPzkY": {
@@ -862,11 +838,10 @@
     "rich_text_EjVzBt",
     "promo_grid_jpmdeG",
     "text_and_image_cYgC3g",
-    "text_and_image_dJmpwg",
     "company_usp_banner_yDj3at",
+    "background_image_text_KigkJR",
     "featured_collection_mQreKt",
     "featured_collection_XNjNXE",
-    "background_image_text_KigkJR",
     "featured_collection_brPzkY",
     "featured_collection_eMYirb",
     "featured-collection",
