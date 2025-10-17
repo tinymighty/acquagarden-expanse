@@ -119,23 +119,6 @@
         "bottom_padding": true
       }
     },
-    "background_image_text_KigkJR": {
-      "type": "background-image-text",
-      "custom_css": [],
-      "name": "t:labels.large_image_with",
-      "settings": {
-        "subtitle": "",
-        "title": "Autumn Sale: 25% Off Sitewide",
-        "text": "<p>Discount automatically applied at checkout.</p><p>🕒Hurry! Ends Friday 31st October</p>",
-        "button_label": "SHOP SALE",
-        "button_link": "shopify://collections",
-        "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER_AUTUMN_1.png",
-        "layout": "left",
-        "height": 550,
-        "parallax": false,
-        "parallax_direction": "top"
-      }
-    },
     "company_usp_banner_yDj3at": {
       "type": "marquee-banner",
       "blocks": {
@@ -220,6 +203,24 @@
         "item_gap": "clamp(50px, 6rem, 200px)",
         "item_text_color": "#000000",
         "item_text_size": 18
+      }
+    },
+    "background_image_text_KigkJR": {
+      "type": "background-image-text",
+      "disabled": true,
+      "custom_css": [],
+      "name": "t:labels.large_image_with",
+      "settings": {
+        "subtitle": "",
+        "title": "Autumn Sale: 25% Off Sitewide",
+        "text": "<p>Discount automatically applied at checkout.</p><p>🕒Hurry! Ends Friday 31st October</p>",
+        "button_label": "SHOP SALE",
+        "button_link": "shopify://collections",
+        "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER_AUTUMN_1.png",
+        "layout": "left",
+        "height": 550,
+        "parallax": false,
+        "parallax_direction": "top"
       }
     },
     "featured_collection_mQreKt": {
