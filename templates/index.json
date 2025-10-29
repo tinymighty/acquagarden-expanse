@@ -15,7 +15,7 @@
         "heading_WW3YKe": {
           "type": "heading",
           "settings": {
-            "title": "Autumn Sale: 25% Off Everything",
+            "title": "48 Hours Only – 30% Off Everything at Acqua Garden",
             "heading_size": "h1"
           }
         },
@@ -23,7 +23,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>Stock up for the season ahead, from autumn veg and winter bedding to houseplants and spring bulbs.</p><p>Offer ends <strong>Friday 31st October</strong>. Discount automatically applied at checkout.</p><p><a href=\"/collections/bedding-flower-plants\" title=\"Bedding & Flowering Plants\"><strong>SHOP SALE</strong></a></p>"
+            "text": "<p><br/>Enjoy <strong>30% off everything</strong> across Acqua Garden for 48 hours only. From festive houseplants and colourful bedding bundles to spring bulbs and vegetable plants, it’s the perfect time to shop premium plants and thoughtful green gifts.</p><p>Offer ends <strong>Friday 31st October at 4.30pm</strong>. Discount automatically applied at checkout.</p><p><a href=\"/collections/bedding-flower-plants\" title=\"Bedding & Flowering Plants\"><strong>SHOP SALE</strong></a></p>"
           }
         }
       },
@@ -37,60 +37,6 @@
         "narrow_column": false,
         "color_scheme": "1",
         "divider": false
-      }
-    },
-    "promo_grid_jpmdeG": {
-      "type": "promo-grid",
-      "blocks": {
-        "advanced_t3pcPk": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "SALE: Chilli Bundles: Extra 25% off",
-            "textarea": "Double Your Discount! Extra 25% Off Sale Price when you shop Chilli Plant Bundles",
-            "cta_text1": "Shop Chilli Plant Bundles",
-            "cta_link1": "shopify://collections/chillies-bundles",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER2_4.png",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_align": "vertical-center horizontal-center",
-            "color_accent": "#ffffff"
-          }
-        },
-        "advanced_GXax9y": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "SALE: 25% Off All Chilli Plants",
-            "textarea": "Shop our Chilli Plants Sale with 25% Off Full Price with code CHILLIES25 at Checkout",
-            "cta_text1": "Shop Chilli Plants Sale",
-            "cta_link1": "shopify://collections/chillies",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER_CHILLI_3.png",
-            "video_url": "",
-            "width": "50",
-            "height": 500,
-            "text_align": "vertical-center horizontal-center",
-            "color_accent": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "advanced_t3pcPk",
-        "advanced_GXax9y"
-      ],
-      "disabled": true,
-      "custom_css": [],
-      "name": "t:labels.promotional_grid",
-      "settings": {
-        "full_width": false,
-        "gutter_size": 23,
-        "space_above": false,
-        "space_below": true
       }
     },
     "text_and_image_cYgC3g": {
@@ -205,56 +151,24 @@
         "item_text_size": 18
       }
     },
-    "background_image_text_KigkJR": {
-      "type": "background-image-text",
-      "disabled": true,
-      "custom_css": [],
-      "name": "t:labels.large_image_with",
-      "settings": {
-        "subtitle": "",
-        "title": "Autumn Sale: 25% Off Sitewide",
-        "text": "<p>Discount automatically applied at checkout.</p><p>🕒Hurry! Ends Friday 31st October</p>",
-        "button_label": "SHOP SALE",
-        "button_link": "shopify://collections",
-        "image": "shopify://shop_images/ACQUA_GARDEN_SALE_HEADER_AUTUMN_1.png",
-        "layout": "left",
-        "height": 550,
-        "parallax": false,
-        "parallax_direction": "top"
-      }
-    },
-    "featured_collection_mQreKt": {
+    "featured_collection_jmrWL3": {
       "type": "featured-collection",
       "settings": {
-        "title": "SALE 25% Off: Seasonal Autumn / Winter Bedding Plants",
+        "title": "30% Off: Seasonal Houseplants",
         "heading_size": "h2",
         "heading_position": "center",
-        "home_featured_products": "autumn-winter-bedding-plants",
-        "count": 10,
+        "home_featured_products": "houseplants",
+        "count": 5,
         "products_per_row": 5,
         "mobile_scrollable": true,
         "view_all": true,
         "divider": false
       }
     },
-    "featured_collection_XNjNXE": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "SALE 25% Off: Best Selling Plants",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "home_featured_products": "best-sellers-for-homepage",
-        "count": 10,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": false,
-        "divider": false
-      }
-    },
     "featured_collection_brPzkY": {
       "type": "featured-collection",
       "settings": {
-        "title": "SALE 25% Off: Vegetable Plants",
+        "title": "30% Off: Vegetable Plants",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "vegetable-plants",
@@ -265,14 +179,56 @@
         "divider": false
       }
     },
+    "featured_collection_mQreKt": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "30% Off: Seasonal Autumn / Winter Bedding Plants",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "autumn-winter-bedding-plants",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured_collection_eLCWT8": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "30% Off: Bundles and Multi-packs",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "new-bundles",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured_collection_XNjNXE": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "30% Off: Best Selling Plants",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "best-sellers-for-homepage",
+        "count": 10,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
     "featured_collection_eMYirb": {
       "type": "featured-collection",
       "settings": {
-        "title": "SALE 25% Off: Bedding Plants",
+        "title": "30% Off: Bedding Plants",
         "heading_size": "h1",
         "heading_position": "center",
         "home_featured_products": "bedding-flower-plants",
-        "count": 10,
+        "count": 5,
         "products_per_row": 5,
         "mobile_scrollable": true,
         "view_all": true,
@@ -282,7 +238,7 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "SALE 25% Off: Herb Plants",
+        "title": "30% Off: Herb Plants",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "herb-plants",
@@ -296,7 +252,7 @@
     "featured_collection_LikEVr": {
       "type": "featured-collection",
       "settings": {
-        "title": "SALE 25% Off: Shrubs & Perennial Plants",
+        "title": "30% Off: Shrubs & Perennial Plants",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "shrubs-perennials",
@@ -307,16 +263,23 @@
         "divider": false
       }
     },
+    "featured_collection_8UnRLB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "30% Off: Bulbs",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "bulbs",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "featured-collections-browser": {
       "type": "featured-collections-browser",
       "blocks": {
-        "collection_kwE97H": {
-          "type": "collection",
-          "settings": {
-            "collection": "fruit-plants",
-            "title": ""
-          }
-        },
         "collection_X3jpwL": {
           "type": "collection",
           "settings": {
@@ -331,17 +294,24 @@
             "title": ""
           }
         },
-        "collection_RtkLhh": {
-          "type": "collection",
-          "settings": {
-            "collection": "rose-plants",
-            "title": ""
-          }
-        },
         "collection_Kr8j4g": {
           "type": "collection",
           "settings": {
             "collection": "shrubs-perennials",
+            "title": ""
+          }
+        },
+        "collection_kwE97H": {
+          "type": "collection",
+          "settings": {
+            "collection": "fruit-plants",
+            "title": ""
+          }
+        },
+        "collection_RtkLhh": {
+          "type": "collection",
+          "settings": {
+            "collection": "rose-plants",
             "title": ""
           }
         },
@@ -354,11 +324,11 @@
         }
       },
       "block_order": [
-        "collection_kwE97H",
         "collection_X3jpwL",
         "collection_46q6Lq",
-        "collection_RtkLhh",
         "collection_Kr8j4g",
+        "collection_kwE97H",
+        "collection_RtkLhh",
         "collection_8h6fMG"
       ],
       "settings": {
@@ -431,7 +401,7 @@
       "type": "scrolling-text",
       "disabled": true,
       "settings": {
-        "text": "Free UK Delivery on orders over £30",
+        "text": "Free UK Delivery on orders over £40",
         "link": "",
         "text_size": 20,
         "text_spacing": true,
@@ -613,31 +583,6 @@
         "style": "arrows",
         "autoplay": true,
         "autoplay_speed": 7
-      }
-    },
-    "promo-grid": {
-      "type": "promo-grid",
-      "blocks": {
-        "block-1": {
-          "type": "banner",
-          "settings": {
-            "heading": "Free U.S. shipping",
-            "text": "On all orders over $100",
-            "link": "shopify://collections/all",
-            "label": "Shop now",
-            "color_scheme": "1"
-          }
-        }
-      },
-      "block_order": [
-        "block-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": true,
-        "gutter_size": 0,
-        "space_above": false,
-        "space_below": false
       }
     },
     "featured-collection3": {
@@ -837,13 +782,14 @@
   },
   "order": [
     "rich_text_EjVzBt",
-    "promo_grid_jpmdeG",
     "text_and_image_cYgC3g",
     "company_usp_banner_yDj3at",
-    "background_image_text_KigkJR",
-    "featured_collection_mQreKt",
-    "featured_collection_XNjNXE",
+    "featured_collection_jmrWL3",
     "featured_collection_brPzkY",
+    "featured_collection_mQreKt",
+    "featured_collection_eLCWT8",
+    "featured_collection_XNjNXE",
+    "featured_collection_8UnRLB",
     "featured_collection_eMYirb",
     "featured-collection",
     "featured_collection_LikEVr",
@@ -853,7 +799,6 @@
     "rich_text_BjweHA",
     "testimonials",
     "slideshow-split2",
-    "promo-grid",
     "featured-collection3",
     "slideshow-split3",
     "text-columns",
