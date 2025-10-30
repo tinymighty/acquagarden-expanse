@@ -15,7 +15,7 @@
         "heading_WW3YKe": {
           "type": "heading",
           "settings": {
-            "title": "48 Hours Only – 30% Off Everything at Acqua Garden",
+            "title": "Final Hours – 30% Off Everything at Acqua Garden",
             "heading_size": "h1"
           }
         },
@@ -221,6 +221,20 @@
         "divider": false
       }
     },
+    "featured_collection_8UnRLB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "30% Off: Bulbs",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "bulbs",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "featured_collection_eMYirb": {
       "type": "featured-collection",
       "settings": {
@@ -257,20 +271,6 @@
         "heading_position": "center",
         "home_featured_products": "shrubs-perennials",
         "count": 10,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false
-      }
-    },
-    "featured_collection_8UnRLB": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "30% Off: Bulbs",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "home_featured_products": "bulbs",
-        "count": 5,
         "products_per_row": 5,
         "mobile_scrollable": true,
         "view_all": true,
