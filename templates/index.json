@@ -31,6 +31,7 @@
         "heading_WW3YKe",
         "text_hp9Rt6"
       ],
+      "disabled": true,
       "name": "t:labels.rich_text",
       "settings": {
         "align_text": "center",
@@ -41,7 +42,6 @@
     },
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
-      "disabled": true,
       "custom_css": [
         ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
       ],
@@ -154,7 +154,7 @@
     "featured_collection_jmrWL3": {
       "type": "featured-collection",
       "settings": {
-        "title": "30% Off: Seasonal Houseplants",
+        "title": "Seasonal Houseplants",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "houseplants",
@@ -168,7 +168,7 @@
     "featured_collection_brPzkY": {
       "type": "featured-collection",
       "settings": {
-        "title": "30% Off: Vegetable Plants",
+        "title": "Vegetable Plants",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "vegetable-plants",
@@ -182,7 +182,7 @@
     "featured_collection_mQreKt": {
       "type": "featured-collection",
       "settings": {
-        "title": "30% Off: Seasonal Autumn / Winter Bedding Plants",
+        "title": "Seasonal Autumn / Winter Bedding Plants",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "autumn-winter-bedding-plants",
@@ -196,7 +196,7 @@
     "featured_collection_eLCWT8": {
       "type": "featured-collection",
       "settings": {
-        "title": "30% Off: Bundles and Multi-packs",
+        "title": "Bundles and Multi-packs",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "new-bundles",
@@ -210,7 +210,7 @@
     "featured_collection_XNjNXE": {
       "type": "featured-collection",
       "settings": {
-        "title": "30% Off: Best Selling Plants",
+        "title": "Best Selling Plants",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "best-sellers-for-homepage",
@@ -224,7 +224,7 @@
     "featured_collection_8UnRLB": {
       "type": "featured-collection",
       "settings": {
-        "title": "30% Off: Bulbs",
+        "title": "Bulbs",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "bulbs",
@@ -238,7 +238,7 @@
     "featured_collection_eMYirb": {
       "type": "featured-collection",
       "settings": {
-        "title": "30% Off: Bedding Plants",
+        "title": "Bedding Plants",
         "heading_size": "h1",
         "heading_position": "center",
         "home_featured_products": "bedding-flower-plants",
@@ -252,7 +252,7 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "30% Off: Herb Plants",
+        "title": "Herb Plants",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "herb-plants",
@@ -266,7 +266,7 @@
     "featured_collection_LikEVr": {
       "type": "featured-collection",
       "settings": {
-        "title": "30% Off: Shrubs & Perennial Plants",
+        "title": "Shrubs & Perennial Plants",
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "shrubs-perennials",
