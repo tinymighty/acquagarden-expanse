@@ -42,6 +42,7 @@
     },
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
+      "disabled": true,
       "custom_css": [
         ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
       ],
@@ -63,6 +64,57 @@
         "divider": false,
         "top_padding": true,
         "bottom_padding": true
+      }
+    },
+    "slideshow-split3": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_4UP86B": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "30% Off Spring Bulbs",
+            "title_size": 60,
+            "subheading": "Celebrate the changing season with 30% off all Spring Bulbs, including favourites like Tulips, Daffodils, Snowdrops, and Iris. Plant now to guarantee bright, early colour next year.",
+            "link": "shopify://collections/bulbs",
+            "link_text": "Shop 30% Off Bulbs",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "left",
+            "image": "shopify://shop_images/2_f152af4d-317c-4add-b2d5-0163a0bf2606.png",
+            "indent_image": false,
+            "color_scheme": "1"
+          }
+        },
+        "slideshow-split3-0": {
+          "type": "slide",
+          "settings": {
+            "top_subheading": "",
+            "title": "Shop New Christmas Collection",
+            "title_size": 40,
+            "subheading": "Our Christmas Collection has arrived: festive evergreens, winter blooms & living gifts.",
+            "link": "shopify://collections/christmas",
+            "link_text": "Shop Christmas Collection",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/Christmas_Cherry_Solunum_1.png",
+            "indent_image": false,
+            "color_scheme": "none"
+          }
+        }
+      },
+      "block_order": [
+        "slide_4UP86B",
+        "slideshow-split3-0"
+      ],
+      "settings": {
+        "full_width": true,
+        "height": 550,
+        "height_mobile": 400,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
       }
     },
     "company_usp_banner_yDj3at": {
@@ -151,6 +203,20 @@
         "item_text_size": 18
       }
     },
+    "featured_collection_8UnRLB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "30% Off Bulbs",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "bulbs",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "featured_collection_jmrWL3": {
       "type": "featured-collection",
       "settings": {
@@ -218,20 +284,6 @@
         "products_per_row": 5,
         "mobile_scrollable": true,
         "view_all": false,
-        "divider": false
-      }
-    },
-    "featured_collection_8UnRLB": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Bulbs",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "home_featured_products": "bulbs",
-        "count": 5,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": true,
         "divider": false
       }
     },
@@ -361,6 +413,7 @@
         },
         "featured-collections-3": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "rose-plants",
             "title": ""
@@ -585,71 +638,6 @@
         "autoplay_speed": 7
       }
     },
-    "featured-collection3": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "heading_position": "left",
-        "home_featured_products": "",
-        "count": 5,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false
-      }
-    },
-    "slideshow-split3": {
-      "type": "slideshow-split",
-      "blocks": {
-        "slide_4UP86B": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "Side by Side Slide",
-            "title_size": 60,
-            "subheading": "Add optional subtext",
-            "link": "",
-            "link_text": "Optional button",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "left",
-            "indent_image": false,
-            "color_scheme": "none"
-          }
-        },
-        "slideshow-split3-0": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "Side by Side Slide",
-            "title_size": 40,
-            "subheading": "Add optional subtext",
-            "link": "",
-            "link_text": "Optional button",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "right",
-            "indent_image": false,
-            "color_scheme": "2"
-          }
-        }
-      },
-      "block_order": [
-        "slide_4UP86B",
-        "slideshow-split3-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "full_width": true,
-        "height": 550,
-        "height_mobile": 400,
-        "style": "arrows",
-        "autoplay": true,
-        "autoplay_speed": 7
-      }
-    },
     "text-columns": {
       "type": "text-columns",
       "blocks": {
@@ -783,13 +771,14 @@
   "order": [
     "rich_text_EjVzBt",
     "text_and_image_cYgC3g",
+    "slideshow-split3",
     "company_usp_banner_yDj3at",
+    "featured_collection_8UnRLB",
     "featured_collection_jmrWL3",
     "featured_collection_brPzkY",
     "featured_collection_mQreKt",
     "featured_collection_eLCWT8",
     "featured_collection_XNjNXE",
-    "featured_collection_8UnRLB",
     "featured_collection_eMYirb",
     "featured-collection",
     "featured_collection_LikEVr",
@@ -799,8 +788,6 @@
     "rich_text_BjweHA",
     "testimonials",
     "slideshow-split2",
-    "featured-collection3",
-    "slideshow-split3",
     "text-columns",
     "rich-text",
     "blog-posts",
