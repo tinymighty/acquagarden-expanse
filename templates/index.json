@@ -203,6 +203,20 @@
         "item_text_size": 18
       }
     },
+    "featured_collection_YHHLL4": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Christmas Collection",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "christmas",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
     "featured_collection_8UnRLB": {
       "type": "featured-collection",
       "settings": {
@@ -773,6 +787,7 @@
     "text_and_image_cYgC3g",
     "slideshow-split3",
     "company_usp_banner_yDj3at",
+    "featured_collection_YHHLL4",
     "featured_collection_8UnRLB",
     "featured_collection_jmrWL3",
     "featured_collection_brPzkY",
