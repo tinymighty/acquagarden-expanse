@@ -217,20 +217,6 @@
         "divider": false
       }
     },
-    "featured_collection_8UnRLB": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Bulbs",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "home_featured_products": "bulbs",
-        "count": 5,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false
-      }
-    },
     "featured_collection_jmrWL3": {
       "type": "featured-collection",
       "settings": {
@@ -238,6 +224,20 @@
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "houseplants",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured_collection_8UnRLB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Bulbs",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "bulbs",
         "count": 5,
         "products_per_row": 5,
         "mobile_scrollable": true,
@@ -788,10 +788,10 @@
     "slideshow-split3",
     "company_usp_banner_yDj3at",
     "featured_collection_YHHLL4",
-    "featured_collection_8UnRLB",
     "featured_collection_jmrWL3",
     "featured_collection_brPzkY",
     "featured_collection_mQreKt",
+    "featured_collection_8UnRLB",
     "featured_collection_eLCWT8",
     "featured_collection_XNjNXE",
     "featured_collection_eMYirb",
