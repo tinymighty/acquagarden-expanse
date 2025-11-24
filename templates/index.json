@@ -85,28 +85,10 @@
             "indent_image": false,
             "color_scheme": "none"
           }
-        },
-        "slide_4UP86B": {
-          "type": "slide",
-          "settings": {
-            "top_subheading": "",
-            "title": "30% Off Spring Bulbs",
-            "title_size": 58,
-            "subheading": "30% off all Spring Bulbs, including favourites like Tulips, Daffodils, Snowdrops, and Iris. Plant now to guarantee bright, early colour next year.\nDiscount automatically applied at Checkout.",
-            "link": "shopify://collections/bulbs",
-            "link_text": "Shop 30% Off Bulbs",
-            "link_2": "",
-            "link_text_2": "",
-            "text_position": "left",
-            "image": "shopify://shop_images/2_f152af4d-317c-4add-b2d5-0163a0bf2606.png",
-            "indent_image": false,
-            "color_scheme": "1"
-          }
         }
       },
       "block_order": [
-        "slideshow-split3-0",
-        "slide_4UP86B"
+        "slideshow-split3-0"
       ],
       "settings": {
         "full_width": true,
@@ -231,20 +213,6 @@
         "divider": false
       }
     },
-    "featured_collection_8UnRLB": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Bulbs",
-        "heading_size": "h2",
-        "heading_position": "center",
-        "home_featured_products": "bulbs",
-        "count": 5,
-        "products_per_row": 5,
-        "mobile_scrollable": true,
-        "view_all": true,
-        "divider": false
-      }
-    },
     "featured_collection_brPzkY": {
       "type": "featured-collection",
       "settings": {
@@ -266,6 +234,20 @@
         "heading_size": "h2",
         "heading_position": "center",
         "home_featured_products": "autumn-winter-bedding-plants",
+        "count": 5,
+        "products_per_row": 5,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured_collection_8UnRLB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Bulbs",
+        "heading_size": "h2",
+        "heading_position": "center",
+        "home_featured_products": "bulbs",
         "count": 5,
         "products_per_row": 5,
         "mobile_scrollable": true,
