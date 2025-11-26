@@ -99,6 +99,40 @@
         "autoplay_speed": 7
       }
     },
+    "slideshow_split_FVDbpF": {
+      "type": "slideshow-split",
+      "blocks": {
+        "slide_HLMnUh": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "title": "Black Friday 30% Off Sitewide",
+            "title_size": 40,
+            "subheading": "30% off - including our new Christmas Collection - until Thursday 4th December.",
+            "link": "shopify://collections/christmas",
+            "link_text": "Shop Christmas Collection",
+            "link_2": "",
+            "link_text_2": "",
+            "text_position": "right",
+            "image": "shopify://shop_images/shutterstock_1614997864_d0b2cf66-0815-4946-be05-580951359847.jpg",
+            "indent_image": false,
+            "color_scheme": "none"
+          }
+        }
+      },
+      "block_order": [
+        "slide_HLMnUh"
+      ],
+      "settings": {
+        "full_width": true,
+        "height": 550,
+        "height_mobile": 400,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
     "company_usp_banner_yDj3at": {
       "type": "marquee-banner",
       "blocks": {
@@ -768,6 +802,7 @@
     "rich_text_EjVzBt",
     "text_and_image_cYgC3g",
     "slideshow-split3",
+    "slideshow_split_FVDbpF",
     "company_usp_banner_yDj3at",
     "featured_collection_YHHLL4",
     "featured_collection_jmrWL3",
