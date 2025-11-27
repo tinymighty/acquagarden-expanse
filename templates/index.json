@@ -71,6 +71,7 @@
       "blocks": {
         "slideshow-split3-0": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "title": "Shop New Christmas Collection",
@@ -104,20 +105,19 @@
       "blocks": {
         "slide_HLMnUh": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "top_subheading": "",
-            "title": "Black Friday 30% Off Sitewide",
+            "title": "Black Friday: 30% Off Sitewide",
             "title_size": 40,
-            "subheading": "30% off - including our new Christmas Collection - until Thursday 4th December.",
-            "link": "shopify://collections/christmas",
-            "link_text": "Shop Christmas Collection",
+            "subheading": "Shop 30% off - including our new Christmas Collection - until Thursday 4th December.",
+            "link": "shopify://collections/all-products-a",
+            "link_text": "Shop Sale Plants",
             "link_2": "",
             "link_text_2": "",
             "text_position": "right",
-            "image": "shopify://shop_images/shutterstock_1614997864_d0b2cf66-0815-4946-be05-580951359847.jpg",
+            "image": "shopify://shop_images/BLACK_FRIDAY_WEEK_-_30_off_large_c80aeab5-69b2-4847-84e7-0f2658f27455.png",
             "indent_image": false,
-            "color_scheme": "none"
+            "color_scheme": "1"
           }
         }
       },
