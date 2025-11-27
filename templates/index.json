@@ -91,6 +91,7 @@
       "block_order": [
         "slideshow-split3-0"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "height": 550,
