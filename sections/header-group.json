@@ -17,8 +17,8 @@
         "toolbar-0": {
           "type": "announcement",
           "settings": {
-            "richtext": "<p>⚠️ Black Friday - 30% Off - Ends 4th Dec - Free UK delivery on orders over £40</p>",
-            "richtext_mobile": "<p>⚠️ Black Friday - 30% Off - Ends 4th Dec - Free UK delivery on orders over £40</p>"
+            "richtext": "<p>⚠️ Black Friday - 30% Off Sitewide - Ends 4th Dec - Free UK delivery on orders over £40</p>",
+            "richtext_mobile": "<p>⚠️ Black Friday - 30% Off Sitewide - Ends 4th Dec - Free UK delivery on orders over £40</p>"
           }
         }
       },
