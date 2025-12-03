@@ -42,7 +42,6 @@
     },
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
-      "disabled": true,
       "custom_css": [
         ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
       ],
@@ -106,6 +105,7 @@
       "blocks": {
         "slide_HLMnUh": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "top_subheading": "",
             "title": "Black Friday: 30% Off Sitewide",
