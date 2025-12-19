@@ -17,8 +17,8 @@
         "toolbar-0": {
           "type": "announcement",
           "settings": {
-            "richtext": "<p>🎄We will be closed from <strong>24th December – 5th January</strong>. Orders placed during this time will be shipped after we reopen.🎄<br/>Wishing you a very Happy Christmas!🎅</p>",
-            "richtext_mobile": "<p>🎄We will be closed from <strong>24th December – 5th January</strong>. Orders placed during this time will be shipped after we reopen.🎄Wishing you a very Happy Christmas!🎅</p>"
+            "richtext": "<p>🎄We will be closed from <strong>24th December – 5th January</strong>. Orders placed during this time will be shipped after we reopen.🎄<br/>Wishing you a very Happy Christmas!</p>",
+            "richtext_mobile": "<p>🎄We will be closed from <strong>24th December – 5th January</strong>. Orders placed during this time will be shipped after we reopen.🎄Wishing you a very Happy Christmas!</p>"
           }
         }
       },
