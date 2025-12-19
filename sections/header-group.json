@@ -17,8 +17,8 @@
         "toolbar-0": {
           "type": "announcement",
           "settings": {
-            "richtext": "<p>🚚 Free UK delivery on orders over £40</p>",
-            "richtext_mobile": "<p>🚚 Free UK delivery on orders over £40</p>"
+            "richtext": "<p>🎄We will be closed from <strong>24th December – 5th January</strong>. Orders placed during this time will be shipped after we reopen.🎄</p>",
+            "richtext_mobile": "<p>🎄We will be closed from <strong>24th December – 5th January</strong>. Orders placed during this time will be shipped after we reopen.🎄 </p>"
           }
         }
       },
