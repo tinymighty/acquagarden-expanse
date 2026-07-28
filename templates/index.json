@@ -42,6 +42,7 @@
     },
     "text_and_image_cYgC3g": {
       "type": "text-and-image",
+      "disabled": true,
       "custom_css": [
         ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
       ],
@@ -63,6 +64,31 @@
         "divider": false,
         "top_padding": true,
         "bottom_padding": true
+      }
+    },
+    "text_and_image_mggad9": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".index-section .btn {margin-top: 2rem; margin-left: -0.4rem;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Orange_Simple_Summer_Sale_Instagram_Post.png",
+        "image_mask": "none",
+        "image2_mask": "landscape",
+        "subtitle": "",
+        "title": "Summer Sale Starts Now",
+        "heading_size": "h2",
+        "text": "<p>Summer is in full bloom, and we're celebrating with our biggest sale of the season. Enjoy 40% OFF Sitewide automatically applied at checkout.<br/><br/></p>",
+        "button_label": "Shop Our Bestsellers",
+        "button_link": "shopify://collections/best-sellers",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "right",
+        "color_scheme": "2",
+        "divider": false,
+        "top_padding": false,
+        "bottom_padding": false
       }
     },
     "slideshow-split3": {
@@ -770,6 +796,7 @@
   "order": [
     "rich_text_EjVzBt",
     "text_and_image_cYgC3g",
+    "text_and_image_mggad9",
     "slideshow-split3",
     "company_usp_banner_yDj3at",
     "featured_collection_YHHLL4",
